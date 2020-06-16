@@ -1,0 +1,12 @@
+.page-header {
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+.main-content h2 {
+    margin-top: 3rem;
+}
+
+.tableWithLinks td:first-child {
+    width: 300px;
+}
