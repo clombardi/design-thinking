@@ -2,5 +2,6 @@
 
 ## Unidad 1 - desde la programación al desarrollo de software
 
-[Introducción - una mirada hacia la construcción de software](./programacion-a-desarrollo/mirada-hacia-construccion.md)  
+[Introducción - una mirada hacia el desarrollo de software](./programacion-a-desarrollo/mirada-hacia-construccion.md)  
 
+[Desarrollo de software - tareas y roles](./programacion-a-desarrollo/desarrollo-tareas-roles.md)  

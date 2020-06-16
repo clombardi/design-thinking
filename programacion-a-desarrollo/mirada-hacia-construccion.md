@@ -1,4 +1,4 @@
-# Una mirada hacia la construcción de software
+# Una mirada hacia el desarrollo de software
 
 ¡Hola!
 
@@ -15,16 +15,16 @@ Varias de las tareas de operaciones IT están relacionadas con productos de soft
 
 <br/>
 
-En esta unidad, vamos a echar una mirada sobre la _construcción_ de estas aplicaciones: qué tareas son necesarias, qué roles están involucrados, cuál es la evolución de un producto de software y cómo se relaciona esto con las versiones que se despliegan, qué se conoce como _arquitectura de software_.
+En esta unidad, vamos a echar una mirada sobre la _construcción_, o _desarrollo_, de estas aplicaciones: qué tareas son necesarias, qué roles están involucrados, cuál es la evolución de un producto de software y cómo se relaciona esto con las versiones que se despliegan, qué se conoce como _arquitectura de software_.
 
 En particular, nos interesa echar luz sobre dos cuestiones.  
-Una es qué son las (tan mentadas) _metodologías ágiles_, y que impacto concreto tienen en la construcción de software.  
-La otra es por qué se habla de _desarrollador_ de software, y no de _progrmador_. Lo que hay que hacer para tener una app andando ¿no es programar? Veremos que es programar ... y bastante más, y por eso se busca una mirada un poco más general, esa es la _visión dev_.
+Una es qué son las (tan mentadas) _metodologías ágiles_, y que impacto concreto tienen en el desarrollo de software.  
+La otra es por qué se habla de _desarrollador_ de software, y no de _programador_. Lo que hay que hacer para tener una app andando ¿no es programar? Veremos que es programar ... y bastante más, y por eso se busca una mirada un poco más general, esa es la _visión dev_.
 
 
 ## ¿Por qué nos interesa?
-Antes de arrancar, hablemos un poco de _por qué_ tener esta mirada sobre la construcción de software, en qué nos nutre.  
-Se podría pensar: bueno, que los programadores, o quienes sean, nos provean de las aplicaciones, desde operaciones las instalamos y mantenemos, y si vemos algún error les avisamos. Ustedes saben de lo suyo, nosotres de lo nuestro, y todes contentes.
+Antes de arrancar, hablemos un poco de _por qué_ tener esta mirada sobre el desarrollo de software, en qué nos nutre.  
+Se podría pensar: que les programadores, o quienes sean, nos provean de las aplicaciones, desde operaciones las instalamos y mantenemos, y si vemos algún error les avisamos. Ustedes saben de lo suyo, nosotres de lo nuestro, y todes contentes.
 
 Hay una cantidad de motivaciones por las que esta división rígida entre "desarrollo" y "operaciones", simplemente ya no puede existir.
 
@@ -42,7 +42,7 @@ El equipo de trabajo se organiza en grupos, cada grupo necesita sus ambientes pa
 El _test_ toma cada vez más relevancia ... nos piden ambientes de test.  
 En resumen, "desde desarrollo nos piden ambientes como si fueran caramelos". 
 
-Otro factor a tener en cuenta es que, por muchas razones, los ciclos de desarrollo y de operaciones están cada vez más solapados, la visión "se construye / se instala / se mantiene" está dejando paso a una idea mucho más _continua_ de construcción de software, en la que la generación de nuevas versiones, agregados y ajustes tiende a ser rutinaria.
+Otro factor a tener en cuenta es que, por muchas razones, los ciclos de desarrollo y de operaciones están cada vez más solapados, la visión "se construye / se instala / se mantiene" está dejando paso a una idea mucho más _continua_ de desarrollo de software, en la que la generación de nuevas versiones, agregados y ajustes tiende a ser rutinaria.
 
 Finalmente, mencionemos que la dificultad de generar los productos entregables para aplicaciones con mucha funcionalidad, fue creciendo hasta convertirse en un factor crítico, que además, va en la dirección contraria de la idea de continuidad en el desarrollo que mencionamos recién.  
 De ahí la tendencia a trabajar con _múltiples entregables_ que pueden tener mucho volumen de comunicación entre ellos ... más necesidad de un trabajo fino de configuración y despliegue.
