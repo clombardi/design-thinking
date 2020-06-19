@@ -99,7 +99,7 @@ También por lo ya expuesto, son quienes probablemente tengan una relación más
 En rigor, el alcance de qué se entiende por "arquitectura" va a variar de proyecto en proyecto, y va a estar en relación a la cultura y a las costumbres de cada lugar y cada grupo de trabajo.  
 Dicho de otro modo, el concepto de "arquitectura", como pasa con otras cuestiones, va a estar fuertemente vinculado a la comunidad de desarrollo.
 
-Esta observación lleva a un comentario más general: al pensar en cuestiones generales de desarrollo de software, la _perspectiva social_ puede ser muy relevante. 
+Esta observación lleva a un comentario más general: al pensar en cuestiones generales de desarrollo de software, y más en general de IT, la _perspectiva social_ puede ser muy relevante. 
 Finalmente, es una actividad que requiere de muchas personas, que ponen -ponemos- bastante de su energía personal, que muchas veces va más allá de lo que significa una relación laboral. Somos un gremio apasionado, tenemos la suerte de dedicarnos a algo que (al menos a veces) nos gusta y/o nos desafía.
 
 
