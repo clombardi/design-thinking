@@ -49,7 +49,7 @@ Si una aplicación se concibe (como pasa cada vez más habitualmente) como un en
 
 En una aplicación Web, típicamente se distingue entre componentes _front-end_ (que van a ejecutarse en el browser) y _back-end_ (que se ejecutan en servidores), esto implica una dimensión de comunicación que debe tenerse en cuenta. A su vez, los componentes back-end muy probablemente tengan que colaborar entre sí para generar cada respuesta que espera "el front", esto nos da una segunda dimensión de comunicación.
 
-Esta problemática entra en el dominio de lo que se conoce como **arquitectura de software**, con el rol aparejado de _arquitecto_.
+Esta problemática entra en el dominio de lo que se conoce como **arquitectura de software**, que ampliaremos más adelante en esta unidad.
 
 
 ### Documentación de componentes

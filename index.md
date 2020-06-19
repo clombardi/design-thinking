@@ -5,3 +5,5 @@
 [Introducción - una mirada hacia el desarrollo de software](./programacion-a-desarrollo/mirada-hacia-construccion.md)  
 
 [Desarrollo de software - tareas y roles](./programacion-a-desarrollo/construccion-tareas-roles.md)  
+
+[Arquitectura de software, con (o sin) arquitectos](./programacion-a-desarrollo/arquitectura-de-software.md)  
