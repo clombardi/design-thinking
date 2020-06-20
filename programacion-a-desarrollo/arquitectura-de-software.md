@@ -27,8 +27,8 @@ Este fenómeno presenta varias aristas.
 
 ### Front y back 
 (acá podría ir una imagen de temática "front y back")  
-Un criterio clásico al respecto es la separación entre "front" y "back". 
-¿Queremos tener componentes separados de frontend y backend?  
+Una temática que se repite en muchos proyectos es la relación entre "front" y "back".  
+¿Queremos tener componentes separados de frontend y backend? 
 En particular en las aplicaciones Web esta es, largamente, la opción más popular  (aunque siguen existiendo sitios, basados en p.ej. PHP, en los que el rol del frontend es débil).  
 
 Decidir que se separa en "front" y "back" _no agota la cuestión_; existen _distintos estilos_ para la organización de una aplicación entre frontend y backend.  
@@ -66,7 +66,7 @@ Aquí empezamos a visualizar la relación estrecha que existe entre las cuestion
 
 ## Cuestiones independientes del dominio
 Está claro que muchas de las cuestiones que deben resolverse en el desarrollo de una aplicación están estrechamente relacionadas con su _dominio_.  
-Si pensamos en p.ej. un sitio de retail, una aplicación para prospección petrolífera, o un juego masivo, cada uno de estos tipos de proyecto resolverá distintas cuestiones de negocio.
+Si pensamos en p.ej. un sitio de retail, una aplicación para prospección petrolífera, o un juego masivo, cada uno de estos tipos de proyecto resolverá distintas cuestiones de negocio, y tampoco serán similares los tipos de información que manejan.
 
 Por otro lado, hay cuestiones que aparecen en proyectos de características muy diversas. Mencionamos algunos entre los más usuales:
 - logging
@@ -78,13 +78,13 @@ Por otro lado, hay cuestiones que aparecen en proyectos de características muy 
 - generación de desplegables.
 
 Estas cuestiones comunes son los llamados _cross-cutting concerns_.  
-Tal como pasa con la organización de componentes, su abordaje requiere de una mirada que abarque distintos aspectos y tareas comprendidos en un proyecto de desarrollo, y también tienen una relación estrecha con cuestiones de infraestructura.
+Tal como pasa con la organización de componentes, su abordaje requiere de una mirada que abarque distintos aspectos y tareas comprendidos en un proyecto de desarrollo, y otra vez, varios tienen una relación estrecha con cuestiones de infraestructura.
 
 
 ## La arquitectura, las arquitectas y los arquitectos (de hecho o de derecho)
 El dominio de la _arquitectura de software_ comprende, en principio, las cuestiones que mencionamos.
 
-Como ya se señaló, todo proyecto está atravesado por las decisiones de arquitectura.  
+Como ya se señaló, todo proyecto está atravesado por las decisiones de arquitectura. En cualquier proyecto surge la pregunta de si, y cómo, organizarlo en componentes; a cualquier proyecto le aplican varias de (si no todas) las cuestiones listadas en el párrafo anterior.  
 Por otro lado, puede haber o no un equipo que se dedique _específicamente_ a las mismas, puede existir o no un _equipo_ de arquitectura.  
 
 En cualquier caso, las personas que se encargan de estas cuestiones suelen estar entre quienes cuentan con mayor seniority en un equipo de desarrollo.  

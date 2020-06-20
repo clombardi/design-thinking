@@ -9,3 +9,5 @@
 [Arquitectura de software, con (o sin) arquitectos](./programacion-a-desarrollo/arquitectura-de-software.md)  
 
 [Ciclo de vida](./programacion-a-desarrollo/ciclo-de-vida.md)  
+
+[Programar y desarrollar](./programacion-a-desarrollo/programar-y-desarrollar.md)  

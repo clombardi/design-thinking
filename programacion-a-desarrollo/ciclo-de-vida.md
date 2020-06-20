@@ -1,7 +1,7 @@
 # Ciclo de vida en desarrollo de software
 Cuenta la leyenda, que en una época hoy lejana, la construcción de productos de software se organizaba de la siguiente manera: primero se desarrollaba, después se realizaba un proceso llamado "pasaje a operaciones", hecho lo cual se desplegaba en entornos productivos, entrando así en "fase de mantenimiento".
 
-Actualmente, en aproximadamente un 99.95\% de los casos, no se procede de esta forma.  
+Actualmente, en aproximadamente un 99.95% de los casos, no se procede de esta forma.  
 Hay dos fenómenos que se combinan para forzar un cambio de perspectiva.
 
 
@@ -29,7 +29,9 @@ Encontramos varias motivaciones para ello, entre ellas.
 
 Podemos decir que la idea de desarrollo continuo es un reflejo del reconocimiento de la existencia de fenómenos que impactan en las organizaciones que requieren  productos de software, y consecuentemente, en la forma que deben tener dichos productos.
 
-Esto implica la generación regular de patches y nuevas versiones de componentes, que involucra todas las tareas descriptas al principio de esta unidad, con la consiguiente participación de equipos de operaciones.  
+
+
+Este cambio de visión implica que la generación de patches y nuevas versiones de componentes se percibe como un fenómeno regular, que involucra a todas las tareas descriptas al principio de esta unidad, con la consiguiente participación de equipos de operaciones.  
 Al stress sobre estos equipos se suma el hecho de que, en aplicaciones formadas por una multitud de componentes débilmente acoplados, es muy probable que deban coexistir en un mismo entorno productivo, _distintas versiones del mismo componente_.
 
 
