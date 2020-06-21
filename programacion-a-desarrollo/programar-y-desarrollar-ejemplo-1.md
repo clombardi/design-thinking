@@ -153,4 +153,32 @@ aquí se utilizan varias técnicas de programación
 
 
 ## Un pequeño análisis 
-En la descripción anterior intentamos puntualizar varios conceptos y técnicas que utiliza habitualmente un programador al codificar. 
+En la descripción anterior intentamos puntualizar varios conceptos y técnicas que utiliza habitualmente un programador al codificar. Destacamos
+- elementos de _razonamiento algorítmico_: análisis de archivo línea por línea, técnica del corte de control, lógica para analizar la especificación de puertos.
+- criterios de _organización de código_, en particular la decisión de definir una función auxiliar para evitar que el código que procesa una especificación de puertos quedara demasiado enmarañado
+- el uso de _técnicas generales de programación_, utilizando su implementación en el lenguaje elegido (en este caso Python). En particular, lectura de un archivo de texto, separación de un string de acuerdo a un carácter de corte.
+- el uso de _características particulares del lenguaje utilizado_, que resultan prácticas. Algunos ejemplos: el uso de índices negativos, la sintaxis `elemento in conjunto`, la representación de rangos de números.
+
+A partir de estos elementos, se pudo construir un programa que genera los resultados esperados.
+
+
+### Algunos cuestionamientos posibles
+En una visión un poco más abarcativa, surgen varias preguntas respecto de este programa.
+
+Una se refiere a la _verificación de los datos de ingreso_. ¿Qué pasa si no se le pasan parámetros al programa, o se le pasan parámetros erróneos? Veamos
+
+![mensajes inadecuados ante problemas de datos de ingreso](./images/checkPort-wrong-parameters-wrong-behavior.jpg)
+
+Está claro que preferimos que los mensajes sean más explicativos, p.ej. `Must supply 2 parameters at least` o `The first argument must be a valid file name`.
+
+Otro cuestionamiento está relacionado con el _análisis del archivo_. ¿Todas las alternativas contempladas en el formato YAML están contempladas? Si se hacen agregados a la definición de este formato ¿qué impacto puede tener esto en el programa?
+
+Otros aspectos tienen que ver con la _organización interna_ del programa.  
+Señalemos la _mezcla de lenguajes_ en los nombres, hay algunos en castellano como `numeroDePuerto`, otros en inglés como `servicesForPort`, y alguno mixto como `leyendoServices`. Esto no ayuda a la legibilidad del programa.  
+También notamos algo de _falta de modularidad_. Un ejemplo está en el procesamiento de la definición de ports: el análisis de un rango está en una función separada, pero la extracción de los host ports está dentro del código que recorre el archivo. Como veremos, esto atenta contra la posibilidad de definir testeos.  
+
+Cerramos con una pregunta relacionada con el _uso de recursos_: al principio del programa se abre un archivo, ¿se cierra al final?  
+Si se consulta la versión completa del programa, se podrá verificar que el archivo no se está cerrando.
+
+
+
