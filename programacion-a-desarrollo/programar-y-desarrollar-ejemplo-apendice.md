@@ -101,9 +101,10 @@ Esta separación también permite generar tests automáticos para la función `s
 
 
 ## Explicitar la condición
-Un efecto notable de este paso es que al separar la definición de la condición que debe cumplir un servicio, se hace más fácil razonar sobre la misma. 
-La condición que se está computando, es que el puerto en cuestión esté incluido en _alguna_ de las especificaciones de puertos del servicio.  
-A partir de visualizarlo de esta forma, surge la conveniencia de usar la función `any`, que indica si algún elemento de una lista cumple una condición. Funciones de este estilo están presentes en Python y JavaScript entre otros lenguajes.
+Un efecto notable de este paso es que al separar, en la función `serviceIncludesHostPort`, la definición de la condición que debe cumplir un servicio, se hace más fácil razonar acerca de _cuál es_ esta condición: que el puerto en cuestión esté incluido en _alguna_ de las especificaciones de puertos del servicio.  
+Esta es la condición que nos interesa, el código que escribimos es la forma de obtenerla.
+
+A partir de visualizar la condición en forma independiente del código generado, surge la conveniencia de usar la función `any`, que indica si algún elemento de una lista cumple una condición. Funciones de este estilo están presentes en Python y JavaScript entre otros lenguajes.
 
 Por comodidad, se obtiene en un paso previo la lista de host ports de cada especificación. Para las especificaciones que no indiquen host ports, este valor será `None` (el equivalente en Python para `null`).
 ``` python
