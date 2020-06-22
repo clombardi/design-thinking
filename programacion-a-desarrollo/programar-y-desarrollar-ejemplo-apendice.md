@@ -46,6 +46,7 @@ A partir de estas funciones, se construyó un algoritmo pensado como secuencia, 
 - se extrae la sección de host ports.
 - si hay tal sección (podría no haberla si se definen sólo container ports) se obtiene la lista o rango de números.
 - si el puerto que nos interesa está en esa lista o rango, entonces se incluye al servicio entre los resultados del programa.
+
 ``` python
 servicesForPort = []
 for (serviceName, serviceSpec) in parsedContents['services'].items():
@@ -100,8 +101,8 @@ Esta separación también permite generar tests automáticos para la función `s
 
 
 ## Explicitar la condición
-Un efecto notable de este paso es que al separar la definición de la condición que debe cumplir un servicio, se hace más fácil razonar sobre la misma.  
-La condición es que el puerto en cuestión esté incluido en _alguna_ de las especificaciones de puertos del servicio.  
+Un efecto notable de este paso es que al separar la definición de la condición que debe cumplir un servicio, se hace más fácil razonar sobre la misma. 
+La condición que se está computando, es que el puerto en cuestión esté incluido en _alguna_ de las especificaciones de puertos del servicio.  
 A partir de visualizarlo de esta forma, surge la conveniencia de usar la función `any`, que indica si algún elemento de una lista cumple una condición. Funciones de este estilo están presentes en Python y JavaScript entre otros lenguajes.
 
 Por comodidad, se obtiene en un paso previo la lista de host ports de cada especificación. Para las especificaciones que no indiquen host ports, este valor será `None` (el equivalente en Python para `null`).
@@ -114,6 +115,7 @@ def serviceIncludesHostPort(serviceSpec, portNumber):
     # recall that hostPorRange yields None for port specs that do not include a host port range
     # (i.e. that  define a container port range))
     hostPortRanges = [hostPortRange(portSpec) for portSpec in serviceSpec['ports']]
+
     # check if any (actual) port range includes the given portNumber 
     return any(
         portNumber in parsePortRange(portRange) 
@@ -121,7 +123,7 @@ def serviceIncludesHostPort(serviceSpec, portNumber):
         if portRange is not None
     )
 ```
-Ahora la condición está explícita en el código: el `portNumber` está en alguno de los `hostPortRanges`.
+Ahora _la condición está explícita en el código_: el `portNumber` está en alguno de los `hostPortRanges`.
 
 Tanto el paso anterior como este, están relacionado con lo que en programación se conoce como "intention revealing", o sea que el código exprese lo más claramente posible qué se está definiendo, sin que sea necesario perderse en detalles algorítmicos para entenderlo.
 
