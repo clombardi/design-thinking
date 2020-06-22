@@ -165,9 +165,9 @@ A partir de estos elementos, se pudo construir un programa que genera los result
 ### Algunos cuestionamientos posibles
 En una visión un poco más abarcativa, surgen varias preguntas respecto de este programa.
 
-Una se refiere a la _verificación de los datos de ingreso_. ¿Qué pasa si no se le pasan parámetros al programa, o se le pasan parámetros erróneos? Veamos
+Una se refiere a la _verificación de los datos de entrada_. ¿Qué pasa si no se le pasan parámetros al programa, o se le pasan parámetros erróneos? Veamos
 
-![mensajes inadecuados ante problemas de datos de ingreso](./images/checkPort-wrong-parameters-wrong-behavior.jpg)
+![mensajes inadecuados ante problemas de datos de entrada](./images/checkPort-wrong-parameters-wrong-behavior.jpg)
 
 Está claro que preferimos que los mensajes sean más explicativos, p.ej. `Must supply 2 parameters at least` o `The first argument must be a valid file name`.
 
@@ -181,4 +181,54 @@ Cerramos con una pregunta relacionada con el _uso de recursos_: al principio del
 Si se consulta la versión completa del programa, se podrá verificar que el archivo no se está cerrando.
 
 
+## Código completo del recorrido de archivo
+Consignamos a continuación el código completo de la parte del programa que analiza el archivo. Esto servirá para compararlo con el código de [la sección siguiente](./programar-y-desarrollar-ejemplo-dev.md) que realiza la misma tarea. A efectos de esta comparación, se excluye la apertura del archivo, que se supone fue realizada previamente.
 
+``` python
+servicesForPort = []
+servicesDefinitionJustDetected = False
+leyendoServices = False
+
+for rawLine in fileContents:
+    line = rawLine.strip()
+
+    if len(line) == 0 or line[0] == '#':
+        continue
+    leadingSpaces = getLeadingSpaces(rawLine)
+
+    if line == 'services:':
+        servicesDefinitionJustDetected = True
+        continue
+
+    if servicesDefinitionJustDetected:
+        serviceIndentation = leadingSpaces
+        servicesDefinitionJustDetected = False
+        leyendoServices = True
+
+    if not leyendoServices:
+        continue
+
+    if leadingSpaces == 0:
+        break
+
+    # empieza la def de un servicio
+    if leadingSpaces == serviceIndentation:
+        currentService = line[0:-1]
+        leyendoPorts = False
+        continue
+
+    if line == 'ports:':
+        leyendoPorts = True
+        continue
+
+    if not leyendoPorts:
+        continue
+
+    # estoy dentro de los ports, hay que mirar las lineas que empiezan con "-"
+    if line[0] == '-':
+        portSpec = line[3:-1]
+        # código descripto en la sección "Procesamiento de una definición de ports"
+
+    else:
+        leyendoPorts = False
+```

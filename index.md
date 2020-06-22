@@ -12,4 +12,8 @@
 
 [Programar y desarrollar](./programacion-a-desarrollo/programar-y-desarrollar.md)  
 
-[Programar y desarrollar - un ejemplo práctico](./programacion-a-desarrollo/programar-y-desarrollar-ejemplo-1.md)  
+[Programar y desarrollar - un ejemplo práctico en "versión programador"](./programacion-a-desarrollo/programar-y-desarrollar-ejemplo-prog.md)  
+
+[Programar y desarrollar - un ejemplo práctico en "versión desarrollador"](./programacion-a-desarrollo/programar-y-desarrollar-ejemplo-dev.md)  
+
+[Programar y desarrollar - un apéndice algorítmico](./programacion-a-desarrollo/programar-y-desarrollar-ejemplo-apendice.md)  

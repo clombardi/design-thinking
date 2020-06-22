@@ -1,0 +1,1 @@
+# Ejemplo de programa con _visión desarrollador_ - un apéndice algorítmico
