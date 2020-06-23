@@ -73,3 +73,34 @@ Además, permite ir descubriendo cuáles son las funciones o elementos que aport
 
 Se contrapone con el seguimiento de un plan preestablecido para llegar a un objetivo que se supone conocido de antemano, postergando la validación hasta luego de concluir el desarrollo. 
 
+
+## Principales metodologías y marcos de trabajo ágiles
+Para cerrar esta sección, presentamos un resumen de los principales exponentes de metodologías y marcos de trabajo ágiles.
+
+Queda claro por lo expuesto hasta aquí, que la obtención de los beneficios de adoptar un enfoque ágil no se lograrán si nos concentramos en el seguimiento de una u otra propuesta concreta. Estas propuestas deben ser aplicadas a partir de la adopción de los principios y actitudes ágiles, y de los conceptos principales de la gestión ágil. Las mencionamos como posibles guías para simplificar este camino, utilizadas en la medida y de la forma en que convenga en cada proyecto en particular.
+
+En todo caso, es muy probable que encontremos elementos de varias de estas propuestas en los proyectos de desarrollo en los que nos toque colaborar. También en este sentido, es importante conocer sus ideas principales.
+
+### Scrum
+**Referencia**: http://www.scrumalliance.org/
+
+Se utiliza para la gestión y desarrollo de software y se basa en un proceso iterativo e incremental. Scrum es sumamente popular y está muy difundido.
+
+### Extreme Programming (XP)
+**Referencia**: http://c2.com/cgi/wiki?ExtremeProgrammingRoadmap
+
+Se basa en la organización de equipos de desarrollo que siguen un ritmo sostenible de trabajo, con desarrolladores trabajando de a pares que realmente disfrutan de su trabajo y con un cliente disponible a quien se entrega periódicamente software. Es quizás un tanto antiguo pero sumamente relevante dado que contiene un buen enfoque técnico, y puede considerarse como superior a SCRUM en algunos sentidos.
+
+### Lean Software Development 
+**Referencia**: http://www.poppendieck.com/
+
+Es una translación de los principios y prácticas de la industria manufacturera Lean hacia el dominio del desarrollo de software. Adaptado del Sistema de producción de Toyota, adopta los siguientes principios: eliminar los desperdicios, ampliar el aprendizaje, decidir lo más tarde posible, reaccionar tan rápido como sea posible, potenciar el equipo, crear la integridad y ver el todo el cómo un conjunto.
+
+### Kanban
+**Referencia**: https://www.atlassian.com/es/agile/kanban
+
+Tiene como objetivo la entrega eficiente de valor al cliente. Promueve el concepto de entregar valor continuamente de manera predecible. El trabajo y los procesos se visualizan para identificar actividades y problemas. Se limita el trabajo en curso para motivar calidad, foco y finalización del trabajo.
+
+
+## Apéndice: un poco de historia
+Para no hacer demasiado largo este material, realizamos un pequeño pantallazo histórico de la concepción ágil en [una página separada](./historia-agil.md).
