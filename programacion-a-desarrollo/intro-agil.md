@@ -29,7 +29,7 @@ Lo que se dio en llamar "movimiento ágil" surge como respuesta ante este estado
 Los problemas recién descriptos, se reformulan en los siguientes tres ítems que configuran el punto de partida para pensar una forma distinta de encarar el desarrollo de software. 
 
 1. **Ya es casi obvio que los requerimientos generalmente cambian con el tiempo.**  
-Cuando pasa el tiempo, para nuestro producto o servicio pueden surgir cambios regulatorios, cambios en la organización, en el mercado, en las prioridades, etc. También suele ocurrir que a medida que se desarrolla el alcance, se va entendiendo mejor la problemática y la necesidad de la organización. Adicionalmente es común que los interesados definan mejoras que no habían identificadas de antemano. Este punto fue mencionado al hablar sobre [ciclo de vida](programacion-a-desarrollo/ciclo-de-vida.md) en una sección anterior. 
+Cuando pasa el tiempo, para nuestro producto o servicio pueden surgir cambios regulatorios, cambios en la organización, en el mercado, en las prioridades, etc. También suele ocurrir que a medida que se desarrolla el alcance, se va entendiendo mejor la problemática y la necesidad de la organización. Adicionalmente es común que los interesados definan mejoras que no habían identificadas de antemano. Este punto fue mencionado al hablar sobre [ciclo de vida](./ciclo-de-vida.md) en una sección anterior. 
 
 1. **El objetivo del trabajo debe ser crear valor más que el cumplimiento de un plan o metas inicialmente definidas.**  
 En algunos casos puede ser más importante adaptarnos a un cambio reciente o que se agreguen algunas funcionalidades importantes que se propusieron luego de una premisa inicial, en lugar de terminar en fecha y con el presupuesto acordado.
@@ -67,7 +67,7 @@ En general la forma de lograr esto se basa en emplear un aprendizaje y mejoramie
 _Iterativo_ ya que se sigue una secuencia de etapas cortas que terminan con la entrega de una porción del producto terminada o un resultado parcial alcanzado.  
 _Incremental_, porque a cambio de entregar “todo o nada” se realizan entregas que construyen sobre lo ya construido con anterioridad (incrementales) con el fin también de reducir el riesgo y la incertidumbre a partir de la propia forma de construcción.
 
-Esta forma de trabajar está estrechamente vinculada a la idea de _ciclo de vida_ descripta en una [sección anterior](programacion-a-desarrollo/ciclo-de-vida.md).  
+Esta forma de trabajar está estrechamente vinculada a la idea de _ciclo de vida_ descripta en una [sección anterior](./ciclo-de-vida.md).  
 Destacamos que facilita la validación, detección de problemas y ajustes en forma temprana, al definir pequeñas unidades de funcionalidad y entregarlas en plazos breves.  
 Además, permite ir descubriendo cuáles son las funciones o elementos que aportan más valor al cliente a medida que se entregan las porciones del producto en cada iteración; e incorporar cambios provenientes del feedback del cliente sobre el uso real del producto o servicio.  
 
