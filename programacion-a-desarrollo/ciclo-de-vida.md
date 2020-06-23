@@ -1,5 +1,5 @@
 # Ciclo de vida en desarrollo de software
-Cuenta la leyenda, que en una época hoy lejana, la construcción de productos de software se organizaba de la siguiente manera: primero se desarrollaba, después se realizaba un proceso llamado "pasaje a operaciones", hecho lo cual se desplegaba en entornos productivos, entrando así en "fase de mantenimiento".
+Cuenta la leyenda, que en una época hoy lejana, la construcción de productos de software se organizaba de la siguiente manera: primero se definía, a partir de esta definición se "programaba". Cuando el producto estaba "listo", se realizaba un proceso llamado "pasaje a operaciones", hecho lo cual se desplegaba en entornos productivos, entrando así en "fase de mantenimiento".
 
 Actualmente, en aproximadamente un 99.95% de los casos, no se procede de esta forma.  
 Hay dos fenómenos que se combinan para forzar un cambio de perspectiva.
@@ -19,7 +19,7 @@ Esta idea está ligada a las llamadas _metodologías ágiles_, sobre las que pro
 
 ## Desarrollo continuo
 El otro fenómeno a considerar es que pierde terreno la concepción del software como productos cerrados, favoreciéndose la visión de _desarrollo continuo_. 
-Encontramos varias motivaciones para ello, entre ellas.
+Entre las motivaciones que llevan a esta visión, mencionamos las siguientes.
 - Los cambios en los negocios, o más en general en los dominios de aplicación, hacen surgir nuevos requerimientos, y también cambios en definiciones de negocio tomadas anteriormente; todo lo cual impacta en los productos a construir.
 - La necesidad de no perder atractivo provoca que el diseño gráfico y las formas de interacción se renueven regularmente.
 - Surgen nuevos dispositivos en los cuales el producto debe poder utilizarse, lo que conlleva la necesidad de adaptaciones y/o agregados.
@@ -27,7 +27,7 @@ Encontramos varias motivaciones para ello, entre ellas.
 - Particularmente en aplicaciones administrativas, surgen cambios en el entorno (por ejemplo, legales o impositivas) que generan la necesidad de agregados o modificaciones.
 - Finalmente, los errores ocurren, y deben ser corregidos.
 
-Podemos decir que la idea de desarrollo continuo es un reflejo del reconocimiento de la existencia de fenómenos que impactan en las organizaciones que requieren  productos de software, y consecuentemente, en la forma que deben tener dichos productos.
+Podemos decir que la idea de desarrollo continuo es un reflejo de reconocer de que hay fenómenos que impactan en las organizaciones que requieren  productos de software, y por lo tanto, modifican la forma que deben tener dichos productos.
 
 
 
