@@ -149,11 +149,12 @@ Este es el ámbito de la _coordinación de proyectos_, con sus roles de _líder 
 
 
 Este diagrama intenta "ubicar" todas estas tareas en una vista integral del desarrollo.
-![Tareas del desarrollo](./images/desarrollo_de_software_tareas.jpg)
 
 (obviamente que este dibujo horrible debe ser convertido en algo lindo.
 Si se pudiera, me encantaría que fuera animado, mostrando cada tarea en el orden en que se listan acá arriba.
-En particular, me gustaría que la "Gestión del código fuente" se fuera agrandando a medida que aparecen otros elementos con los que está relacionada)
+En particular, me gustaría que la "Gestión del código fuente" se fuera agrandando a medida que aparecen otros elementos con los que está relacionada)  
+![Tareas del desarrollo](./images/desarrollo_de_software_tareas.jpg)
+
 
 
 ## Un último comentario - rol del repositorio de código
