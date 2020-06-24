@@ -1,7 +1,7 @@
 # Desarrollo de software - ¿de qué se trata?
 Tal vez, la versión popular sobre el desarrollo es ... como lo muestra (p.ej.) la serie "Silicon Valley": un grupo (o un montón, si la aplicación es grande) de nerds sentados en sus computadoras codeando sin parar, hablando de tecnologías, comiendo en el escritorio, y explotando de alegría cuando resuelven un problema aplicando una genialidad. De todo ese código que escribe este grupo de nerds, mágicamente surge una aplicación que se puede instalar.
 
-(esta intro la hice medio a propósito para meter alguna imagen)
+(esta intro la hice medio a propósito para meter alguna imagen)  
 ![esta intro la hice medio a propósito para meter alguna imagen](../images/logoelevate.jpg) 
 
 Esta imagen es muy pobre ... en varios sentidos.  
@@ -25,7 +25,7 @@ Antes de arrancar, aclaremos que todas estas tareas arrancan _antes_ de que haya
 (indico en cada sección imágenes que se pueden agregar)  
 ![esta intro la hice medio a propósito para meter alguna imagen](../images/logoelevate.jpg) 
 
-(me quedó muy largo, pero no sé cómo partirlo. Tal vez podrían aparecer sólo los títulos, y que para desplegar un texto se cliquee. Pero es un tiro, la verdad que no sé qué hacer.){: style="color: Crimson"}:
+<div>(me quedó muy largo, pero no sé cómo partirlo. Tal vez podrían aparecer sólo los títulos, y que para desplegar un texto se cliquee. Pero es un tiro, la verdad que no sé qué hacer.)</div>{: style="color: Crimson"}
 
 
 ### Gestión del código fuente
