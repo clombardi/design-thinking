@@ -3,7 +3,12 @@
 En esta sección vamos a observar las características de la visión de desarrollador, a partir de la resolución de un requerimiento bien práctico.
 
 En el contexto de un proyecto en el cual se utiliza intensamente Docker, surge la necesidad de poder saber rápidamente cuál/es de los servicios incluidos en un archivo YAML dedefinición `docker-compose`, exponen como _host port_ el puerto con un número determinado.  
-(tal vez, pequeña intro, link a página nuestra, o link a página externa, con una mínima intro a los archivos docker-compose)  
+<div>(tal vez, pequeña intro, link a página nuestra, o link a página externa, con una mínima intro a los archivos docker-compose)</div> {: style="color: Crimson"}   
+
+(tal vez, imagen sobre "Docker compose")  
+![tal vez, imagen sobre "Docker compose"](../images/logoelevate.jpg) 
+
+
 Se decide construir un programa que se ejecutará mediante línea de comandos, que se utilizaría del modo que se ve en los siguientes ejemplos.  
 
 ![uso del programa para chequear host ports](./images/checkPort-output-examples.jpg)
@@ -14,6 +19,10 @@ En los ejemplos, el segundo caso marca un posible conflicto entre los dos servic
 En lo que sigue, vamos a mostrar dos programas que resuelven este requerimiento. El primero está pensado con lo que en la [sección anterior](./programar-y-desarrollar.md) llamamos _visión de programador_, acotada a la respuesta que se espera del programa. En el segundo adoptamos una _visión de desarrollador_, que incorpora varios elementos adicionales. Estos elementos van a ir apareciendo en la descripción.
 
 Elegimos **Python** como lenguaje de programación, porque reúne varias condiciones interesantes.  
+
+(imagen sobre "Python")  
+![imagen sobre "Python"](../images/logoelevate.jpg) 
+
 Por un lado, es un lenguaje de _propósito general_, o sea, no está acotado/orientado a un tipo de tareas o programas específico. Es popular en diversos ámbitos entre ellos: desarrollo de aplicaciones Web, en particular backend pero actualmente también para frontend; programas con uso intensivo de técnicas de ciencia de datos; programas de uso en el ámbito científico.  
 Al mismo tiempo, su _sintaxis_ es sencilla, es un lenguaje poco burocrático.  
 Finalmente, al estar disponible para una multitud de plataformas, y ser muy sencilla la ejecución de programas por línea de comandos, es muy práctico para el desarrollo de scripts.  
@@ -23,7 +32,8 @@ Este estudio sobre cómo concebir, organizar e implementar un programa, forma un
 Por otro lado, en esta sección nos concentraremos en los aspectos que marcan la presencia de una visión más amplia para la codificación. 
 No se realizará un análisis detallado de cada programa ni se explicarán los elementos del lenguaje utilizados, esperando que el contenido de esta sección pueda transmitirse adecuadamente sin necesidad de entrar en demasiados detalles técnicos. 
 Quienes estén interesados en los mismos, pueden consultarlos en la _enorme_ cantidad de material sobre Python disponible online.  
-(acá mandar un par de links)  
+
+<div>(acá mandar un par de links)</div> {: style="color: Crimson"}
 
 Asimismo, se pueden consultar los archivos completos en (link ¿a un repo Git?)
 

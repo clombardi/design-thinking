@@ -21,8 +21,6 @@ Al armar un programa, tiene claro lo que le piden, o sea cuál es el _resultado 
 En su visión, el producto de su trabajo es el código que conforma un programa que genera los resultados esperados.
 
 
-(las siguientes dos secciones están prolijamente separadas en parágrafos, para que tal vez alguien las pueda leer, pero también para simplificar la inclusión de imágenes adecuadas a cada subtítulo)
-
 ## Desarrollador: en un proyecto y en un entorno
 Por su parte, un desarrollador no pierde de vista que su trabajo produciendo código está _en el contexto de un proyecto de desarrollo_, que involucra todos los aspectos que venimos debatiendo.
 
@@ -30,6 +28,10 @@ Por su parte, un desarrollador no pierde de vista que su trabajo produciendo có
 
 
 ### Trabajo dentro de un equipo
+(imagen de "trabajo en equipo")  
+![imagen de "trabajo en equipo"](../images/logoelevate.jpg) 
+
+
 Un desarrollador tiene en cuenta que trabaja en conjunto con colegas.  
 En principio, está dispuesto a intercambiar conocimiento, realizar y responder consultas. Por suerte nuestro ámbito es, en general, muy abierto a compartir información; por lo tanto, este no es un rasgo privativo de la visión de desarrollador.
 
@@ -38,6 +40,9 @@ Puede ser que dentro del proyecto se requiera de un código de características 
 
 
 ### Productos que permanecen y evolucionan
+(imagen de "producto que evoluciona", si tiene sentido. Acá confío en quien se encargue de la diagramación)  
+![imagen de "producto que evoluciona", si tiene sentido. Acá confío en quien se encargue de la diagramación](../images/logoelevate.jpg) 
+
 Una desarrolladora es consciente de que, probablemente, el código que produce se va a utilizar durante largo tiempo.  
 También percibe que es inevitable que el código evolucione, o sea, que ella misma u otras personas, generarán cambios, agregados y mejoras.
 Asimismo, cambian las condiciones en que se escribió el código: tecnologías, cuestiones legales, etc.. 
@@ -55,6 +60,9 @@ Un desarrollador que tenga esto presente, verificará que los componentes que ge
 
 
 ### Parte de un proyecto mucho más amplio
+(imagen de "proyecto amplio", si tiene sentido. Acá confío en quien se encargue de la diagramación)  
+![imagen de "proyecto amplio", si tiene sentido. Acá confío en quien se encargue de la diagramación](../images/logoelevate.jpg) 
+
 Otro aspecto importante en esta visión es la comprensión de que el código que se genera forma parte, y va a estar en relación con, otras partes y componentes de un proyecto.
 
 Esto tiene varias implicancias.  
@@ -82,6 +90,9 @@ Es interesante aclarar que esta búsqueda debe darse, tanto para componentes de 
 
 
 ### Desarrollar componentes y (eco)sistemas, más que productos cerrados
+(imagen de "ecosistema de componentes de software", espero que exista alguna imagen que represente este concepto)  
+![imagen de "ecosistema de componentes de software", espero que exista alguna imagen que represente este concepto](../images/logoelevate.jpg) 
+
 El complemento de lo anterior es tomar una actitud más abierta respecto del código _que se produce_. En lugar de pensarlo exclusivamente como un programa que se limita a producir un resultado determinado, concebirlo en la forma de uno o varios componentes, de los cuales algunos pueden ser de utilidad para otras personas.  
 Dicho de otra forma, en lugar de resolver un problema puntual, pensar en contribuir a un ecosistema de componentes que evoluciona constantemente.
 
@@ -93,6 +104,9 @@ Existen convenciones de distinta naturaleza: formato del código (tabs o espacio
 
 
 ### Mantener legibilidad
+(tal vez, alguna imagen que muestre a alguien que no entiende qué está leyendo, idealmente código)  
+![tal vez, alguna imagen que muestre a alguien que no entiende qué está leyendo, idealmente código](../images/logoelevate.jpg) 
+
 Surge de tener en cuenta que el código se escribe para ser leido por otras personas (que puedo ser yo misma dentro de unos meses), tanto como (o incluso más que) por un compilador/intérprete/etc. que lo lleve a su forma entregable.
 
 Resulta conveniente mantener un estilo que facilite la legibilidad del código que se escribe. El respeto a las convenciones ayuda para ello. Elegir buenos nombres para las variables y funciones es otro aspecto de _gran_ relevancia.  
@@ -104,6 +118,9 @@ Otra actitud que ayuda a la legibilidad, y también a la facilidad de mantener, 
 
 
 ### Acompañar el código con tests automáticos
+(imagen sobre "tests automáticos")  
+![imagen sobre "tests automáticos"](../images/logoelevate.jpg) 
+
 Dejamos para el final una práctica con un impacto enorme: la de acompañar cada pieza de software que se construye con una batería de _tests automáticos_ que verifican que se brindan los resultados esperados.
 
 Tal como indicamos con la búsqueda activa de elementos reutilizables, la ventaja más evidente, en este caso garantizar que el software que producimos funcione correctamente en distintos escenarios, está lejos de ser la única.  

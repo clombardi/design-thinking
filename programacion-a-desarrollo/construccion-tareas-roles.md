@@ -29,7 +29,8 @@ Antes de arrancar, aclaremos que todas estas tareas arrancan _antes_ de que haya
 
 
 ### Gestión del código fuente
-(imagen: logo de git)
+(imagen: logo de git)  
+![imagen: logo de git](../images/logoelevate.jpg) 
 
 El código que escriben les devs (por razones cada vez más de tradición, llamado _código fuente_), es un recurso ultra-valioso, que debe ser resguardado.  
 En este punto entran en escena los **repositorios de código**; donde `git` es hoy el formato abrumadoramente más popular.  
@@ -40,14 +41,16 @@ El contenido de estos repositorios debe alojarse en algún lado, esto implica la
 
 
 ### Revisión de código
-(imagen: pair programming)
+(imagen: pair programming)  
+![imagen: pair programming](../images/logoelevate.jpg) 
 
 Cada vez más, se suele incluir una etapa de _revisión_ del código que se produce, antes de integrarlo en versiones desplegables. Este paso también está previsto en el `git` mediante el concepto de _pull request_.  
 Esta tarea la realizan devs con mayor seniority y una visión más amplia del desarrollo.
 
 
 ### Determinación de componentes y mecanismos de comunicación
-(imagen: diagrama de componentes de arquitectura)
+(imagen: diagrama de componentes de arquitectura)  
+![imagen: diagrama de componentes de arquitectura](../images/logoelevate.jpg) 
 
 Si una aplicación se concibe (como pasa cada vez más habitualmente) como un enjambre de componentes, un aspecto importante del desarrollo es definir con qué criterios se van a definir los componentes, y cómo se van a comunicar entre sí, o sea, cómo va a ser la _interface_ entre componentes.
 
@@ -57,7 +60,8 @@ Esta problemática entra en el dominio de lo que se conoce como **arquitectura d
 
 
 ### Documentación de componentes
-(imagen: Swagger)
+(imagen: Swagger)  
+![imagen: Swagger](../images/logoelevate.jpg) 
 
 En aplicaciones organizadas en componentes que deben comunicarse entre sí para resolver funcionalidades complejas, y donde puede haber (como es frecuente en desarrollos de gran envergadura) varios equipos independientes, la _documentación_ de cada componente, indicando qué funcionalidad implementa y detallando su interface, es vital para poder llevar adelante el desarrollo.
 
@@ -70,7 +74,8 @@ Por lo general, de la documentación se encargan los mismos desarrolladores. Par
 
 
 ### Test
-(imagen: vista de ejecución de test en JUnit, Karate o similar)
+(imagen: vista de ejecución de test en JUnit, Karate o similar)  
+![imagen: vista de ejecución de test en JUnit, Karate o similar](../images/logoelevate.jpg) 
 
 A medida que las aplicaciones se hacen más complejas, con requerimientos más sofisticados, y menos tolerantes a fallos, se vuelven más relevantes las tareas de **test**.
 
@@ -85,7 +90,8 @@ En una unidad posterior de este curso, profundizaremos sobre distintos conceptos
 
 
 ### Gestión de errores
-(imagen: lista de issues o algún board de JIRA)
+(imagen: lista de issues o algún board de JIRA)  
+![imagen: lista de issues o algún board de JIRA](../images/logoelevate.jpg) 
 
 Las aplicaciones informáticas fallan, esto no es novedad. En aplicaciones más grandes, claro, aparecerán más errores. Los requerimientos sofisticados respecto de las interfaces, y el deseo de ubicuidad (distintos dispositivos, incluso distintos browsers) es una fuente adicional de defectos en los productos de software.
 
@@ -100,7 +106,8 @@ Finalmente, indiquemos que la reproducción de un error puede implicar el armado
 
 
 ### Diseño de interfaces y de interacción
-(imagen: comparación entre un "diseño soviético" y uno moderno)
+(imagen: comparación entre un "diseño soviético" y uno moderno)  
+![imagen: comparación entre un "diseño soviético" y uno moderno](../images/logoelevate.jpg) 
 
 Las aplicaciones entran por los ojos. Por lo tanto, el diseño de interfaces gráficas es un tema que está ganando en relevancia dentro del desarrollo.  
 Lo que se busca no es sólo que las aplicaciones resulten más agradables, sino también (y muchas veces, sobre todo) que resulten más claras, lo que redunda en 
@@ -129,7 +136,8 @@ Esto lleva a esquemas de organización del desarrollo en los cuales especificaci
 
 
 ### Generación de los productos a desplegar
-(imagen: alguna descripción gráfica de CI/CD)
+(imagen: alguna descripción gráfica de CI/CD)  
+![imagen: alguna descripción gráfica de CI/CD](../images/logoelevate.jpg) 
 
 Pasar del código de un componente a la versión del mismo que debe desplegarse en un ambiente, involucra varias cuestiones a resolver, entre ellas:
 - Determinar cuál de las múltiples versiones del código es la que debe desplegarse.
@@ -154,6 +162,7 @@ Este diagrama intenta "ubicar" todas estas tareas en una vista integral del desa
 Si se pudiera, me encantaría que fuera animado, mostrando cada tarea en el orden en que se listan acá arriba.
 En particular, me gustaría que la "Gestión del código fuente" se fuera agrandando a medida que aparecen otros elementos con los que está relacionada)  
 ![Tareas del desarrollo](./images/desarrollo_de_software_tareas.jpg)
+![imagen: alguna descripción gráfica de CI/CD](../images/logoelevate.jpg) 
 
 
 

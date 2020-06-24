@@ -40,7 +40,8 @@ En resumen, el concepto tradicional de desarrollo cerrado y en cascada, fue muta
 
 En esta visión, las diferentes tareas que componen un proyecto de desarrollo se llevan a cabo con un alto grado de paralelismo y de retroalimentación mutua, apuntando a una elevación continua tanto de la calidad de los productos, como de su adecuación a las necesidades reales del negocio.
 
-(acá va diagrama, creo que sí o sí)
+(acá va diagrama de "ciclo de vida", creo que sí o sí)  
+![acá va diagrama de "ciclo de vida", creo que sí o sí](../images/logoelevate.jpg) 
 
 Como ya mencionamos, al tiempo que brinda enormes ventajas respecto de los resultados del desarrollo, esta concepción genera mayores desafíos para varios de los roles que intervienen, en particular los equipos de operaciones / infraestructura.  
 Esta es una motivación adicional para incorporar el hábito de automatizar tareas en este ámbito.

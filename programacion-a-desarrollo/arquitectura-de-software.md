@@ -3,7 +3,8 @@
 Alrededor de la figura del "arquitecto" (o arquitecta, claro) de software, se fue formando una imagen un poquito hasta legendaria, en el gremio IT, y un poco también fuera del mismo.  
 Tal vez la escena del "arquitecto" en Matrix 2 haya ayudado al fortalecimiento de esta imagen en la cultura tech.
 
-(y acá va la imagen)
+(y acá va la imagen)  
+![y acá va la imagen](../images/logoelevate.jpg) 
 
 Alrededor del campo de la _arquitectura de software_ rondan varios conceptos, que vamos a ir tratando de describir y organizar en lo que sigue.
 
@@ -14,6 +15,8 @@ En todo proyecto de software deben tomarse ciertas decisiones sobre algunos tema
 Existen también algunas cuestiones largamente independientes del dominio (o sea, de qué se trata la aplicación, si es bancaria, de retail, de gestión de personal, control de producción, y miles de etcéteras), dos ejemplos típicos son autenticación/autorización y logging.
 
 (al párrafo que sigue le vendría bien una imagen que representara "decisión")  
+![al párrafo que sigue le vendría bien una imagen que representara "decisión"](../images/logoelevate.jpg) 
+
 A grandes rasgos, este es el dominio de la arquitectura de software.  
 Estos aspectos, y la necesidad de tomar decisiones y adoptar criterios (o no hacerlo, a riesgo de los dolores de cabeza que se arriesgan en tal caso), aparecen en cualquier proyecto, independientemente de su tamaño.  
 Es por esto que señalamos que **en todo proyecto hay arquitectura**. Lo que puede no haber son _arquitectos_, o sea personas que se dedican _específicamente_ a estas cuestiones.
@@ -27,6 +30,9 @@ Este fenómeno presenta varias aristas.
 
 ### Front y back 
 (acá podría ir una imagen de temática "front y back")  
+![acá podría ir una imagen de temática "front y back"](../images/logoelevate.jpg) 
+
+
 Una temática que se repite en muchos proyectos es la relación entre "front" y "back".  
 ¿Queremos tener componentes separados de frontend y backend? 
 En particular en las aplicaciones Web esta es, largamente, la opción más popular  (aunque siguen existiendo sitios, basados en p.ej. PHP, en los que el rol del frontend es débil).  
