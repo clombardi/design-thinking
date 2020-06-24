@@ -2,6 +2,7 @@
 Tal vez, la versión popular sobre el desarrollo es ... como lo muestra (p.ej.) la serie "Silicon Valley": un grupo (o un montón, si la aplicación es grande) de nerds sentados en sus computadoras codeando sin parar, hablando de tecnologías, comiendo en el escritorio, y explotando de alegría cuando resuelven un problema aplicando una genialidad. De todo ese código que escribe este grupo de nerds, mágicamente surge una aplicación que se puede instalar.
 
 (esta intro la hice medio a propósito para meter alguna imagen)
+![esta intro la hice medio a propósito para meter alguna imagen](../images/logoelevate.jpg) 
 
 Esta imagen es muy pobre ... en varios sentidos.  
 En este material, vamos a referirnos a uno: la visión reducida que se da del rango de _tareas necesarias_, y de perfiles/roles de las _personas que intervienen_, en el desarrollo de una aplicación (la imagen que se da de "les nerds" queda para otro material).
@@ -22,7 +23,10 @@ Haciendo un listado de otras tareas necesarias, observamos que dan lugar al surg
 Antes de arrancar, aclaremos que todas estas tareas arrancan _antes_ de que haya una versión operativa. A esto se le agregan las tareas relacionadas con la operación ... que seguramente les lectores de este material conocerán bien.
 
 (indico en cada sección imágenes que se pueden agregar)  
-(esto me quedó muy largo, pero no sé cómo partirlo. Tal vez podrían aparecer sólo los títulos, y que para desplegar un texto se cliquee. Pero es un tiro, la verdad que no sé qué hacer.)
+![esta intro la hice medio a propósito para meter alguna imagen](../images/logoelevate.jpg) 
+
+(me quedó muy largo, pero no sé cómo partirlo. Tal vez podrían aparecer sólo los títulos, y que para desplegar un texto se cliquee. Pero es un tiro, la verdad que no sé qué hacer.){: style="color: Crimson"}:
+
 
 ### Gestión del código fuente
 (imagen: logo de git)
