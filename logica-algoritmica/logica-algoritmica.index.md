@@ -1,6 +1,6 @@
 # Unidad 2 - Introducción a la lógica algorítmica
 
-[De qué se trata esta unidad](./logica-algoritmica-de-que-se-trata.md)  
+[De qué se trata esta unidad, y por qué nos interesan estos temas](./logica-algoritmica-de-que-se-trata.md)  
 
-[Un poco de contexto - automatización y scripts](./automatizacion-scripts.md)  
+[Algoritmo - un poco de filosofía](./algoritmo-filosofia.md)  
 
