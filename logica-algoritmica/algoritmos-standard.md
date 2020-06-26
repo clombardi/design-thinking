@@ -33,9 +33,14 @@ WHERE <condicion>
 
 Cuando nos toque resolver un problema que se puede traducir a un esquema standard de procesamiento, para abordarlo se puede proceder como sigue.
 1. antes que nada, _reconocer_ que podemos utilizar un esquema conocido
-1. _conocer_ (o aprender) las herramientas que nos da el lenguaje (o librerías agregadas) que nos ayuda a resolver el esquema detectado
+1. _conocer_ (o aprender) las herramientas que nos da el lenguaje (o librerías agregadas) que nos ayuda a resolver el esquema detectado.
 1. _aplicar_ las herramientas encontradas.
 
+Otro esquema muy popular es el llamado _map-reduce_, en el cual el resultado, en lugar de incluir un dato para cada elemento (como en el ejemplo, el nombre de cada servicio), consta de un único valor que es el resultado de consolidar los datos obtenidos; un ejemplo típico es un valor de sumatoria, p.ej. el tamaño total de los archivos en un directorio.
 
 ## También hay casos más específicos
-x
+Los esquemas comunes son de utilidad para resolver muchos problemas, pero _no todos_.
+Además, en algunos casos encontrar el modo de aplicar los esquemas más usuales demanda una cierta dosis de ingenio.  
+Obviamente, este tipo de casos que (por decirlo de alguna forma) "salen de la norma", requieren un grado mayor de utilización de razonamiento algorítmico por parte de quien quiera resolverlos.
+
+Para el desarrollo de esta unidad, elegimos un ejemplo que reviste cierta dificultad, con el objetivo de profundizar un poco más en la temática de aplicación de algoritmos en el procesamiento de datos.
