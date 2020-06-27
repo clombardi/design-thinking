@@ -28,7 +28,7 @@ Hay varios _rankings de popularidad_ de lenguajes, con fuentes de información y
 ![logo de Python o imagen que remita a Python](/images/logoelevate.jpg) 
 
 Entre los lenguajes de propósito general, algunos se adaptan bien al desarrollo de scripts. Entre ellos destacamos a _Python_, que reúne varias características que (al menos a nuestro entender) lo hacen adecuado para esta tarea. Entre ellas:
-- incluye una sintaxis sencilla y muy poco burocrática para definir un programa.
+- incluye una sintaxis sencilla y muy poco burocrática para definir programas.
 - es muy sencillo ejecutar un programa Python desde línea de comandos.
 - puede instalarse en cualquier entorno operativo, y es trivial hacerlo.
 
