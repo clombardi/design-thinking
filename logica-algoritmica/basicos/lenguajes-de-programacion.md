@@ -23,7 +23,6 @@ Hay varios _rankings de popularidad_ de lenguajes, con fuentes de información y
 
 
 ## Lenguajes a utilizar en esta unidad
-
 (logo de Python o imagen que remita a Python)  
 ![logo de Python o imagen que remita a Python](/images/logoelevate.jpg) 
 
@@ -42,3 +41,17 @@ También trabajaremos con lenguajes de scripting, para mostrar que muchos concep
 En particular, vamos a utilizar _PowerShell_ para realizar un desarrollo completo del desarrollo y evolución de un programa que resuelva el [problema planteado](../desafio-enunciado.md). 
 También vamos a mostrar algunos ejemplos en _bash_.
 
+
+## Qué versiones usar de cada lenguaje
+Les recomendamos que usen estas versiones
+- Python: 3.4.1 en adelante. OJO es muy importante que sea un "Python 3", hay diferencias importantes entre Python 2.x y Python 3.x, y **no** es retrocompatible.
+- PowerShell: 5.0 en adelante.
+- bash: cualquiera de 4.1 en adelante debería servir.
+
+En Python, recomendamos usar la _consola interactiva_, que se accede tipeando simplemente `python`.  
+![consola interactiva de Python](./images/python-repl.jpg) 
+
+
+## Qué sigue
+En las siguientes páginas, vamos a repasar algunos conceptos básicos que están presentes en prácticamente todo lenguaje de programación.  
+Esta reseña tiene un _enfoque puramente práctico_, no pretende dar definiciones ni entrar en debates de carácter académico, sino simplemente acercar algunos elementos que, esperamos, ayuden a hacer más comprensible el material posterior, y a tener un primer acercamiento con elementos de programación a quienes estén más lejanos a esta disciplina.

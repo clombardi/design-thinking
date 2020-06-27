@@ -12,3 +12,7 @@
 
 ## Conceptos de base
 [Lenguajes de programación](./basicos/lenguajes-de-programacion.md)  
+
+[Variables](./basicos/variables.md)  
+
+[Arrays/listas/secuencias](./basicos/arrays-listas.md)  
