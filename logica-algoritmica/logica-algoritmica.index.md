@@ -16,3 +16,5 @@
 [Variables](./basicos/variables.md)  
 
 [Arrays/listas/secuencias](./basicos/arrays-listas.md)  
+
+[Funciones](./basicos/funciones.md)  
