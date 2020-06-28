@@ -21,4 +21,8 @@
 
 [Alternativa](./basicos/alternativa.md)  
 
-[Repetición](./basicos/repeticion.md)  
+[Repetición, recorridos, y algo de integración](./basicos/repeticion.md)  
+
+[Repetición - esquemas menos usados](./basicos/repeticion-2.md)  
+
+[¿Cuánto importa el lenguaje?](./basicos/relevancia-del-lenguaje.md)  

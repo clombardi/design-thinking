@@ -24,7 +24,7 @@ Hay varios _rankings de popularidad_ de lenguajes, con fuentes de información y
 
 ## Lenguajes a utilizar en esta unidad
 (logo de Python o imagen que remita a Python)  
-![logo de Python o imagen que remita a Python](/images/logoelevate.jpg) 
+![logo de Python o imagen que remita a Python](../../images/logoelevate.jpg) 
 
 Entre los lenguajes de propósito general, algunos se adaptan bien al desarrollo de scripts. Entre ellos destacamos a _Python_, que reúne varias características que (al menos a nuestro entender) lo hacen adecuado para esta tarea. Entre ellas:
 - incluye una sintaxis sencilla y muy poco burocrática para definir programas.
@@ -35,7 +35,7 @@ Como se puede apreciar en los rankings mencionados más arriba, Python es actual
 Por estas razones, elegimos Python como lenguaje de propósito general para esta unidad. 
 
 (logos de PowerShell y bash, o imagen/imágenes que remitan a estos lenguajes)  
-![logos de PowerShell y bash, o imagen/imágenes que remitan a estos lenguajes](/images/logoelevate.jpg) 
+![logos de PowerShell y bash, o imagen/imágenes que remitan a estos lenguajes](../../images/logoelevate.jpg) 
 
 También trabajaremos con lenguajes de scripting, para mostrar que muchos conceptos básicos de programación y algoritmia se pueden aplicar en distintos lenguajes, y a la vez apreciar las diferencias entre distintos tipos de lenguaje.  
 En particular, vamos a utilizar _PowerShell_ para realizar un desarrollo completo del desarrollo y evolución de un programa que resuelva el [problema planteado](../desafio-enunciado.md). 

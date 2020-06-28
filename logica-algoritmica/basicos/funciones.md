@@ -203,6 +203,6 @@ Por lo tanto, el indentado y la definición en una línea separada son _obligato
 
 
 ## Más sobre funciones
-Está claro que este ejemplo "matemático" tiene como _único_ objetivo introducir el concepto de función. Más adelante, a modo de cierre de esta reseña sobre temas básicos, veremos un ejemplo (que esperamos resulte) algo más interesante. 
+Está claro que este ejemplo "matemático" tiene como _único_ objetivo introducir el concepto de función. Más adelante, veremos un ejemplo (que esperamos resulte) algo más interesante al realizar una pequeña integración, dentro del [estudio de repetición](./repeticion.md). 
 También utilizaremos funciones al trabajar con el [problema que planteamos para su resolución](../desafio-enunciado).
 
