@@ -20,3 +20,5 @@
 [Funciones](./basicos/funciones.md)  
 
 [Alternativa](./basicos/alternativa.md)  
+
+[Repetición](./basicos/repeticion.md)  

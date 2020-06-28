@@ -110,3 +110,43 @@ $ echo ${numeritos[a-1]}
 $ echo ${numeritos[-1]}
 21
 ```
+
+## Modificar una lista
+Hasta ahora hemos _accedido_ a los elementos de una lista. Pero también podemos _modificarla_. Van algunos ejemplos en Python.
+``` python
+>>> numeritos = [32, 5, 48, 21]
+>>> numeritos[2] = 107
+>>> numeritos.append(12)
+>>> len(numeritos)
+5
+>>> numeritos
+[32, 5, 107, 21, 12]
+```
+Realizamos dos operaciones: primero _modificamos_ un elemento, el tercero, asignando como nuevo valor 107; y luego _agregamos_ un elemento, en este caso el número 12.
+
+Así es en PowerShell.
+``` PowerShell
+> $numeritos = @(32,5,48,21)
+> $numeritos[2] = 107
+> $numeritos = $numeritos + 12
+> $numeritos.Length
+5
+> $numeritos
+32
+5
+107
+21
+12
+```
+
+Así es en Bash.
+``` bash
+$ numeritos=(32 5 48 21)
+$ numeritos[2]=107
+$ numeritos+=( 12 )
+$ echo ${#numeritos[@]}
+5
+$ echo ${numeritos[*]}
+32 5 107 21 12
+```
+Obsérvese la sintaxis para obtener la longitud de una lista, y para mostrar la lista completa.

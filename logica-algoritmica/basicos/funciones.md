@@ -167,6 +167,41 @@ Cerramos haciendo una aclaración que estimamos importante sobre Bash.
 En el ejemplo, esto se nota respecto de la función `do_triple`. El `$1` mencionado dentro de la función es el valor enviado en la invocación, que es _el tercer_ parámetro por línea de comando en la invocación `do_triple $3`, y la suma calculada previamente en `do_triple $the_sum`.  
 
 
+## Organización sintáctica: indentación vs. llaves
+Volvamos a la definición de una función en los tres lenguajes.
+
+Python:
+``` python
+def do_sum(n1, n2, n3):
+    return n1 + n2 + n3
+```
+
+PowerShell:
+``` PowerShell
+function do_sum {
+    param($n1, $n2, $n3)
+    return $n1 + $n2 + $n3
+}
+```
+
+Bash:
+``` bash
+do_sum () {
+    return $(($1 + $2 + $3))
+}
+```
+
+Entre las varias diferencias, queremos destacar un aspecto en el que Python es distinto a los otros dos (y a la gran mayoría de los lenguajes): cómo es la _organización sintáctica_ del código. En este caso, se refleja en cómo se indica el código que forma parte de una función.  
+En PowerShell y Bash, esto se indica mediante llaves. Las llaves son, en general, los delimitadores de una _unidad de código_, en este caso de una función. El hecho de indentar el código y ponerlo en una línea aparte es una convención, no está forzado por el lenguaje. Esto es, la función en PowerShell podría escribirse así
+``` PowerShell
+function do_sum { param($n1, $n2, $n3) return $n1 + $n2 + $n3 }
+```
+Aquí **no estamos recomendando** esta forma de escribir una función, sólo indicamos que el lenguaje no obliga a la indentación.
+
+En Python, la situación es distinta. Lo que marca la delimitación de una unidad de código es, precisamente, _el indentado_; y no se incluyen llaves. Sí se indica el comienzo de una unidad de código, colocando un símbolo de dos-puntos `:` al final de la linea previa; en este caso, la que indica el nombre de la función.  
+Por lo tanto, el indentado y la definición en una línea separada son _obligatorios_ en Python.
+
+
 ## Más sobre funciones
 Está claro que este ejemplo "matemático" tiene como _único_ objetivo introducir el concepto de función. Más adelante, a modo de cierre de esta reseña sobre temas básicos, veremos un ejemplo (que esperamos resulte) algo más interesante. 
 También utilizaremos funciones al trabajar con el [problema que planteamos para su resolución](../desafio-enunciado).

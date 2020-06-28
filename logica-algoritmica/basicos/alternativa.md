@@ -76,8 +76,9 @@ if ($fileSize -gt $oneMb) {
 }
 ```
 
-La sintaxis es un poco distinta: hay que poner las llaves en lugar del caracter dos-puntos `:` que se usa en Python. Esta diferencia, en rigor, ya apareció en la [definición de funciones](./funciones.md), y también se translada a otras construcciones de cada lenguaje que veremos más adelante.  
-Específico de la alternativa, en lugar de `elif` es `elseif`.  
+La sintaxis es un poco distinta: hay que poner las llaves en lugar del caracter dos-puntos `:` que se usa en Python, para delimitar el código cuya ejecución está sujeta a la condición.  
+Esta diferencia sobre cómo se delimita una unidad de código, en rigor, ya apareció en la [definición de funciones](./funciones.md), y también se translada a otras construcciones de cada lenguaje que veremos más adelante.  
+Ya más específico de la alternativa, vemos que en lugar de `elif` es `elseif`.  
 
 Vamos con Bash
 ``` bash
