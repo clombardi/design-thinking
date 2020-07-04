@@ -146,7 +146,7 @@ Finalmente, en bash
 $ muchos_numeritos=(32 5 48 21 94 4 104 72)
 $ echo ${muchos_numeritos[*]:2:3}                   # del tercero al quinto
 48 21 94
-$ echo {muchos_numeritos[*]:1}                      # del segundo en adelante
+$ echo ${muchos_numeritos[*]:1}                      # del segundo en adelante
 5 48 21 94 4 104 72
 $ echo ${muchos_numeritos[*]: -3}                   # los últimos tres
 4 104 72

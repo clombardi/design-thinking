@@ -34,3 +34,5 @@
 [De la estrategia al algoritmo](./resolvamos/algoritmo.md)
 
 [De algoritmo a programa](./resolvamos/primer-programa.md)
+
+[Primeras ideas sobre organización de un programa](./resolvamos/modularidad-primeras-ideas.md)
