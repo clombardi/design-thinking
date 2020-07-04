@@ -40,6 +40,6 @@ Cuando tengamos que resolver una tarea algorítmica, hay tres elementos que muy 
 1. El _resultado_ que queremos obtener, si va a ser un booleano, un número, o qué.
 1. La _estrategia_, difícil pensar en un algoritmo o programa si no sabemos qué queremos hacer.
 
-En esta página definimos las tres cosas para el problema que se nos planteó. El próximo paso es definir un algoritmo.
+En esta página definimos las tres cosas para el problema que se nos planteó. El próximo paso es definir un [algoritmo](./algoritmo.md).
 
 

@@ -111,6 +111,55 @@ $ echo ${numeritos[-1]}
 21
 ```
 
+
+## Acceder a secciones - slice
+Otra operación usual sobre listas es acceder a una _sección_, p.ej. del segundo elemento en adelante, entre el tercero y el quinto, etc.. En el argot técnico, se conocen como _slice_ a estas secciones, y también a la operación que permite obtenerlas.  
+Varios lenguajes modernos, entre ellos los tres que estamos trabajando en esta unidad, incluyen una sintaxis especial para el _slicing_. Veámoslo con ejemplos sobre una lista más grande.
+
+Empecemos por Python:
+``` python
+>>> muchos_numeritos = [32, 5, 48, 21, 94, 4, 104, 72]
+>>> muchos_numeritos[2:5]              # del tercero al quinto
+[48, 21, 94]
+>>> muchos_numeritos[1:]               # del segundo en adelante
+[5, 48, 21, 94, 4, 104, 72]
+>>> muchos_numeritos[-3:]              # los últimos tres
+[4, 104, 72]
+```
+
+Vamos a PowerShell. Se incluye el `Write-Host` para que muestre todos los números en una misma línea, obviamente si se quiere asignar el _slice_ a una variable, o utilizarlo de otra forma dentro de un programa, debe obviarse esta indicación.  
+Brindamos dos alternativas para "del segundo en adelante", porque la idea es que no sea necesario referirse explícitamente al `Length`, pero ... PowerShell lo hace largo. 
+``` powershell
+> $muchos_numeritos = @(32, 5, 48, 21, 94, 4, 104, 72)
+> Write-Host $muchos_numeritos[2..4]                             # del tercero al quinto
+48 21 94
+> Write-Host $muchos_numeritos[1..$muchos_numeritos.Length]      # del segundo en adelante
+5 48 21 94 4 104 72
+>  Write-Host ($muchos_numeritos | Select-Object -Skip 1)        # del segundo en adelante, otra forma
+5 48 21 94 4 104 72
+> Write-Host $muchos_numeritos[-3..-1]                           # los últimos tres
+4 104 72
+```
+
+Finalmente, en bash
+``` bash
+$ muchos_numeritos=(32 5 48 21 94 4 104 72)
+$ echo ${muchos_numeritos[*]:2:3}                   # del tercero al quinto
+48 21 94
+$ echo {muchos_numeritos[*]:1}                      # del segundo en adelante
+5 48 21 94 4 104 72
+$ echo ${muchos_numeritos[*]: -3}                   # los últimos tres
+4 104 72
+```
+**Atención**: en la expresión para obtener los últimos tres elementos, el espacio antes del -3 es _obligatorio_. Bash es así, lo apreciamos como es.  
+
+Uf, tres lenguajes, tres formas distintas para indicar la sección "del tercero al quinto". Lo explicamos brevemente
+- _Python_: `[2:5]` se interpreta como "del tercero al sexto, pero sin incluir el sexto". Más precisamente "del elemento 2 al elemento 5, incluyendo el 2 pero excluyendo el 5".
+- _PowerShell_: `[2..4]` se interpreta como "del elemento 2 al elemento 4, en ambos casos inclusive".
+- _bash_: `:2:3` se interpreta como "a partir del elemento 2, tres elementos".
+
+
+
 ## Modificar una lista
 Hasta ahora hemos _accedido_ a los elementos de una lista. Pero también podemos _modificarla_. Van algunos ejemplos en Python.
 ``` python
@@ -144,9 +193,9 @@ Así es en Bash.
 $ numeritos=(32 5 48 21)
 $ numeritos[2]=107
 $ numeritos+=( 12 )
-$ echo ${#numeritos[@]}
+$ echo ${#numeritos[*]}
 5
 $ echo ${numeritos[*]}
 32 5 107 21 12
 ```
-Obsérvese la sintaxis para obtener la longitud de una lista, y para mostrar la lista completa.
+Obsérvese la sintaxis para obtener la longitud de una lista, y para referirnos a la lista completa.
