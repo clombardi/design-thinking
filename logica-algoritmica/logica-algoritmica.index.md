@@ -32,3 +32,5 @@
 [Arranquemos por algún lado - estrategia y resultado](./resolvamos/estrategia.md)
 
 [De la estrategia al algoritmo](./resolvamos/algoritmo.md)
+
+[De algoritmo a programa](./resolvamos/primer-programa.md)

@@ -1,6 +1,6 @@
 # Definamos un algoritmo
 
-En la [página anterior](./estrategia.md) diseñamos una estrategia para resolver el [desafío](../desafio-enunciado.md) que queremos resolver.
+En la [página anterior](./estrategia.md) diseñamos una estrategia para resolver el [desafío que queremos resolver](../desafio-enunciado.md).
 
 En esta página, vamos a definir un **algoritmo** que lleve la estrategia a algo más parecido a un programa. Pero antes, respondamos una pregunta que tal vez esté en el aire.
 
@@ -83,7 +83,8 @@ do
 done
 return cada_tamanio_es_mas_grande_que_el_anterior
 ```
-La línea marcada como **importante** es, efectivamente, crucial: el valor que es el `tamanio` de una comparación, debe pasar a ser el `tamanio_anterior` en la siguiente.  
+La línea marcada como **importante** es, efectivamente, crucial: el valor que es el `tamanio` de una comparación, debe pasar a ser el `tamanio_anterior` en la siguiente. 
+
 Les sugerimos que revisen el comportamiento de este algoritmo con los ejemplos que brindamos al describir la [estrategia](./estrategia.md), para seguir la mecánica. En el primero de esos ejemplos, la lista `tamanios` toma el valor `[3, 8, 5, 22]`; por lo tanto, `tamanios[1:]` será `[8, 5, 22]`.
 
 > Una observación antes de seguir: creemos que la **legibildad** del algoritmo es buena, a lo cual contribuye el (largo) nombre de la variable que registra el resultado.  
@@ -126,15 +127,48 @@ return cada_tamanio_es_mas_grande_que_el_anterior
 ```
 
 **Tercer comentario - alternativas superadoras**  
-Más adelante en esta unidad, veremos alternativas en más de un lenguaje, que "se encargan" de realizar el corte sin que tengamos que preocuparnos.
+Más adelante en esta unidad, veremos alternativas en más de un lenguaje, que "se encargan" de realizar el corte sin que tengamos que preocuparnos.  
+Este tipo de "variantes superadoras" de las estructuras de repetición, son muchas veces específicas de uno, o algunos, lenguaje/s.
 
 
 ### Una alternativa clásica - uso del `while`
 Buceando en viejos libros de programación, es probable que la solución a este tipo de problemas se base en un `while` que trabaja con los índices de la lista de tamaños.  
 Consignamos un algoritmo de este estilo que resuelve el problema al que estamos abocados, para dar un ejemplo de algoritmo "clásico", y también para mostrar dos algoritmos distintos que resuelven el mismo problema.
 
+``` bash
+cada_tamanio_es_mas_grande_que_el_anterior = true
+tamanio_anterior = tamanios[0]
+ix = 1
+while [ cada_tamanio_es_mas_grande_que_el_anterior && ix < len(tamanios) ]
+do
+    tamanio = tamanios[ix]
+    if tamanio_anterior > tamanio
+       cada_tamanio_es_mas_grande_que_el_anterior = false
+    fi
+    tamanio_anterior = tamanio        
+    ix = ix + 1
+done
+return cada_tamanio_es_mas_grande_que_el_anterior
+```
 
+En este algoritmo, tenemos una variable `ix` que representa el _índice_ del elemento actual. 
+La idea de hacer una comparación menos que la cantidad de archivos se refleja en que el valor inicial de esta variable es 1, por lo tanto en la primer comparación, `tamanios[ix]` será el _segundo_ elemento.  
+Para "avanzar" en la lista, es necesario el `ix = ix + 1`.
 
+Esta misma idea se puede expresar en forma más compacta ...
+``` bash
+cada_tamanio_es_mas_grande_que_el_anterior = true
+ix = 1
+while [ cada_tamanio_es_mas_grande_que_el_anterior && ix < len(tamanios) ]
+do
+    if tamanios[ix-1] > tamanios[ix]
+       cada_tamanio_es_mas_grande_que_el_anterior = false
+    fi
+    ix = ix + 1
+done
+return cada_tamanio_es_mas_grande_que_el_anterior
+```
+... pero que exige algo más de manejo del acceso mediante índices para poder leerlo. Esta versión ya está más en "modo programador" que en "modo desarrollador".
 
 
 
