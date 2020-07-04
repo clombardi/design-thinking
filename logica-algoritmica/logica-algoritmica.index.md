@@ -26,3 +26,9 @@
 [Repetición - esquemas menos usados](./basicos/repeticion-2.md)  
 
 [¿Cuánto importa el lenguaje?](./basicos/relevancia-del-lenguaje.md)  
+
+
+## ¡Resolvamos el problema!
+[Arranquemos por algún lado - estrategia y resultado](./resolvamos/estrategia.md)
+
+[De la estrategia al algoritmo](./resolvamos/algoritmo.md)
