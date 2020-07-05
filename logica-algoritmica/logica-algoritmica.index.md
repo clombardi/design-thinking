@@ -36,3 +36,10 @@
 [De algoritmo a programa](./resolvamos/primer-programa.md)
 
 [Primeras ideas sobre organización de un programa](./resolvamos/modularidad-primeras-ideas.md)
+
+
+
+## Elevando la calidad del programa
+[Cuestionar la calidad de nuestro producto](./elevando/cuestionar-calidad.md)
+
+[Validación de datos de entrada](./elevando/validacion-datos-entrada.md)

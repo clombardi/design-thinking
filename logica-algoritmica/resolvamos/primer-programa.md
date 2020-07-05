@@ -86,7 +86,7 @@ for file in files[1:]:          # a partir del segundo archivo
 ``` 
 pero con gran daño a la legibilidad. Tal vez una _programadora_ consideraría hacerlo así para "ahorrarse una línea", pero una _desarrolladora_ que es consciente de que tal vez tenga que volver a este código más adelante, muy probablemente no.
 
-El resto son sencillamente la "traducción a Python": desaparecen el `fi` y el `done` porque Pyhton delimita bloques de acuerdo a la indentación, esto lo mencionamos en la [página sobre funciones](../basicos/funciones.md), se agregan los dos-puntos en algunas líneas, y hay que poner `True` y `False` en mayúscula.
+El resto son sencillamente la "traducción a Python": desaparecen el `fi` y el `done` porque Pyhton delimita bloques de acuerdo a la indentación (esto lo mencionamos en la [página sobre funciones](../basicos/funciones.md)), se agregan los dos-puntos en algunas líneas, y hay que poner `True` y `False` en mayúscula.
 
 
 ## La salida
@@ -170,7 +170,7 @@ Notamos que en el segundo condicional, _es necesario_ agregar el `= true`.
 
 Cerramos con una pequeña tabla de manejo de booleanos en cada lenguaje.
 
-| Lenguaje | Verdadero | Falso | Alternativa de condición booelana |
+| Lenguaje | Verdadero | Falso | Alternativa de condición booleana |
 | --- | --- | --- | --- | 
 | Python | `True` | `False` | `if condicion:` e indentado |
 | PowerShell | `$true` | `$false` | `if (condicion) {...}` |
