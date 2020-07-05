@@ -68,7 +68,7 @@ En casos más complejos, el descubrimiento de casos en los que las definiciones 
 Por lo general, ante cualquier situación suficientemente compleja, uno de los problemas más difíciles que deben resolverse en un desarrollo es determinar el comportamiento _deseado_ del software.  
 Este es uno de los fenómenos que llevaron a adoptar la idea de [ciclo de vida](../../programacion-a-desarrollo/ciclo-de-vida.md) y los [marcos de trabajo ágiles](../../programacion-a-desarrollo/intro-agil.md) en el desarrollo de software.  
 
-Destacamos que también en este aspecto, resulta conveniente aplicar para la construcción de scripts, ideas que resultan útiles para desarrollo de software.
+Este pequeño ejemplo es suficiente para mostrar que las mismas problemáticas presentes en el desarrollo de aplicaciones, pueden aparecer al armar programas específicos para el uso en operaciones; y que por lo tanto, resulta conveniente aplicar ideas del ámbito del desarrollo de software.
 
 
 ## Enfrentando los problemas
@@ -78,6 +78,12 @@ En nuestro caso: ¿cuál es la probabilidad de que se ejecute para carpetas que 
 También puede servir, afinar la mirada sobre el _propósito_ del programa. En este caso, es un programa que detecta un problema potencial, una especie de alarma. ¿Qué tan _sensible_ queremos que sea esta alarma, preferimos que se "active" ante cualquier posible problema (a riesgo de generar trabajo manual que puede ser muchas veces innecesario) o que sólo se active en casos claros de problema (a riesgo de no detectar un problema a tiempo)?
 
 Esto nos lleva a pensar en más casos posibles. Si hay muchos archivos, cada uno más grande que el anterior _salvo un solo caso_ en el que el tamaño disminuye ¿es suficiente esta excepción para concluir que "no se detecta crecimiento sostenido"?
+
+Terminamos este análisis mencionando un caso límite que es espejo de algunos que analizamos: ¿cómo se comportará el programa ante carpetas con _muchos_ archivos, podremos tener problemas de performance o de uso de recursos?  
+Para poder evaluar esto, hay que determinar "cuánto es _muchos_", ante qué dimensión el comportamiento del programa empieza a degradarse. ¿Soporta bien una carpeta con 1000 archivos? ¿Con 5000? ¿Con 25000?  
+Por otro lado, en las condiciones en las que se va a ejecutar el script ¿es realmente probable que nos encontremos con estas dimensiones?
+
+Para este ejercicio, supondremos que este problema no se va a presentar: digamos que nuestras carpetas nunca van a tener más de 200 archivos, y que ese tamaño no afecta a la performance del script.
 
 
 ### La peor decisión es no tomar ninguna decisión

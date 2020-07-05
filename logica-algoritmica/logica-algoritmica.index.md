@@ -49,3 +49,5 @@
 [Casos límite - análisis del algoritmo](./elevando/casos-limite.md)
 
 [Casos límite - correcciones en el programa](./elevando/casos-limite-correcciones.md)
+
+[Un pequeño resumen](./elevando/elevando-resumen.md)
