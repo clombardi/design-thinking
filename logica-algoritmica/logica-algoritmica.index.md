@@ -43,3 +43,5 @@
 [Cuestionar la calidad de nuestro producto](./elevando/cuestionar-calidad.md)
 
 [Validación de datos de entrada](./elevando/validacion-datos-entrada.md)
+
+[Nuestras propias librerías](./elevando/librerias-propias.md)
