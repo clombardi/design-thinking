@@ -20,16 +20,18 @@ Funciona igual que la versión anterior. Y "nos ahorramos" la variable de nombre
 
 A pesar de estas (en nuestra visión, supuestas) ventajas, nosotros recomendamos _fuertemente_ la estructura del programa anterior.
 
-En primer término, pensando en la _claridad_: en esta nueva versión, el objetivo está mucho menos explícito, y hay que pensar en detalle cómo "trabaja" el algoritmo para entender qué hace.  
+En una primera mirada, la razón de esta preferencia se relaciona con la _claridad_: en esta nueva versión, el objetivo está mucho menos explícito, y hay que pensar en detalle cómo "trabaja" el algoritmo para entender qué hace.  
 En particular ¿qué hace ese `print` suelto al final de todo? Hay que relacionarlo con el `exit` del medio, para darse cuenta de que el `print` del final no se va a ejecutar en todos los casos, sino sólo en aquellos en los que no se encontró ninguna comparación "mala".  
 Entender el programa anterior involucra, creemos, menos sutilezas.
 
-Esta observación particular está relacionada con una idea general: en el primer programa podemos separar tres fases
+
+## Separación en partes - modularidad
+Esta observación particular está relacionada con una idea general: en el primer programa podemos separar tres tareas
 1. tratamiento inicial de _datos de entrada_.
 1. resolución de la _operación_, en este caso mediante un algoritmo.
 1. generación de la _salida_.
 
-Transcribamos nuevamente el programa, separando claramente las tres fases, y señalando dónde queda el resultado de las dos primeras.
+Transcribamos nuevamente el programa, separando claramente las tres tareas, y señalando dónde queda el resultado de las dos primeras.
 
 ``` python
 from pathlib import Path
@@ -64,9 +66,15 @@ else:
     print("no se detecta crecimiento sostenido de logs")
 ##########################################################
 ``` 
-Notamos que la _única_ conexión entre las fases es que cada una usa el resultado de la anterior. Nuestro programa se _compone_ de tres partes, con interfaces bien definidas entre ellas.  
-Mencionamos que esta separación es análoga a la que se busca, en el desarrollo de aplicaciones, entre _lógica de negocio_ (lo que llamamos aquí "operación") e _interface_ (lo que involucra en este programa a los datos de entrada, y a la salida).
+Notamos que la _única_ conexión entre las tareas es que cada una usa el resultado de la anterior. 
 
+Nuestro programa se _compone_ de tres partes, con interfaces bien definidas entre ellas.  
+Esta idea se asocia a la de _componente_ o _módulo_: decimos que este programa está mejor _modularizado_ que la versión que mezcla la salida con el proceso.
+
+Mencionamos que esta forma de modularización en particular, es análoga a la que se busca, en el desarrollo de aplicaciones, entre _lógica de negocio_ (lo que llamamos aquí "operación") e _interface_ (lo que involucra en este programa a los datos de entrada, y a la salida).
+
+
+### Fortalezas de un programa mejor modularizado
 Esta separación de los tres aspectos que constituyen el programa, hace más sencillo realizar manipulaciones con el programa, que afectan a uno de ellos.
 
 Respecto de la _salida_, si en lugar de informar por consola, se debe generar un archivo con el resulado, enviarlo por mail, o cualquier otra forma de salida, sabemos que con modificar la tercera parte alcanza.  
