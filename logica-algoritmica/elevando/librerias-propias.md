@@ -1,4 +1,4 @@
-# Nuestras propias librerías
+# Nuestras propias librerías, y el máximo de modularidad
 
 En los últimos ejemplos de la sección sobre [validación de datos de entrada](./validacion-datos-entrada.md) se definen funciones separadas que implementan las validaciones.
 
@@ -6,7 +6,7 @@ Aparte de aumentar el grado de modularidad del programa, este enfoque nos brinda
 
 En los tres lenguajes que estamos estudiando, definir una librería, y utilizarla en un script, es muy sencillo. 
 
-Una librería es, sencillamente, un archivo separado que incluye el código de las funciones que se quiere aprovechar en distintos scripts. 
+Una **librería** es, sencillamente, un archivo separado que incluye el código de las funciones que se quiere aprovechar en distintos scripts. 
 En PowerShell, el archivo debe tener extensión `psm1` y hay que declarar explícitamente cuáles de las funciones definidas se disponibilizan. En Python y en bash, sencillamente se coloca el código en archivos con extensión `py` o `sh` respectivamente.
 
 En los programas, se indica al principio qué librería/s se usa/n o _importa/n_. En Python, las librerías propias se agregan a las genéricas.

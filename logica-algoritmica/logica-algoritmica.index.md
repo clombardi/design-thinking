@@ -44,4 +44,8 @@
 
 [Validación de datos de entrada](./elevando/validacion-datos-entrada.md)
 
-[Nuestras propias librerías](./elevando/librerias-propias.md)
+[Nuestras propias librerías, y el máximo de modularidad](./elevando/librerias-propias.md)
+
+[Casos límite - análisis del algoritmo](./elevando/casos-limite.md)
+
+[Casos límite - correcciones en el programa](./elevando/casos-limite-correcciones.md)
