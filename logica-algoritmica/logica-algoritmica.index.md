@@ -51,3 +51,7 @@
 [Casos límite - correcciones en el programa](./elevando/casos-limite-correcciones.md)
 
 [Un pequeño resumen](./elevando/elevando-resumen.md)
+
+
+## Conceptos de algoritmia generales - Python
+[zip - juntar los pares](./algoritmia-python/zip.md)

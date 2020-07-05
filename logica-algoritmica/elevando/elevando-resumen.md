@@ -29,7 +29,8 @@ Para lograr estas mejoras, fue crucial adoptar una _visión amplia_, que incluye
 
 ## Etapa 3 - el foco vuelve al algoritmo
 En la última parte de esta unidad, vamos a volver a poner el foco en el algoritmo. Vamos a trabajar sobre la función que resuelve si los tamaños de los archivos analizados son crecientes.  
-Tomando esta función como ejemplo, vamos a presentar algunas ideas más avanzadas de programación, con el objetivo de llegar a formas del código que resulten, a la vez, más compactas y más claras.
+Tomando esta función como ejemplo, vamos a presentar algunas ideas más avanzadas de programación, con el objetivo de llegar a formas del código que resulten, a la vez, más compactas y más claras.  
+Realizamos esta descripción de algunos ejemplos de técnicas de algoritmia, con el objetivo de generar un acercamiento a este tipo de herramientas, que aliente a su búsqueda y experimentación para resolver problemas que se presenten al automatizar tareas de operaciones. 
 
 Vamos a proceder en dos partes.
 1. Primero vamos a estudiar técnicas más generales de programación, utilizando Python como lenguaje.
