@@ -55,3 +55,7 @@
 
 ## Conceptos de algoritmia generales - Python
 [zip - juntar los pares](./algoritmia-python/zip.md)
+
+[Uso de list comprehension - aislando los tamaños](./algoritmia-python/solo-tamanios.md)
+
+[all - condición que cumplen todos los elementos](./algoritmia-python/all.md)
