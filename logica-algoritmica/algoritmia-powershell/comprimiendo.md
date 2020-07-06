@@ -1,11 +1,11 @@
 # Comprimimos la función aprovechando el pipeline
-Luego de [implementar la operación `zip`] llegamos a esta variante de la función que estamos estudiando
+Luego de [implementar la operación `zip`](./zip.md) llegamos a esta variante de la función que estamos estudiando
 ``` powershell
 function LosTamaniosSonCrecientes {
     param($files)
 
     $cada_tamanio_es_mas_grande = $true
-    $pares_de_tamanios = $files | ForEach-Object Length | ZipPipe
+    $pares_de_tamanios = $files | ForEach-Object { $_.Length } | ZipPipe
 
     foreach ($par in $pares_de_tamanios) {
         $tamanio_anterior, $tamanio = $par
@@ -31,7 +31,7 @@ Obtenemos la forma final de la función.
 function LosTamaniosSonCrecientes {
     param($files)
 
-    $pares_de_tamanios = $files | ForEach-Object Length | ZipPipe
+    $pares_de_tamanios = $files | ForEach-Object { $_.Length } | ZipPipe
     $pares_malos = $pares_de_tamanios | Where-Object { $_[0] -gt $_[1] }
 
     return $pares_malos.Length -eq 0

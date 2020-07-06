@@ -5,7 +5,7 @@ function LosTamaniosSonCrecientes {
     param($files)
 
     $cada_tamanio_es_mas_grande = $true
-    $tamanios = $files | ForEach-Object Length
+    $tamanios = $files | ForEach-Object { $_.Length }
     $tamanio_anterior = $tamanios[0]
 
     foreach ($tamanio in ($tamanios | Select-Object -Skip 1)) {
@@ -34,7 +34,7 @@ function LosTamaniosSonCrecientes {
     param($files)
 
     $cada_tamanio_es_mas_grande = $true
-    $pares_de_tamanios = $files | ForEach-Object Length | ZipPipe
+    $pares_de_tamanios = $files | ForEach-Object { $_.Length } | ZipPipe
 
     foreach ($par in $pares_de_tamanios) {
         $tamanio_anterior, $tamanio = $par
@@ -95,7 +95,7 @@ function ZipPipe {
 ```
 Notar la superpoblación de arrobas `@` al componer la lista. Esto es necesario porque le estamos concatenando a `$resultado` una lista _de un solo elemento_. Ver p.ej. [este post](https://superuser.com/questions/414650/why-does-powershell-silently-convert-a-string-array-with-one-item-to-a-string).
 
-Más allá de los detalles de la definición, queremos ilustrar 
+Más allá de los detalles que conlleva implementar la función `ZipPipe`, queremos destacar 
 - cómo se concibió, a partir de un problema concreto que requiere el uso de una operación no implementada; 
 - cómo se definió su comportamiento, pensando _cómo utilizar_ la función antes de definirla; y
 - la estructura general de una función que puede ser incorporada en un pipeline de colecciones.
