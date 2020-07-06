@@ -18,11 +18,12 @@ def los_tamanios_son_crecientes(files):
 
 Para desarrollar el tema que vamos a tratar en esta página, partimos de la siguiente observación:
 en rigor, lo que se está procesando son los _pares_ de tamaños de archivos consecutivos: primero y segundo, segundo y tercero, etc..  
-Por ejemplo, si la lista de tamaños de los archivos es `[3,8,5,22]`, entonces en rigor estamos trabajando con esta lista: ` [(3,8),(8,5),(5,22)]`.  
+Por ejemplo, si la lista de tamaños de los archivos es `[3,8,5,22]`, entonces en rigor estamos trabajando con esta lista: `[(3,8),(8,5),(5,22)]`.  
 Para "generar" el par al que se aplica cada comparación, debemos agregar la variable `tamanio_anterior`, que tenemos que manejar con cierto cuidado dentro de la función.
 
 Observemos en particular, que al pensar en la lista de pares, coinciden exactamente la cantidad de elementos (o sea, de pares) y la cantidad de comparaciones (que es "uno menos" si tomamos la cantidad de archivos): se realiza, exactamente, una comparación para cada par _en esta nueva lista_.  
-Veremos más adelante que esta correspondencia va a permitir aplicar otras técnicas de programación.
+En el ejemplo, tenemos _cuatro archivos_, pero _tres pares_, que se corresponden con las _tres comparaciones_ que deben realizarse.  
+Veremos más adelante que esta correspondencia va a permitir aplicar, luego, otras técnicas de programación.
 
 
 ## Una técnica conocida en el ámbito de la programación
@@ -31,7 +32,8 @@ Una de las ideas asociadas es una operación conocida vulgarmente como _zip_: a 
 
 Por ejemplo, si consideramos las listas `[3,8,5,22]` y `[98,32,21,77]`, el _zip_ de estas dos listas será `[(3,98), (8,32), (5,21), (22,77)]`, una lista de pares donde el primer elemento "junta" a los primeros elementos de las dos listas originales, y así siguiendo.
 
-Esta operación es bien conocida en el ámbito de la programación, como se puede verificar buscando en Internet "zip arrays \<su-lenguaje-preferido\>". Notamos que p.ej. en [Scala](http://allaboutscala.com/tutorials/chapter-8-beginner-tutorial-using-scala-collection-functions/scala-zip-example/) aparece en las librerías incluidas con el lenguaje, en [JavaScript](https://www.geeksforgeeks.org/underscore-js-_-zip-with-examples/) está incluido en la popular librería `Underscore.js`, y que en [Java](https://www.baeldung.com/java-collections-zip) se puede implementar fácilmente utilizando técnicas introducidas en Java 1.8.  
+Esta operación es bien conocida en el ámbito de la programación, como se puede verificar buscando en Internet "zip arrays \<su-lenguaje-preferido\>".  
+Notamos que p.ej. en [Scala](http://allaboutscala.com/tutorials/chapter-8-beginner-tutorial-using-scala-collection-functions/scala-zip-example/) aparece en las librerías incluidas con el lenguaje, en [JavaScript](https://www.geeksforgeeks.org/underscore-js-_-zip-with-examples/) está incluido en la popular librería `Underscore.js`, y que en [Java](https://www.baeldung.com/java-collections-zip) se puede implementar fácilmente utilizando técnicas introducidas en Java 1.8.  
 El nombre _zip_ proviene de la imagen de un cierre relámpago (llamado justamente _zip_ o _zipper_ en inglés), que une las dos listas originales.
 
 
@@ -50,7 +52,7 @@ En los ejemplos se ve que si las dos listas tienen distinto tamaño, el `zip` co
 
 > **Nota**  
 En el ejemplo anterior, notarán el agregado del `list(...)` exterior, análogo al que aparece en nuestro programa: `files = list(Path(argv[1]).iterdir())`.  
-Este agregado resulta necesario por una dualidad que mantiene Python entre lo que se conoce como _iteradores_ y las listas. Mencionaremos brevemente este tema más adelante, por ahora les pedimos no olvidar el `list(...)`.
+Este agregado resulta necesario por una dualidad que mantiene Python entre lo que se conoce como _generadores_, y las listas. Mencionaremos este tema sobre el final del proceso de análisis de código Python; por ahora les pedimos no olvidar el `list(...)`.
 
 Aunque cada par que forma el resultado de `zip` no es exactamente una lista, podemos tratarlo como tal, accediendo a sus elementos mediante los índices 0 y 1.
 ``` python
