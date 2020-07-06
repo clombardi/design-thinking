@@ -59,3 +59,5 @@
 [Uso de list comprehension - aislando los tamaños](./algoritmia-python/solo-tamanios.md)
 
 [all - condición que cumplen todos los elementos](./algoritmia-python/all.md)
+
+[observación final - iteradores y listas](./algoritmia-python/iteradores.md)

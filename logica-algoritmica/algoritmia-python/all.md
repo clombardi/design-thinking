@@ -61,7 +61,7 @@ Ahora sí, apliquemos esta idea para llegar a la forma más compacta de nuestra 
 ``` python
 def los_tamanios_son_crecientes(files):
     tamanios = [archivo.stat().st_size for archivo in files]
-    pares_de_tamanios = zip(tamanios, tamanios[1:])
+    pares_de_tamanios = list(zip(tamanios, tamanios[1:]))
 
     return all([tamanio_anterior <= tamanio 
                 for tamanio_anterior, tamanio in pares_de_tamanios])
