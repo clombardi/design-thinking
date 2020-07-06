@@ -66,4 +66,6 @@
 ## Conceptos de algoritmia para lenguajes de scripting - PowerShell
 [Incorporamos pipelines](./algoritmia-powershell/pipelines-intro.md)
 
+[zip - concebimos e implementamos una nueva función](./algoritmia-powershell/zip.md)
 
+[Comprimimos la función aprovechando el pipeline](./algoritmia-powershell/comprimiendo.md)

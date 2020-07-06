@@ -66,7 +66,7 @@ function LosTamaniosSonCrecientes {
 Hasta ahora, no parece mucho más sencilla que la anterior. Al igual que en la evolución que realizamos sobre el código Python, cada paso nos hará más sencillo aplicar los siguientes, para llegar a una versión sensiblemente más compacta y sencilla.
 
 
-## El cmdlet `ForEach-Object` y la sintaxis de list comprehension en Python
+## Analogía entre pipelines de PowerShell y list comprehension en Python
 Notemos que el propósito del cmdlet `ForEach-Object` es similar al de las list comprehension de Python, que presentamos al [repasar conceptos básicos sobre repetición](../basicos/repeticion.md). 
 
 Por ejemplo, la expresión de PowerShell
@@ -90,5 +90,11 @@ La expresión análoga en PowerShell es
 ``` powershell 
 $files | ForEach-Object { if ($_.BaseName[-1] -eq '3') { $_.Length } }
 ```  
+
+También puede obtenerse una expresión con este objetivo combinando el cmdlet `ForEach-Object` con `Where-Object`, que "filtra" la entrada de acuerdo a una condición. Respecto del ejemplo, la siguiente expresión PowerShell 
+``` powershell 
+$files | Where-Object { $_.Basename[-1] -eq '3' } | ForEach-Object {$_.Length}
+```  
+es equivalente a la anterior.
 
 Esta analogía representa un ejemplo de cómo un mismo concepto se puede expresar en distintos lenguajes, aunque la técnica y sintaxis utilizadas puedan variar grandemente de lenguaje en lenguaje.
