@@ -60,4 +60,10 @@
 
 [all - condición que cumplen todos los elementos](./algoritmia-python/all.md)
 
-[observación final - iteradores y listas](./algoritmia-python/iteradores.md)
+[Generadores - ahora sí, hablemos de eficiencia](./algoritmia-python/iteradores.md)
+
+
+## Conceptos de algoritmia para lenguajes de scripting - PowerShell
+[Incorporamos pipelines](./algoritmia-powershell/pipelines-intro.md)
+
+
