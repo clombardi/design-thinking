@@ -123,6 +123,7 @@ los_tamanios_son_crecientes () {
         then
             cada_tamanio_es_mas_grande_que_el_anterior=false
         fi
+        tamanio_anterior=$tamanio
     done
     echo $cada_tamanio_es_mas_grande_que_el_anterior
     $cada_tamanio_es_mas_grande_que_el_anterior

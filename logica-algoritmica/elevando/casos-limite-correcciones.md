@@ -66,3 +66,122 @@ elif (los_tamanios_son_crecientes(files)):
 else:
     print("No se detecta crecimiento sostenido de logs")
 ``` 
+
+## En lenguajes de scripting
+Consignamos la versión final (hasta ahora) del programa, en los dos lenguajes de scripting con los que venimos trabajando.
+
+Primero PowerShell.
+``` powershell
+Import-Module .\scriptLibrary.psm1
+
+function LosTamaniosSonCrecientes {
+    param($files)
+
+    $cada_tamanio_es_mas_grande = $true
+    $tamanio_anterior = $files[0].Length
+
+    foreach ($file in ($files | Select-Object -Skip 1)) {
+        $tamanio = $file.Length
+        if ($tamanio_anterior -gt $tamanio) {
+            $cada_tamanio_es_mas_grande = $false
+        }
+        $tamanio_anterior = $tamanio
+    }
+
+    return $cada_tamanio_es_mas_grande
+}
+
+function HayPocosArchivos {
+    param($files)
+    return (@($files).Length -lt 4)
+}
+
+function HayCrecimientoSignificativo {
+    param($files) 
+
+    $tamanio_primer_archivo = $files[0].Length
+    $tamanio_ultimo_archivo = $files[-1].Length
+    return $tamanio_ultimo_archivo -ge $tamanio_primer_archivo * 1.1
+}
+
+
+CheckArgCount 1 $args
+CheckFolder $args[0]
+
+$files = Get-ChildItem $args[0]
+if (HayPocosArchivos $files) {
+    Write-Host "Hay pocos archivos, no alcanzan para analizar crecimiento"
+} elseif (-not (HayCrecimientoSignificativo $files)) {
+    Write-Host No se detecta crecimiento significativo de logs en general
+} elseif (LosTamaniosSonCrecientes ($files)) {
+    Write-Host los logs vienen creciendo, atención
+} else {
+    Write-Host no se detecta crecimiento sostenido de logs
+}
+```
+
+Por último, bash.
+``` bash
+. ./scriptLibrary.sh
+
+check_arg_count 1 $#
+check_folder $1
+
+los_archivos_son_crecientes () {
+    files=$1
+    cada_tamanio_es_mas_grande_que_el_anterior=true
+    tamanio_anterior=$(wc -c < ${files[0]})
+
+    for f in ${files[*]:1}
+    do
+        tamanio=$(wc -c < $f)
+        if [ $tamanio_anterior -gt $tamanio ]
+        then
+            cada_tamanio_es_mas_grande_que_el_anterior=false
+        fi
+        tamanio_anterior=$tamanio
+    done
+
+    $cada_tamanio_es_mas_grande_que_el_anterior
+}
+
+hay_pocos_archivos () {
+    files=$1
+    comp=false
+    if [[ ${#files[*]} -lt 4 ]]
+    then
+        comp=true
+    fi
+    $comp
+}
+
+hay_crecimiento_significativo () {
+    files=$1
+    tamanio_primer_archivo=$(wc -c < ${files[0]})
+    tamanio_ultimo_archivo=$(wc -c < ${files[-1]})
+    comp=false
+    mult=$(echo $tamanio_ultimo_archivo \> $tamanio_primer_archivo*1.1  | bc)
+    if [[ $mult -eq 1 ]]
+    then
+        comp=true
+    fi
+    $comp
+}
+
+
+files=($1/*)
+
+if hay_pocos_archivos $files
+then 
+    echo Hay pocos archivos, no alcanzan para analizar crecimiento
+elif ! (hay_crecimiento_significativo $files)
+then 
+    echo No se detecta crecimiento significativo de logs en general
+elif los_archivos_son_crecientes $files  
+then
+    echo los logs vienen creciendo, atención
+else
+    echo no se detecta crecimiento sostenido de logs
+fi
+```
+Nótese el recurso a `bc` para realizar un cálculo que involucra un número decimal, y la necesidad de utilizar una alternativa para manejar condiciones booleanas.

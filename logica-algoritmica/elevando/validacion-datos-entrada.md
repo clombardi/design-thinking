@@ -280,6 +280,7 @@ do
     then
         cada_tamanio_es_mas_grande_que_el_anterior=false
     fi
+    tamanio_anterior=$tamanio
 done
 
 if [ $cada_tamanio_es_mas_grande_que_el_anterior = true ] 
