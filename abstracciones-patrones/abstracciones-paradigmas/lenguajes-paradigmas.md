@@ -67,27 +67,27 @@ El surgimiento de los primeros lenguajes de programación como Fortran, Lisp, Co
 
 
 ## Paso 2 - paradigmas de programación
-Entre los conceptos principales que aportaron las primeras generaciones de lenguajes de programación, encontramos las [variables](../../logica-algoritmica/basicos/variables.md), los [arrays o listas](../../logica-algoritmica/basicos/arrays-listas.md), la [alternativa](../../logica-algoritmica/basicos/alternativa.md), las [estructuras de repetición](../../logica-algoritmica/basicos/repeticion.md), y las [funciones](../../logica-algoritmica/basicos/funciones.md) u otros conceptos similares.  Mencionamos brevemente estos conceptos en la unidad sobre lógica algorítmica. 
+Entre los conceptos principales que aportaron las primeras generaciones de lenguajes de programación, encontramos las [variables](../../logica-algoritmica/basicos/variables.md), los [arrays o listas](../../logica-algoritmica/basicos/arrays-listas.md), la [alternativa](../../logica-algoritmica/basicos/alternativa.md), las [estructuras de repetición](../../logica-algoritmica/basicos/repeticion.md), y las [funciones](../../logica-algoritmica/basicos/funciones.md) u otros conceptos similares.  Estos conceptos fueron mencionados brevemente en la unidad sobre lógica algorítmica. 
 
 Todos estos conceptos, más otros como los [registros](https://en.wikipedia.org/wiki/Struct_(C_programming_language)), apuntan a organizar la _estructura_, tanto del programa como de los datos que maneja.  
 El foco está puesto en los programas, quedando en las desarrolladoras la tarea de adaptar la descripción de los fenómenos que se desea manipular, a las estructuras de un programa.  
 
 
-Un siguiente paso de la elevación del nivel de abstracción, lo constituye la concepción de distintos **paradigmas de programación**. El concepto de paradigma es, dentro de la informática, tal vez uno de los que más se resiste a una definición precisa.  
-Aquí diremos que un **paradigma** define un conjunto de conceptos que estructuran  un programa, y la forma en que se relacionan las unidades que lo conforman.
+Un siguiente paso de la elevación del nivel de abstracción, lo constituye la concepción de distintos **paradigmas de programación**. 
 
-Los conceptos mencionados más arriba forman la base del llamado _paradigma imperativo-procedural_. Se caracteríza por el hecho de que varios de sus conceptos principales siguen manteniendo una relación con las estructuras básicas de un equipo de cómputo: una variable surge como una forma de designar a una dirección de memoria, el ciclo y la alternativa como formas elegantes de describir una estructura de `jump`s.  
+El concepto de paradigma es tal vez, dentro de la informática, uno de los que más se resiste a una definición precisa; 
+_aquí_ diremos que un **paradigma** define a partir de qué conceptos se organiza un programa, y cómo interactúan los elementos que se generan a partir de esos conceptos.
+
+Los conceptos mencionados al principio de este parágrafo (variables, arrays/listas, alternativa, etc.) forman la base del llamado _paradigma imperativo-procedural_. Se caracteríza por el hecho de que varios de sus conceptos principales fueron concebidos en relación con las estructuras básicas de un equipo de cómputo: una variable surge como una forma de designar a una dirección de memoria, el ciclo y la alternativa como formas elegantes de describir una estructura de `jump`s.  
 En otros paradigmas, se rompe esta relación entre los conceptos básicos que estructuran un programa, y el reflejo que van a tener cuando el programa se ejecute.  
 
 ## Los dos paradigmas más relevantes: "objetos y funcional"
 Los dos paradigmas más influyentes en el estado actual de la programación son los llamados _programación orientada a objetos_ y _programación funcional_.
 
 La **programación orientada a objetos** propone estructurar un programa a partir de dispositivos computacionales, llamados _objetos_, que representan las entidades que se desea representar.
-Cada dato que se obtenga será el resultado de efectuarle una consulta al objeto correspondiente.
-
-Así, para construir p.ej. un programa que maneja una red social, cada usuario, sesión, conversación, post, etc., estará representado por un objeto.  
-Para saber si dos usuarios son "amigos", una forma posible de resolverlo es haciéndole una consulta al objeto que representa a uno de ellos, pasando el (objeto que representa al) otro usuario como parámetro.  
-El comportamiento de un programa surge de la interacción entre objetos.
+Cada dato que se obtenga será el resultado de efectuarle una consulta al objeto correspondiente.  
+Así, para construir p.ej. un programa que maneja una red social, cada usuario, sesión, conversación, post, etc., estará representado por un objeto. Para saber si dos usuarios son "amigos", una forma posible de resolverlo es haciéndole una consulta al objeto que representa a uno de ellos, pasando el (objeto que representa al) otro usuario como parámetro.  
+El comportamiento de un programa surge de la interacción entre objetos: cada objeto puede mantener _referencias_ a otros objetos, y realizar consultas a los objetos que conoce de esta forma. En nuestro ejemplo, el objeto que representa a un post puede mantener una referencia al (objeto que representa al) usuario que lo generó, y consultarle p.ej. su nick, su imagen identificatoria, y si es o no "amigo" de otro usuario.
 
 En la **programación funcional**, el concepto más relevante es el de _función_, entendida desde un punto de vista matemático: recibe ciertos parámetros, entrega una respuesta.  
 La información se estructura mediante listas y tuplas. El procesamiento ocurre aplicando funciones, donde la información a manejar se pasa como parámetro.  
