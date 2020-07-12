@@ -1,0 +1,8 @@
+Links sobre container patterns
+
+1.
+https://techbeacon.com/enterprise-it/7-container-design-patterns-you-need-know
+
+2.
+https://medium.com/tech-bits/container-design-patterns-7020b132675
+

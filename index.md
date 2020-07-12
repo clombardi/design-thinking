@@ -6,3 +6,4 @@
 
 [Unidad 2 - Introducción a la lógica algorítmica](./logica-algoritmica/logica-algoritmica.index.md)  
 
+[Unidad 3 - Patrones de diseño y abstracciones](./abstracciones-patrones/abstracciones-patrones.index.md)  
