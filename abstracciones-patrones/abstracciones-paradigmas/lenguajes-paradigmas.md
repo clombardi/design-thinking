@@ -84,10 +84,13 @@ En otros paradigmas, se rompe esta relación entre los conceptos básicos que es
 ## Los dos paradigmas más relevantes: "objetos y funcional"
 Los dos paradigmas más influyentes en el estado actual de la programación son los llamados _programación orientada a objetos_ y _programación funcional_.
 
-La **programación orientada a objetos** propone estructurar un programa a partir de dispositivos computacionales, llamados _objetos_, que representan las entidades que se desea representar.
+La **programación orientada a objetos** propone estructurar un programa a partir de elementos, llamados _objetos_, que representan las entidades que deben modelarse dentro de un programa.
 Cada dato que se obtenga será el resultado de efectuarle una consulta al objeto correspondiente.  
-Así, para construir p.ej. un programa que maneja una red social, cada usuario, sesión, conversación, post, etc., estará representado por un objeto. Para saber si dos usuarios son "amigos", una forma posible de resolverlo es haciéndole una consulta al objeto que representa a uno de ellos, pasando el (objeto que representa al) otro usuario como parámetro.  
-El comportamiento de un programa surge de la interacción entre objetos: cada objeto puede mantener _referencias_ a otros objetos, y realizar consultas a los objetos que conoce de esta forma. En nuestro ejemplo, el objeto que representa a un post puede mantener una referencia al (objeto que representa al) usuario que lo generó, y consultarle p.ej. su nick, su imagen identificatoria, y si es o no "amigo" de otro usuario.
+Así, para construir p.ej. un programa que maneja los permisos para una aplicación, cada usuario, recurso, rol, etc., estará representado por un objeto.
+Para saber si un usuario tiene acceso a un recurso, una forma posible es haciéndole una consulta al objeto que representa al recurso, pasando el (objeto que representa al) usuario como parámetro.  
+Cada objeto puede mantener _referencias_ a otros objetos, y realizar consultas a los objetos que conoce de esta forma. En nuestro ejemplo, el objeto que representa a un usuario puede tener  mantener una referencia al (objeto que representa a) cada rol que tiene asignado, y consultarle p.ej. a qué recursos da acceso un rol.  
+De esta forma, se configura una red (o grafo) de objetos que se conocen e interactúan entre sí. 
+El procesamiento surge de esta interacción entre objetos, disparada por una consulta inicial que se hace a uno de ellos. 
 
 En la **programación funcional**, el concepto más relevante es el de _función_, entendida desde un punto de vista matemático: recibe ciertos parámetros, entrega una respuesta.  
 La información se estructura mediante listas y tuplas. El procesamiento ocurre aplicando funciones, donde la información a manejar se pasa como parámetro.  
