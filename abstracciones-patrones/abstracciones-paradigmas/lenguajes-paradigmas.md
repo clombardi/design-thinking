@@ -1,0 +1,102 @@
+# Abstracciones básicas en programación
+
+Al principio fue el código-máquina.
+
+(dibujito que represente el código-máquina, onda alguien tipeando en una terminal de los 70 o algo así)  
+![dibujito que represente el código-máquina](../../images/logoelevate.jpg) 
+
+Durante varios años, cada programa se escribían utilizando la codificación binaria definida por el equipo de cómputo donde se fuera a ejecutar. Esto podía ser parte de un programa
+``` 
+            00000010        00000001, 0
+            00010001        00000001, 00001010
+            00001011        00000100
+```
+
+Aunque se definieron códigos mnemotécnicos para instrucciones, registros y otros 
+``` 
+            mov     ax, 0
+            cmp     ax, 10
+            je      :after_loop
+```
+la construcción de programas seguía estando ligada muy estrechamente a las características del procesador, y más en general, del equipo de cómputo.  
+En lugar de pensarse en los objetivos de un programa, en la información que se deseara modelar, el foco tenía que estar puesto en registros, direcciones e instrucciones. 
+
+
+## Paso 1 - lenguajes de programación 
+Uno de los aspectos necesarios para pensar en programas con objetivos ambiciosos respecto del manejo de información y/o de la interacción con los usuarios, es contar con herramientas que faciliten la elevación del nivel de abstracción al programar.
+
+Esta es una de las motivaciones para el surgimiento de los _lenguajes de programación_, que definen abstracciones de nivel más elevado tanto para el control del flujo de programa, como para la memoria. 
+
+Respecto del flujo, este bucle en assembler
+``` 
+            mov     ax, 0
+:loop
+            cmp     ax, 10
+            je      :after_loop
+            // ... acciones ...
+            inc     ax
+            jump    :loop
+:after_loop
+```
+se transforma en este [ciclo `for`](../../logica-algoritmica/basicos/repeticion-2.md)
+``` c
+for (i=0; i < 10; i++) {
+    // ... acciones ...
+}
+```
+que resulta más claro, legible y compacto.
+
+Respecto de la memoria, este programa
+``` 
+            store   ax, 158         # b address
+            load    cx, [ax]        # b value
+            store   ax, 156         # a address
+            load    bx, [ax]        # a value
+            inc     bx, cx
+            store   bx, [ax]        # store addition result in a address
+``` 
+se puede expresar de forma mucho más concisa
+``` c
+a = a + b
+```
+
+El surgimiento de los primeros lenguajes de programación como Fortran, Lisp, Cobol, o Algol, representó un primer paso en la elevación de la programación por sobre los detalles del hardware.
+
+(imagen ligada a los primeros lenguajes)  
+![imagen ligada a los primeros lenguajes](../../images/logoelevate.jpg) 
+
+
+## Paso 2 - paradigmas de programación
+Entre los conceptos principales que aportaron las primeras generaciones de lenguajes de programación, encontramos las [variables](../../logica-algoritmica/basicos/variables.md), los [arrays o listas](../../logica-algoritmica/basicos/arrays-listas.md), la [alternativa](../../logica-algoritmica/basicos/alternativa.md), las [estructuras de repetición](../../logica-algoritmica/basicos/repeticion.md), y las [funciones](../../logica-algoritmica/basicos/funciones.md) u otros conceptos similares.  Mencionamos brevemente estos conceptos en la unidad sobre lógica algorítmica. 
+
+Todos estos conceptos, más otros como los [registros](https://en.wikipedia.org/wiki/Struct_(C_programming_language)), apuntan a organizar la _estructura_, tanto del programa como de los datos que maneja.  
+El foco está puesto en los programas, quedando en las desarrolladoras la tarea de adaptar la descripción de los fenómenos que se desea manipular, a las estructuras de un programa.  
+
+
+Un siguiente paso de la elevación del nivel de abstracción, lo constituye la concepción de distintos **paradigmas de programación**. El concepto de paradigma es, dentro de la informática, tal vez uno de los que más se resiste a una definición precisa.  
+Aquí diremos que un **paradigma** define un conjunto de conceptos que estructuran  un programa, y la forma en que se relacionan las unidades que lo conforman.
+
+Los conceptos mencionados más arriba forman la base del llamado _paradigma imperativo-procedural_. Se caracteríza por el hecho de que varios de sus conceptos principales siguen manteniendo una relación con las estructuras básicas de un equipo de cómputo: una variable surge como una forma de designar a una dirección de memoria, el ciclo y la alternativa como formas elegantes de describir una estructura de `jump`s.  
+En otros paradigmas, se rompe esta relación entre los conceptos básicos que estructuran un programa, y el reflejo que van a tener cuando el programa se ejecute.  
+
+## Los dos paradigmas más relevantes: "objetos y funcional"
+Los dos paradigmas más influyentes en el estado actual de la programación son los llamados _programación orientada a objetos_ y _programación funcional_.
+
+La **programación orientada a objetos** propone estructurar un programa a partir de dispositivos computacionales, llamados _objetos_, que representan las entidades que se desea representar.
+Cada dato que se obtenga será el resultado de efectuarle una consulta al objeto correspondiente.
+
+Así, para construir p.ej. un programa que maneja una red social, cada usuario, sesión, conversación, post, etc., estará representado por un objeto.  
+Para saber si dos usuarios son "amigos", una forma posible de resolverlo es haciéndole una consulta al objeto que representa a uno de ellos, pasando el (objeto que representa al) otro usuario como parámetro.  
+El comportamiento de un programa surge de la interacción entre objetos.
+
+En la **programación funcional**, el concepto más relevante es el de _función_, entendida desde un punto de vista matemático: recibe ciertos parámetros, entrega una respuesta.  
+La información se estructura mediante listas y tuplas. El procesamiento ocurre aplicando funciones, donde la información a manejar se pasa como parámetro.  
+
+
+## La potencia está en la combinación
+Luego de una etapa de apasionados debates sobre "cuál es el mejor paradigma", el consenso de la industria ha tomado la (sabia) decisión de integrar fortalezas de ambos paradigmas en el desarrollo de software.
+
+Esta decisión se refleja en varios de los lenguajes de programación más utilizados actualmente, que permiten combinar las estructuras básicas de la programación orientada a objetos con técnicas surgidas de la programación funcional.  
+Entre estos lenguajes mencionamos a Python, Java, JavaScript y Swift.
+
+

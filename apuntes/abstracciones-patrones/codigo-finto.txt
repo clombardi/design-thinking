@@ -1,0 +1,25 @@
+flujo de programa
+
+            mov     ax, 0
+:loop
+            cmp     ax, 10
+            je      :after_loop
+            // ... stuff ...
+            inc     ax
+            jump    :loop
+:after_loop
+
+
+for (i=0; i < 10; i++) {
+    // ... stuff ...
+}
+
+
+            store   ax, 158         # b address
+            load    cx, [ax]        # b value
+            store   ax, 156         # a address
+            load    bx, [ax]        # a value
+            inc     bx, cx
+            store   ax, [bx]        # store addition result in a address
+
+a := a + b
