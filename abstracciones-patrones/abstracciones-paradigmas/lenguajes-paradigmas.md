@@ -70,7 +70,8 @@ El surgimiento de los primeros lenguajes de programación como Fortran, Lisp, Co
 Entre los conceptos principales que aportaron las primeras generaciones de lenguajes de programación, encontramos las [variables](../../logica-algoritmica/basicos/variables.md), los [arrays o listas](../../logica-algoritmica/basicos/arrays-listas.md), la [alternativa](../../logica-algoritmica/basicos/alternativa.md), las [estructuras de repetición](../../logica-algoritmica/basicos/repeticion.md), y las [funciones](../../logica-algoritmica/basicos/funciones.md) u otros conceptos similares.  Estos conceptos fueron mencionados brevemente en la unidad sobre lógica algorítmica. 
 
 Todos estos conceptos, más otros como los [registros](https://en.wikipedia.org/wiki/Struct_(C_programming_language)), apuntan a organizar la _estructura_, tanto del programa como de los datos que maneja.  
-El foco está puesto en los programas, quedando en las desarrolladoras la tarea de adaptar la descripción de los fenómenos que se desea manipular, a las estructuras de un programa.  
+El foco está puesto en los programas en sí, más que en la representación de la  información relevante del _dominio de aplicación_ (sistema bancario, industria, extracción, ventas y facturación, manejo de personal, etc.) de cada programa o aplicación.  
+Queda en los desarrolladores (y desarrolladoras) la tarea de adaptar la información de un dominio en particular, a los formatos propios de un programa.
 
 
 Un siguiente paso de la elevación del nivel de abstracción, lo constituye la concepción de distintos **paradigmas de programación**. 
@@ -79,21 +80,30 @@ El concepto de paradigma es tal vez, dentro de la informática, uno de los que m
 _aquí_ diremos que un **paradigma** define a partir de qué conceptos se organiza un programa, y cómo interactúan los elementos que se generan a partir de esos conceptos.
 
 Los conceptos mencionados al principio de este parágrafo (variables, arrays/listas, alternativa, etc.) forman la base del llamado _paradigma imperativo-procedural_. Se caracteríza por el hecho de que varios de sus conceptos principales fueron concebidos en relación con las estructuras básicas de un equipo de cómputo: una variable surge como una forma de designar a una dirección de memoria, el ciclo y la alternativa como formas elegantes de describir una estructura de `jump`s.  
+
 En otros paradigmas, se rompe esta relación entre los conceptos básicos que estructuran un programa, y el reflejo que van a tener cuando el programa se ejecute.  
+El objetivo es brindar formas de organizar programas que atiendan más a la información que debe ser representada, o a las formas adecuadas para manipularla, que a la forma en que el programa va a ser ejecutado en un equipo de cómputo.
 
-## Los dos paradigmas más relevantes: "objetos y funcional"
-Los dos paradigmas más influyentes en el estado actual de la programación son los llamados _programación orientada a objetos_ y _programación funcional_.
 
-La **programación orientada a objetos** propone estructurar un programa a partir de elementos, llamados _objetos_, que representan las entidades que deben modelarse dentro de un programa.
+## Los dos paradigmas más relevantes: "objetos" y "funcional"
+Los dos paradigmas más influyentes en el estado actual de la programación son los llamados _programación orientada a objetos_ y _programación funcional_, referidos habitualmente usando las palabras "objetos" y "funcional".
+
+La **programación orientada a objetos** (POO) propone estructurar un programa a partir de elementos, llamados _objetos_, que representan las entidades que deben modelarse dentro de un programa.
 Cada dato que se obtenga será el resultado de efectuarle una consulta al objeto correspondiente.  
-Así, para construir p.ej. un programa que maneja los permisos para una aplicación, cada usuario, recurso, rol, etc., estará representado por un objeto.
+Así, para construir p.ej. un programa que maneja los permisos para una aplicación, cada usuario, recurso, rol, etc., podrá estar representado por un objeto.
 Para saber si un usuario tiene acceso a un recurso, una forma posible es haciéndole una consulta al objeto que representa al recurso, pasando el (objeto que representa al) usuario como parámetro.  
 Cada objeto puede mantener _referencias_ a otros objetos, y realizar consultas a los objetos que conoce de esta forma. En nuestro ejemplo, el objeto que representa a un usuario puede tener  mantener una referencia al (objeto que representa a) cada rol que tiene asignado, y consultarle p.ej. a qué recursos da acceso un rol.  
 De esta forma, se configura una red (o grafo) de objetos que se conocen e interactúan entre sí. 
-El procesamiento surge de esta interacción entre objetos, disparada por una consulta inicial que se hace a uno de ellos. 
+El procesamiento surge de esta interacción entre objetos, disparada por una consulta inicial que se hace a uno de ellos.  
+
+(imagen sobre "Programación Orientada a Objetos")  
+![imagen sobre "Programación Orientada a Objetos"](../../images/logoelevate.jpg) 
 
 En la **programación funcional**, el concepto más relevante es el de _función_, entendida desde un punto de vista matemático: recibe ciertos parámetros, entrega una respuesta.  
 La información se estructura mediante listas y tuplas. El procesamiento ocurre aplicando funciones, donde la información a manejar se pasa como parámetro.  
+
+(imagen sobre "Programación Funcional")  
+![imagen sobre "Programación Funcional"](../../images/logoelevate.jpg) 
 
 
 ## La potencia está en la combinación

@@ -1,0 +1,108 @@
+# Programación Orientada a Objetos - una aproximación
+
+En esta página, vamos a presentar algunos conceptos básicos de la **Programación Orientada a Objetos (POO)**, tal vez el [paradigma de programación](./lenguajes-paradigmas.md) más influyente actualmente en la industria del software.
+
+No pretendemos dar una descripción completa de este paradigma, sino solamente brindar una aproximación parcial, destacando los elementos que utilizaremos luego al mencionar patrones en desarrollo de software.  
+Quienes estén interesado en un panorama más completo, pueden consultar el [libro clásico de Bertrand Meyer](https://www.amazon.com/-/es/Bertrand-Meyer/dp/0136291554), o el material más conciso que conforma la [serie de apuntes utilizados en varias universidades argentinas](https://www.wollok.org/documentacion/apuntes/).
+
+Antes de comenzar, una pequeña puntualización. La POO admite varias variantes, que ponen énfasis en distintos conceptos y presentan diferencias en las formas de organizar el código que forma un programa o aplicación.  
+Aquí presentaremos los elementos básicos de la versión más difundida del paradigma, en la que es preponderante el concepto de _clase_.
+
+Incluiremos extractos de código en el lenguaje Python, que hemos utilizado en la unidad sobre [lógica algorítmica](../../logica-algoritmica/logica-algoritmica.index.md).
+
+
+## Modelo basado en objetos
+En la [página anterior](./lenguajes-paradigmas.md), mencionamos que los elementos básicos que conforman un programa en la POO son los _objetos_, y que el procesamiento surge de la interacción entre estos objetos, que están vinculados formando una red a partir de _referencias_.  
+También indicamos que cada objeto será capaz de responder a determinadas consultas. 
+
+En el ejemplo esbozado sobre manejo de permisos, indicamos que una forma posible de organizar el programa correspondiente es definir un objeto para cada recurso, para cada usuario, para cada rol, etc..   
+Para saber si un usuario tiene acceso a un recurso, podemos hacer una consulta al (objeto que representa al) recurso, pasándole el (objeto que representa al) usuario como parámetro. La consulta podría tener esta forma:
+``` python
+recurso_X.tiene_acceso(usuario_Z)
+``` 
+que muestra que los objetos que representan recursos admiten una consulta llamada `tiene_acceso`, que espera un usuario, y responde con un valor de verdadero-o-falso.  
+Esta consulta dispara la ejecución del código que evalúa las condiciones de acceso.
+
+Aquí debe quedar claro que cada elemento, en nuestro caso cada recurso, cada usuario, cada rol, estará representado mediante un objeto _distinto_. Si tenemos 100 recursos, tendremos 100 objetos, uno que representa a _cada_ recurso.  
+Siguiendo con el ejemplo, suponiendo que el usuario al que llamamos `usuario_Z`  tiene acceso al `recurso_X` pero no al `recurso_J`, la respuesta a la consulta anterior será `True`, mientras que si consultamos
+``` python
+recurso_J.tiene_acceso(usuario_Z)
+``` 
+obtendremos `False` como respuesta.
+
+Las acciones que tengan efecto sobre el programa, p.ej. otorgar un rol a un usuario, se resolverán en forma similar. En el mismo modelo, la sentencia por el cual se otorga un rol a un usuario podría tener esta forma.
+``` python
+usuario_Z.otorgar_rol(rol_W)
+``` 
+
+Los objetos definidos (recursos, usuarios, roles, etc.) configuran un _modelo del dominio de aplicación_, en este caso, de la información relevante para un sistema de permisos basado en roles.  
+Obviamente, este no es el único modelo posible: entre las decisiones principales al diseñar un programa en la POO están las que configuran qué modelo del dominio se va a utilizar.
+
+
+## Clases: definición unificada para objetos similares
+En prácticamente todos los modelos, existirán muchos objetos con características similares, porque representan entidades de un mismo tipo.  
+Para el dominio que estamos usando como ejemplo, en los modelos más usuales, todos los objetos que representan recursos admitirán las mismas consultas (una de las cuales es `tiene_acceso`), y responderán aplicando la misma lógica, o sea, el código que deba ejecutarse será el mismo cuando se realice una misma consulta para cualquiera de los objetos que representan recursos.
+
+En POO, una **clase** es la definición del comportamiento y estructura de uno o varios objetos, que son llamados **instancias** de esa clase.  
+Una clase define:
+- _atributos_, que especifican qué referencias a otros objetos va a mantener cada instancia; y
+- _métodos_, que especifican qué interacciones (consultas y/o acciones) admite cada instancia, y cuál es el código que debe ejecutarse para cada uno.
+
+Presentamos una versión muy sencilla de una posible clase para representar recursos.
+
+``` python
+class Recurso:
+    def __init__(self):
+        self.usuarios_habilitados = []
+
+    def habilitar_usuario(self, usuario):
+        self.usuarios_habilitados.append(usuario)
+
+    def tiene_acceso(self, usuario):
+        # código que resuelve el control de acceso
+        # en esta implementación sencilla, sólo los usuarios expresamente habilitados
+        # tienen acceso al recurso
+        return usuario in self.usuarios_habilitados
+```
+Destaquemos los elementos incluidos en la clase
+- un atributo llamado `usuarios_habilitados`, cuyo valor será una lista, presumiblemente de usuarios.
+- un método llamado `habilitar_usuario`, que recibe un usuario por parámetro; el `self` que aparece como primer parámetro se refiere al mismo recurso y no aparece en las invocaciones. Este método representa una acción: se agrega al usuario a la lista de usuarios habilitados.
+- un método llamado `tiene_acceso`, que también recibe un usuario por parámetro. Este método implementa la lógica de control de acceso. En esta versión, la condición es que el usuario por el que se consulta esté dentro de la lista de usuarios habilitados.
+
+
+## Usando una clase
+Presentemos ejemplos sencillos de cómo se utilizan las clases. En lo que sigue, supondremos la existencia de una clase `Usuario`.
+
+Para utilizar una clase, debemos crear instancias. Todo lenguaje que incluye características de la POO, provee una sintaxis para crear una instancia de una clase determinada. En Python se escribe el nombre de la clase seguido de paréntesis. Por ejemplo, si en la consola ejecutamos
+
+``` python
+> recurso_X = Recurso()
+```
+el valor de la variable `recurso_X` será una instancia de `Recurso`, recién creada.
+
+Para cerrar este primer ejemplo, agreguemos a `recurso_X` algunos de los objetos mencionados más arriba, y lleguemos a realizar nuestras primeras consultas
+``` python
+> recurso_J = Recurso()
+> usuario_Z = Usuario()
+> recurso_X.habilitar_usuario(usuario_Z)
+> recurso_X.tiene_acceso(usuario_Z)
+True
+> recurso_J.tiene_acceso(usuario_Z)
+False
+```
+
+
+## El foco pasa del programa al dominio
+Este sencillo ejemplo, alcanza para apreciar el cambio de foco que habilita la POO. En lugar de pensar en funciones, procedimientos, listas o registros, nuestra atención está puesta en el modelo de usuarios, recursos y roles, o sea, de los conceptos relevantes del _dominio de aplicación_.
+
+Es de esta forma en que la POO permite elevar el nivel de nuestros modelos, con un mayor grado de abstracción respecto de los equipos de cómputo, y con el foco puesto en el problema a resolver.
+
+
+## Protocolos en POO
+Obviamente, lo mostrado hasta aquí es una sobre-simplificación sin ninguna pretensión de verosimilitud, configurada al solo efecto de obtener una presentación lo más concisa posible.
+
+En aplicaciones reales, la lógica para resolver el control de acceso será mucho más compleja, pudiendo involucrar roles, cuotas u otras cusestiones.  
+Un aspecto a destacar es que la complejidad que se agregue, puede respetar el **contrato** básico que hemos definido: 
+> para consultar si un usuario tiene acceso a un recurso, se le hace al recurso la consulta `tiene_acceso`, con el usuario como parámetro.
+
+Estos contratos son la forma en que se refleja, en la POO, el concepto de _protocolo_. 
