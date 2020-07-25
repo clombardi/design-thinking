@@ -9,5 +9,5 @@ Para mayor referencia, se pueden consultar numerosos tutoriales que se pueden en
 Para cada patrón, indicaremos
 - su objetivo.
 - su motivación, a partir de situaciones en las que el patrón ayuda a resolver un problema de diseño.
+- algunos comentarios sobre cómo implementarlo.
 - un ejemplo relacionado con el dominio de recursos, usuarios y permisos descripto [en una página anterior](../abstracciones-paradigmas/oop-algo-mas.md).
-- algunos comentarios sobre técnicas utilizadas para implementarlo.

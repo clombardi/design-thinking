@@ -23,6 +23,30 @@ Por ejemplo, el despliegue de una aplicación (proceso principal) puede involucr
 ![imagen de partes de un auto](../../images/logoelevate.jpg) 
 
 
+## Técnicas involucradas
+Se definen clases separadas para los objetos que representan elementos compuestos. Los objetos que representan compuestos, mantienen referencias a los objetos que representan a cada uno de sus componentes, muchas veces en la forma de una lista o array. Mediante técnicas de manipulación de listas como las que describimos en la Unidad 2, se pueden realizar los recorridos necesarios sobre los componentes.
+
+Es _fundamental_ que se defina un **contrato compartido** entre los objetos que representan objetos simples y compuestos. 
+Esto permite que un elemento compuesto pueda ser, a su vez, componente en una composición ulterior.   
+
+Este es un esquema de definición para un objeto compuesto, con una operación 
+``` python
+class ObjetoSimple:
+    def operacion_x(self):
+        # implementacion
+
+class ObjetoCompuesto:
+    def __init__(self, _componentes):
+        self.componentes = _componentes
+
+    def operacion_x(self):
+        (componente.operacion_x() for componente in self.componentes)
+```
+Aquí notamos que el `ObjetoCompuesto` respeta el contrato definido para los componentes, en este caso el que consta únicamente de la `operacion_x()`. Cuando se invoca la operación sobre el objeto compuesto, este la distribuye a cada uno de sus componentes.  
+Para ciertas operaciones, el objeto compuesto realizará alguna forma de agregación, p.ej. calcular la suma (o el máximo, mínimo, promedio, etc.) si el resultado de la operación es un número.
+
+
+
 ## Ejemplo
 En nuestro ejemplo sobre usuarios, recursos y permisos, puede resultar de utilidad la definición de _recursos compuestos_, o sea agrupamientos de recursos. 
 Un usuario tendrá acceso a un recurso compuesto, sólo si puede acceder a cada uno de sus componentes en forma separada.
@@ -38,6 +62,8 @@ class RecursoCompuesto:
     def tiene_acceso(self, usuario):
         return all(recurso.tiene_acceso(usuario) for recurso in self.recursos_individuales)
 ```
+
+Destacamos que las instancias de `Recurso` y de `RecursoCompuesto` comparten el contrato definido por la consulta `tiene_acceso`, que es el objetivo del modelo construido. Esto permite que un `RecursoCompuesto` sea, a su vez, componente dentro de otro `RecursoCompuesto`, sin que sea necesaria ninguna consideración especial en el código. 
 
 Esta clase nos permite definir un recurso compuesto por otros, como se muestra en el siguiente ejemplo.
 ``` python
@@ -70,9 +96,3 @@ False
 Hemos agregado un `recurso_X` compuesto por `recurso_A` (que a su vez es un compuesto de otros dos más simples) y `recurso_B`. Ninguno de los dos usuarios definidos tiene acceso al nuevo recurso: al `usuario_1` "le falta" `recurso_A` (como vimos antes), mientras que al `usuario_2` "le falta" `recurso_B`.
 
 
-## Técnicas involucradas
-Se definen clases separadas para los objetos que representan elementos compuestos. Los objetos que representan compuestos, mantienen referencias a los objetos que representan a cada uno de sus componentes, muchas veces en la forma de una lista o array. Mediante técnicas de manipulación de listas como las que describimos en la Unidad 2, se pueden realizar los recorridos necesarios sobre los componentes.
-
-Es _fundamental_ que se defina un **contrato compartido** entre los objetos que representan objetos simples y compuestos. 
-Esto permite que un elemento compuesto pueda ser, a su vez, componente en una composición ulterior.   
-En el último ejemplo, las instancias de `Recurso` y de `RecursoCompuesto` comparten el contrato definido por la consulta `tiene_acceso`, que es el objetivo del modelo construido. Esto permite que un `RecursoCompuesto` sea, a su vez, componente dentro de otro `RecursoCompuesto`, sin que sea necesaria ninguna consideración especial en el código. 

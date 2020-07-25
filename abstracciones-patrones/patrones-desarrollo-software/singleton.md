@@ -32,6 +32,15 @@ nuevo_identificador = Generador.get_instance().generar_identificador()
 En otros casos, simplemente la existencia de múltiples instancias resulta innecesaria, y se prefiere evitarla generando una única instancia globalmente accesible.  
 
 
+## Técnicas involucradas
+Existen distintas técnicas que facilitan la definición de Singletons.  
+Mencionamos algunos conceptos relacionados: métodos de clase (o estáticos), metaclases, objetos "compañeros" de una clase, prototipos.  
+Estos conceptos, ligados a las particularidades de cada lenguaje, escapan al contenido de este curso.
+
+Más relevante resulta indicar cómo _acceder_ a un Singleton. Por lo general, se asocia una operación a _la clase_  que permite acceder a su única instancia.  
+Es el formato utilizado en los ejemplos anteriores: en `ControlDeAcceso.get_instance()`, `ControlDeAcceso` es la clase, y `get_instance()` la operación que permite acceder a su único ejemplar.
+
+
 ## Ejemplo
 En nuestro ejemplo sobre usuarios, recursos y permisos, la clase `PermisoHabilitadosDeLicencia` puede ser un Singleton; podemos manejarnos con una única instancia.  
 Distinto es el caso de `PermisoUnDiaPorMes`, porque debemos tener distintas instancias correspondientes a cada posible día para el que establezca un permiso de este tipo.
@@ -41,9 +50,5 @@ Si efectivamente implementamos el patrón Singleton en esta clase, entonces para
 usuario_2.agregar_permiso_especial(PermisoHabilitadosDeLicencia.get_instance())
 usuario_3.agregar_permiso_especial(PermisoHabilitadosDeLicencia.get_instance())
 ```
-
-## Técnicas involucradas
-Existen distintas técnicas que facilitan la definición de Singletons.  
-Mencionamos algunos conceptos relacionados: métodos de clase (o estáticos), metaclases, objetos "compañeros" de una clase, prototipos.  
 
 

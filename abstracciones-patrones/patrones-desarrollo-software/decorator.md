@@ -20,6 +20,43 @@ En principio, resulta útil para modelar, en una aplicación, situaciones simila
 También existen otros dominios, más cercanos específicamente al software, donde este patrón resulta útil. Un ejemplo es la configuración de una ventana en un sistema gráfico: al diseño básico de una ventana se le pueden agregar bordes, títulos, barras de menú o de íconos, etc..
 
 
+## Técnicas involucradas
+Para cada característica que se quiera incorporar, debe definirse una nueva clase, que debe respetar los contratos definidos para los objetos que se desee decorar.  
+
+Esta es una definición esquemática de un objeto original y dos posibles decoradores
+``` python
+class ObjetoOriginal:
+    def operacion_x(self):
+        # implementacion
+
+class Decorador1:
+    def __init__(self, _objeto_decorado):
+        self.objeto_decorado = _objeto_decorado
+
+    def operacion_x(self):
+        # agregados del decorador 1
+        self.objeto_decorado.operacion_x()
+
+class Decorador2:
+    def __init__(self, _objeto_decorado):
+        self.objeto_decorado = _objeto_decorado
+
+    def operacion_x(self):
+        # agregados del decorador 2
+        self.objeto_decorado.operacion_x()
+```
+Destacamos que los decoradores respetan el contrato definido por la `operacion_x()`. Esto permite la definición de cadenas de decoradores de longitud arbitraria, en la que un decorador puede decorar a otro decorador.
+En este ejemplo:
+``` python
+objeto_original = ObjetoOriginal()
+deco_1 = Decorador1(objeto_original)
+deco_2 = Decorador2(deco_1)
+```
+el decorador `deco_2` decora a otro decorador, que a su vez decora al objeto original. Si ejecutamos
+`deco_2.operacion_x()`
+se aplicarán los agregados de _ambos_ decoradores, al comportamiento definido en la clase del objeto original.
+
+
 ## Ejemplo
 A partir de la definición básica del criterio para definir si un usuario tiene o no acceso a un recurso, podemos pensar en varias variantes, entre otras las siguientes.
 - recursos que sólo pueden ser accedidos por usuarios con rango de administrador.
@@ -29,7 +66,7 @@ A partir de la definición básica del criterio para definir si un usuario tiene
 Supongamos que se nos solicita agregar varias restricciones de este estilo, de forma tal que puedan ser combinadas libremente.
 
 Este es un buen caso para aplicar la idea de _Decorator_.
-Para cada capacidad agregada, definiremos una clase específica, _que debe compartir el contrato básico de los recursos_. Diremos que los objetos generados a partir de estas clases son _decoradores_ de recursos.  
+Para cada capacidad agregada, definiremos una clase específica, _que debe compartir el contrato básico de los recursos_. Los objetos generados a partir de estas clases son _decoradores_ de recursos. 
 A su vez, cada decorador debe mantener una referencia al recurso al que está decorando.
 
 Por ejemplo, para agregar a cualquier recurso la restricción de rango horario, definimos la siguiente "clase decoradora".
@@ -78,9 +115,7 @@ Destacamos que el `recurso_con_dos_agregados` está decorando al `recurso_admini
 Se pueden generar todos los niveles de decoración que se deseen, para agregar una cantidad indeterminada de agregados sobre el comportamiento original.
 
 
-## Técnicas involucradas
-Para cada característica que se quiera incorporar, debe definirse una nueva clase, que debe respetar los contratos definidos para los objetos que se desee decorar.  
-La condición de respetar los contratos, es la que permite la definición de cadenas de decoradores de longitud arbitraria.
-
+## Nota adicional
 Mencionamos que la _herencia de clases_, una de las técnicas más usuales en POO, puede utilizarse para agregar **una** característica (o un conjunto fijo de características) sobre un comportamiento original.  
 El beneficio que da el uso de Decorators sobre la herencia es que permite combinar libremente las características adicionales, donde cada una se define en una clase separada, y por lo tanto de código sencillo.
+

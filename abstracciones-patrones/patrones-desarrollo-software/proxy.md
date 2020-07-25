@@ -46,6 +46,30 @@ class Proxy:
 ```
 
 
+## Técnicas involucradas
+El proxy es un objeto separado, que debe mantener una referencia al objeto real.  
+
+Si el proxy se establece para demorar la configuración de los objetos originales hasta su primer uso efectivo, se utiliza la técnica de _inicialización perezoza_ (_lazy initialization_): la referencia al objeto real está en principio vacía, y cambia al objeto en el momento en que se crea efectivamente.
+
+Este es un esquema de definición de clase Proxy, en un caso en que es el Proxy quien debe crear al objeto real.
+``` python
+class Proxy:
+    def __init__(self):
+        self.objeto_real = None
+        
+    def inicializar_objeto_real(self):
+        if self.objeto_real == None:
+            self.objeto_real = ... creación del objeto real ...
+
+    def operacion(self):
+        inicializar_objeto_real()
+        return self.objeto_real.operacion()
+```
+Cada proxy tiene una referencia al objeto real, que no tiene un valor significativo (esto se refleja en el valor inicial `None`) hasta que se aplica una operación.  
+Para cada operación que se solicita al proxy, se valida si el objeto real está creado, y si no es así, se lo crea en ese momento. Aquí estamos aplicando la idea de _lazy initialization_ recién mencionada.
+
+
+
 ## Ejemplo
 En nuestro ejemplo sobre usuarios, recursos y permisos, algunos de nuestros usuarios podrían estar registrados en directorios externos, en donde la obtención de la información sobre un usuario puede ser costosa en tiempo. Los permisos de estos usuarios son manejados por el sistema de directorio, a partir de un identificador que se establece para cada recurso.  
 A su vez, estos usuarios sólo acceden ocasionalmente a los recursos que manejamos.
@@ -77,10 +101,5 @@ class UsuarioDeDirectorioProxy:
 ```
 
 
-## Técnicas involucradas
-Como se ve en los extractos de código incluidos, el proxy debe mantener una referencia al objeto real.  
-En muchos casos, también se debe mantener una referencia separada, a información que permita crear o configurar el objeto real en el momento oportuno.
-
-Si el proxy se establece para demorar la configuración de los objetos originales hasta su primer uso efectivo, se utiliza la técnica de _inicialización perezoza_ (_lazy initialization_) utilizada en el último ejemplo: la referencia al objeto real está en principio vacía (`None`), y cambia al objeto en el momento en que se crea efectivamente.
 
 

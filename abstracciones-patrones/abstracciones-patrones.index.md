@@ -20,3 +20,5 @@
 [Composite](./patrones-desarrollo-software/composite.md)
 
 [Decorator](./patrones-desarrollo-software/decorator.md)
+
+[Strategy](./patrones-desarrollo-software/strategy.md)
