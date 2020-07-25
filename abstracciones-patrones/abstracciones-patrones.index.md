@@ -19,4 +19,4 @@
 
 [Composite](./patrones-desarrollo-software/composite.md)
 
-<!-- [Decorator](./patrones-desarrollo-software/decorator.md) -->
+[Decorator](./patrones-desarrollo-software/decorator.md)
