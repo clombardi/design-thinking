@@ -9,3 +9,5 @@
 [Programación orientada a objetos - un ejemplo un poco más elaborado](./abstracciones-paradigmas/oop-algo-mas.md)
 
 [Introducción a patrones de diseño](./abstracciones-paradigmas/patrones-intro.md)
+
+[Patrones de diseño para desarrollo de software](./patrones-desarrollo-software/patrones.md)

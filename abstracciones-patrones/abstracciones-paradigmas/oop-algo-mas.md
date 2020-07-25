@@ -79,7 +79,7 @@ class PermisoUnDiaPorMes:
         return date.today().day == self.dia_del_mes
 
 
-class PermisHabilitadosDeLicencia:
+class PermisoHabilitadosDeLicencia:
     def habilita_acceso(self, recurso):
         return all(usuario.esta_de_licencia for usuario in recurso.usuarios_habilitados)
 ```
