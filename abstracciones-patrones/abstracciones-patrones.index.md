@@ -10,4 +10,13 @@
 
 [Introducción a patrones de diseño](./abstracciones-paradigmas/patrones-intro.md)
 
-[Patrones de diseño para desarrollo de software](./patrones-desarrollo-software/patrones.md)
+### Patrones de diseño para desarrollo de software
+[Introducción](./patrones-desarrollo-software/patrones.md)
+
+[Singleton](./patrones-desarrollo-software/singleton.md)
+
+[Proxy](./patrones-desarrollo-software/proxy.md)
+
+[Composite](./patrones-desarrollo-software/composite.md)
+
+<!-- [Decorator](./patrones-desarrollo-software/decorator.md) -->
