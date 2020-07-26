@@ -2,7 +2,7 @@
 Concluimos esta unidad con una descripción suscinta de algunos de los patrones de diseño para containers más extensamente difundidos.  
 La aplicación de la idea de patrón de diseño a las redes de containers para despliegue de software es más reciente que su correlato en desarrollo de software. 
 Concretamente, surge en un [artículo](https://www.usenix.org/conference/hotcloud16/workshop-program/presentation/burns) presentado en una conferencia de 2016 sobre Cloud Computing.
-Los patrones que se presentan, junto con algunos otros, fueron propuestos originalmente en el artículo mencionado. Las imágenes que se incluyen fueron tomadas del artículo citado.
+Los patrones que se presentan, junto con algunos otros, fueron propuestos originalmente en el artículo mencionado, del cual tomamos las imágenes que se incluyen en esta página.
 
 La presentación será mucho más abreviada que la desarrollada para patrones de desarrollo de software: nos limitaremos a describir brevemente el propósito y características principales de cada patrón.
 
@@ -20,24 +20,24 @@ Este patrón indica, simplemente, que se recomienda:
 Este patrón se considera el punto de partida para la utilización de containers para el despliegue de aplicaciones.  
 Para la interacción de los componentes con otros servicios, o para distintas variantes de configuración, se definen otros patrones, algunos de los cuales se describen a continuación.
 
-El concepto de _single-container_ es acompañado por propuestas acerca de las  acciones de gestión asociadas a una aplicación desplegada en un container, tanto respecto del monitoreo de las aplicaciones por parte de herramientas específicas, como de la relación de la aplicación con el container donde está corriendo (aviso ante la baja del container, posibilidad de obtener datos de configuración a partir de recursos disponibilizados por un container, etc.).
+El concepto de _single-container_ es acompañado por propuestas acerca de las  acciones de gestión asociadas a una aplicación desplegada en un container, tanto respecto del monitoreo de las aplicaciones por parte de herramientas específicas, como de la relación de la aplicación con el container donde está desplegado (aviso ante la baja del container, posibilidad de obtener datos de configuración a partir de recursos disponibilizados por un container, etc.).
 
 
 ## Sidecar
 
 ### Propósito
-Establecer un mecanismo estandarizado para proveer servicios (logging, autenticación, etc.) a un componente que corre en un container, sin romper con el principio recién mencionado de _single-container_.
+Establecer un mecanismo estandarizado para proveer servicios (logging, autenticación, etc.) a un componente desplegado en un container, sin romper con el principio recién mencionado de _single-container_.
 
 ### Características
 Se propone disponibilizar los servicios requeridos en containers separados, que se comuniquen con el componente a través de canales y/o recursos compartidos, tales como una red local o un volumen.
 
-La siguiente imagen muestra un ejemplo de un container donde corre un web server, junto con un _sidecar container_ que se encarga del log.  
+La siguiente imagen muestra un ejemplo de un container donde está desplegado un web server, junto con un _sidecar container_ que se encarga del log.  
 ![ejemplo de sidecar](./images/sidecar.png) 
 
 La separación de responsabilidades que propone este patrón brinda varios beneficios, entre los que señalamos.
 - la posibilidad de controlar por separado el uso de recursos en cada container. En el ejemplo, si los dos containers se alojan en el mismo equipo físico, se puede dar prioridad a la atención de pedidos del componente principal, relegando el otorgamiento de recursos al servidor dedicado al log.
 - el componente principal se empaqueta y despliega por separado de los servicios a los que accede.
-- los errores ocurridos en un servicio accesorio, no impactan en el funcionamiento del container donde corre el componente principal.
+- los errores ocurridos en un servicio accesorio, no impactan en el funcionamiento del container donde está alojado el componente principal.
 
 ## Ambassador
 
