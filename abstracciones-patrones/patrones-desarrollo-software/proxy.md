@@ -49,7 +49,7 @@ class Proxy:
 ## Técnicas involucradas
 El proxy es un objeto separado, que debe mantener una referencia al objeto real.  
 
-Si el proxy se establece para demorar la configuración de los objetos originales hasta su primer uso efectivo, se utiliza la técnica de _inicialización perezoza_ (_lazy initialization_): la referencia al objeto real está en principio vacía, y cambia al objeto en el momento en que se crea efectivamente.
+Si el proxy se establece para demorar la configuración de los objetos originales hasta su primer uso efectivo, se utiliza la técnica de _inicialización perezosa_ (_lazy initialization_): la referencia al objeto real está en principio vacía, y cambia al objeto en el momento en que se crea efectivamente.
 
 Este es un esquema de definición de clase Proxy, en un caso en que es el Proxy quien debe crear al objeto real.
 ``` python
@@ -74,7 +74,7 @@ Para cada operación que se solicita al proxy, se valida si el objeto real está
 En nuestro ejemplo sobre usuarios, recursos y permisos, algunos de nuestros usuarios podrían estar registrados en directorios externos, en donde la obtención de la información sobre un usuario puede ser costosa en tiempo. Los permisos de estos usuarios son manejados por el sistema de directorio, a partir de un identificador que se establece para cada recurso.  
 A su vez, estos usuarios sólo acceden ocasionalmente a los recursos que manejamos.
 
-Un equipo de trabajo que participa de nuestro proyecto, impleenta la clase `UsuarioDeDirectorio` que implementa la operación `tiene_permiso_especial(recurso)`.
+Un equipo de trabajo que participa de nuestro proyecto, implementa la clase `UsuarioDeDirectorio` que implementa la operación `tiene_permiso_especial(recurso)`.
 ``` python
 class UsuarioDeDirectorio:
     def __init__(self, referencia):
@@ -100,6 +100,6 @@ class UsuarioDeDirectorioProxy:
         return self.usuario_real.tiene_permiso_especial(recurso)
 ```
 
-
+Los recursos se configurarán utilizando estos proxies para el acceso a los usuarios de directorio.
 
 

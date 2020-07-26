@@ -10,13 +10,13 @@ Definir distintos agregados a una funcionalidad básica, de forma tal de que se 
 ## Motivación
 La existencia de distintos agregados sobre una estructura principal, que admiten una diversidad de configuraciones, es un fenómeno común en el "mundo real".
 
-Una situación usual es la de un producto que se ofrece en una versión básica, para el cual se define una serie de opcionales, donde cada cliente que compra el producto, puede elegir libremente cuáles de estos opcionales desea agregar.  
+Una situación usual es la de un **producto** que se ofrece en una versión básica, para el cual se define una serie de opcionales, donde cada cliente que compra el producto, puede elegir libremente cuáles de estos opcionales desea agregar.  
 Un ejemplo típico es la venta de automóviles, sobre una base se puede elegir agregar, o no, levantavidrios eléctrico, airbag en el asiento del conductor, asiento ajustable en altura, una mejor calidad de sonido, etc..
 
-La oferta de diversos servicios sigue un patrón similar. Por ejemplo, un gimnasio puede ofrecer un abono básico al que se le pueden añadir acceso a natación, profesor particular, clases específicas de alguna disciplina, etc.. Cada cliente elige la combinación de servicios opcionales, que se agregan al servicio base.
+La **oferta de diversos servicios** sigue un patrón similar. Por ejemplo, un gimnasio puede ofrecer un abono básico al que se le pueden añadir acceso a natación, profesor particular, clases específicas de alguna disciplina, etc.. Cada cliente elige la combinación de servicios opcionales, que se agregan al servicio base.
 
 Este mismo patrón, resulta útil para resolver varias situaciones que aparecen en el desarrollo de software.  
-En principio, resulta útil para modelar, en una aplicación, situaciones similares a las recién descriptas. 
+En principio, puede aplicarse para desarrollar modelos de situaciones similares a las recién descriptas. 
 También existen otros dominios, más cercanos específicamente al software, donde este patrón resulta útil. Un ejemplo es la configuración de una ventana en un sistema gráfico: al diseño básico de una ventana se le pueden agregar bordes, títulos, barras de menú o de íconos, etc..
 
 

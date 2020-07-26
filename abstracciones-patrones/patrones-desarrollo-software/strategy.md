@@ -48,9 +48,9 @@ class CriterioSegunMontoDeLaOperacion:
     def porcentaje_descuento(self, operacion):
         return 15 if operacion.monto() > 1000 else 0
 ```
-Se conoce como _strategies_ a los objetos creados a partir de las clases que representan los distintos criterios.
+Se conoce como _strategies_ a los objetos creados a partir de estas clases.
 
-Los objetos que deben aplicar el criterio (en los ejemplos anteriores, cada cliente del comercio, línea de crédito, o examen) deberán tener una referencia a un strategy. Esta es una implementación esquemática del cliente al que pueden aplicar distintos criterios de cálculo de descuento.
+Los objetos que deben aplicar el criterio (en los ejemplos anteriores, cada cliente del comercio, línea de crédito, o examen) deberán incluir una referencia a un strategy. Esta es una implementación esquemática del cliente al que pueden aplicar distintos criterios de cálculo de descuento.
 ``` python
 class Cliente:
     def __init__(self):
