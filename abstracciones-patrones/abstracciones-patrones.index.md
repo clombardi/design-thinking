@@ -22,3 +22,7 @@
 [Decorator](./patrones-desarrollo-software/decorator.md)
 
 [Strategy](./patrones-desarrollo-software/strategy.md)
+
+
+### Patrones de diseño para containers
+[Patrones para containers](./patrones-containers/patrones.md)

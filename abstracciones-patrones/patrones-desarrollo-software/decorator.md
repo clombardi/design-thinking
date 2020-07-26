@@ -111,9 +111,6 @@ aunque el `usuario_1` tiene habilitado el recurso, no puede acceder porque se es
 
 Este recurso podrá ser accedido únicamente por administradores, y en el horario de 11 a 13.
 
-Destacamos que el `recurso_con_dos_agregados` está decorando al `recurso_administrador`, que _también es un decorador_, en este caso del `recurso_original`.   
-Se pueden generar todos los niveles de decoración que se deseen, para agregar una cantidad indeterminada de agregados sobre el comportamiento original.
-
 
 ## Nota adicional
 Mencionamos que la _herencia de clases_, una de las técnicas más usuales en POO, puede utilizarse para agregar **una** característica (o un conjunto fijo de características) sobre un comportamiento original.  

@@ -17,7 +17,7 @@ Por ejemplo, el despliegue de una aplicación (proceso principal) puede involucr
 ![imagen que remita a procesos y subprocesos](../../images/logoelevate.jpg) 
 
 
-**Objetos que se componen de partes**, donde en algunas partes son a su vez el resultado de ensamblar partes más sencillas. Un ejemplo típico es un modelo de un auto, una de cuyas partes es un motor, que a su vez se compone de partes más sencillas.
+Otra situación que se presenta frecuentemente es la de **objetos que se componen de partes**, donde en algunas partes son a su vez el resultado de ensamblar partes más sencillas. Un ejemplo típico es un modelo de un auto, una de cuyas partes es un motor, que a su vez se compone de partes más sencillas.
 
 (imagen de partes de un auto)  
 ![imagen de partes de un auto](../../images/logoelevate.jpg) 

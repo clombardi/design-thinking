@@ -10,7 +10,7 @@ Permitir la configuración de una determinada política relacionada con el compo
 ## Motivación
 La noción de política aplica a distintos dominios del "mundo real".
 
-Por ejemplo, un comercio podría definir distintas políticas de otorgamiento de descuentos para sus clientes. Estos son algunos ejemplos.
+Por ejemplo, un comercio podría definir **distintas políticas de otorgamiento de descuentos** para sus clientes. Estos son algunos ejemplos.
 - el 10% en todas las compras, 
 - el 15% en compras que superen un valor, 
 - nada, 
@@ -19,9 +19,9 @@ Por ejemplo, un comercio podría definir distintas políticas de otorgamiento de
 
 El comercio decide qué política utilizar para cada cliente, teniendo la libertad de _cambiar_ la política definida para un determinado cliente en cualquier momento.
 
-En un dominio distinto, un banco podría definir distintas líneas de crédito, cada una con distinto criterio de asignación a un cliente: por nivel de ingresos, monto de transacciones con el banco, antigüedad como cliente, etc..
+En un dominio distinto, un banco podría definir distintas líneas de crédito, cada una con distinto **criterio de asignación** a un cliente: por nivel de ingresos, monto de transacciones con el banco, antigüedad como cliente, etc..
 
-Otro ejemplo lo representa la política de asignación de asientos en un aula para un examen a medida que entran los estudiantes: de atrás hacia adelante, de izquierda a derecha, primero asientos pares y luego impares, etc.. Para cada examen podría definirse una política distinta.
+Otro ejemplo lo representa la política de **asignación de asientos en un aula para un examen** a medida que entran los estudiantes: de atrás hacia adelante, de izquierda a derecha, primero asientos pares y luego impares, etc.. Para cada examen podría definirse una política distinta.
 
 En el desarrollo de software, además de los casos que resultan de modelar las situaciones descriptas y otras similares, existen situaciones ligadas a _algoritmos de decisión_. Mencionamos algunos ejemplos: 
 - asignación de recursos a distintos procesos (misma cuota de recursos para todos los procesos, asignación de acuerdo a la prioridad del proceso, dar mayores recursos a procesos con menor tiempo previsto de ejecución, etc.),
@@ -63,8 +63,8 @@ class Cliente:
         descuento_a_aplicar = self.criterio_descuento.porcentaje_descuento(operacion)
         # resto de la implementacion
 ```
-Al crear un cliente se le puede asignar un criterio de cálculo de descuento, que luego puede ser modificado en cualquier momento. Cuando debe calcular los importes de una operación, el descuento a aplicar dependerá del criterio que tenga asignado en ese momento.  
-Notamos que en este ejemplo, si a un cliente no se le asigna ningún criterio, utiliza uno extremo que es no aplicar ningún descuento en ningún caso. Esto está indicado en la inicialización del cliente.
+Al crear un cliente se le puede asignar un criterio de cálculo de descuento, que luego puede ser modificado en cualquier momento. Al calcular los importes para una operación, el descuento a aplicar dependerá del criterio que tenga asignado en ese momento.  
+Notamos que si a un cliente no se le asigna ningún criterio, utiliza una opción extrema: no aplicar ningún descuento en ningún caso. Esto está indicado en la inicialización del cliente.
 
 
 
@@ -79,12 +79,13 @@ Hay distintos criterios de cuándo considerar que un usuario está inhabilitado:
 
 Para distintos recursos, podrán aplicar distintas políticas de cuándo se considera que un usuario está inhabilitado. 
 
-Para aplicar el patrón Strategy, definiremos una nueva clase para cada criterio; estas clases deben resepetar un contrato que incluye únicamente la operación
+Para aplicar el patrón Strategy, definimos un contrato que incluye únicamente la operación
 ``` python
 esta_inhabilitado(usuario)
 ``` 
 cuyo resultado es un valor booleano (o sea, `True` o `False`).
 
+Cada criterio estará implementado como una clase que respeta el contrato definido.  
 A continuación, presentamos el código correspondiente a dos criterios: uno extremo en el que nadie está inhabilitado, el otro que considera inhabilitados a los usuarios que están de licencia
 ``` python
 class NadieInhabilitado:
@@ -133,7 +134,7 @@ True
 >>> recurso_A.tiene_acceso(usuario_2)
 True
 ```
-en un momento posterior, podemos cambiar el criterio del `recurso_A`, para que considere inhabilitados a los empleados que estén de licencia, lo que genera una modificación en el comportamiento del recurso.
+En un momento posterior, podemos cambiar el criterio del `recurso_A`, para que considere inhabilitados a los empleados que estén de licencia, lo que genera una modificación en el comportamiento del recurso.
 ``` python
 >>> recurso_A.cambiar_criterio_inhabilitacion(InhabilitarUsuariosEnLicencia())
 >>> recurso_A.tiene_acceso(usuario_1)
