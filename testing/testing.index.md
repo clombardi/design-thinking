@@ -7,7 +7,7 @@ Severidad y Tipos de Bugs
 
 Bug Tracking. Bugzilla, Jira, Redmine
 
-## Automatización de la ejecución
+## [Automatización de la ejecución](./automatizacion-ejecucion.md)
 Testing Unitario
 
 Casos de Testing Unitario
