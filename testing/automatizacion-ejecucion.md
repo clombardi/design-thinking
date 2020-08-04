@@ -1,18 +1,11 @@
 <!-- 
-[casos límite](../logica-algoritmica/elevando/casos-limite.md)
-Esto no significa que hayamos “procedido mal” hasta ahora.
-
-El mismo proceso de haber armado una primer versión del programa, nos permite pensar con mayor precisión en el comportamiento que necesitamos.
-
-En casos más complejos, el descubrimiento de casos en los que las definiciones no resultan coincidir con lo que en realidad se necesita, se produce recién cuando el programa comienza a funcionar y se observan sus resultados. -->
-
-<!-- Descubrir casos en que el comportamiento del programa no se ajusta a lo que se necesita, nos lleva a pensar con mayor precisión cuál es el comportamiento que queremos de un programa.  -->
-
-<!-- La peor decisión es no tomar ninguna decisión
-Se podrían analizar más situaciones ad infinitum.
-Salvo en sistemas enormemente críticos (como podría ser el control de una central nuclear), es conveniente tomar una decisión, aplicarla, y observar el comportamiento del programa para definir si resulta conveniente efectuar ulteriores ajustes. La idea de desarrollo iterativo e incremental descripto al hablar de marcos de trabajo ágiles.
-
-En este caso, tomamos las siguientes decisiones -->
+Creo que acá se podría:
+* razonar sobre el hecho de que esto es efectivamente un programa que se puede ejecutar (HECHO)
+* ejecución: mostrar success, failure y error. (HECHO)
+* ¿quién ejecuta este programa? lxs devs, un servidor de CI, un qa (HECHO)
+* casuística: ¿por qué se eligieron esos valores? ¿qué representan? ¿se puede mejorar?
+* ¿qué se puede testear? costo/beneficio a medida que vamos alejándonos del código (HECHO)
+ -->
 
 ## Un caso práctico
 
@@ -77,15 +70,6 @@ Para este último ejemplo, introdujimos un pequeño error en el script original:
 
 A diferencia de los dos casos anteriores, en este ejemplo _el código productivo_ falló y ni siquiera pudieron terminar de ejecutarse las pruebas. Si miramos atentamente la salida, veremos que esta vez se incluye la porción de código productivo que falló y el error correspondiente, además del test.
 
-<!-- 
-Creo que acá se podría:
-* razonar sobre el hecho de que esto es efectivamente un programa que se puede ejecutar (HECHO)
-* ejecución: mostrar success, failure y error. (HECHO)
-* ¿quién ejecuta este programa? lxs devs, un servidor de CI, un qa (HECHO)
-* casuística: ¿por qué se eligieron esos valores? ¿qué representan? ¿se puede mejorar?
-* ¿qué se puede testear? costo/beneficio a medida que vamos alejándonos del código
- -->
-
 ## ¿Quién corre los tests?
 
 Ya tenemos nuestro código productivo y tenemos nuestros tests... ¿y ahora?
@@ -103,7 +87,22 @@ Un ciclo de desarrollo típico, de los tantos posibles, podría ser el siguiente
 
 En este ejemplo, vemos que los tests son útiles en dos momentos bien distintos: cuando la desarrolladora está trabajando, como herramienta de soporte de su trabajo; y cuando su trabajo finalizó, como garantía de que sus cambios no introdujeron errores nuevos. Esto sin dudas eleva la calidad del código, pero también ayuda a tener procesos más dinámicos y confiables.
 
-**Para ir mechando en el relato:**
+## Las pruebas a mano, ¿no van más?
+
+En el ejemplo que vimos, escribimos pruebas para una aplicación de línea de comandos, diseñada para ser utilizada por alguien con un perfil técnico. Podemos pensar a esa aplicación como tres grandes componentes: uno que interactúa con la usuaria, otro que se encarga de leer el archivo YAML y un tercero que verifica si el modelo cumple con las condiciones. 
+
+Por el momento, solo estamos probando un pequeño subconjunto de este último componente (la parte que interpreta el rango de puertos), pero podríamos fácilmente extender lo que hicimos para probarlo por completo. El segundo componente está prácticamente implementado por la biblioteca externa, así que no tiene tanto sentido escribir pruebas nuevas. En cuanto al primero (la interacción), probarlo representaría ciertas dificultades técnicas como simular la ejecución del script o capturar lo que saldría por pantalla, pero también sería posible realizarlo. Con todo esto nos aseguraríamos de que cada uno de los tres componentes funciona correctamente, pero... ¿qué garantía tenemos de que la interacción entre ellos es correcta? La respuesta no debería sorprender a esta altura: necesitamos también _testear_ esa interacción.
+
+A modo de orientación, podemos esbozar una clasificación (de las miles que existen) de los tipos de pruebas:
+* **pruebas unitarias:** verifican que un componente funcione adecuadamente, aislado del resto del sistema. A qué llamamos componente depende del paradigma y del equipo de trabajo, podría ser una función, un módulo, una clase en el paradigma de objetos.
+* **pruebas de integración:** verifican que un sistema, o una parte del sistema funcione adecuadamente. Aquí típicamente involucraríamos varios componentes distintos, que en su conjunto se encargan de resolver una parte significativa del problema. Es habitual que haya cierto solapamiento con las pruebas unitarias, aunque el objetivo aquí es diferente.
+* **pruebas de interacción:** verifican un sistema a partir de la interacción que un usuario podría realizar, y el _feedback_ que el sistema le da. Este tipo de pruebas, con una gran carga de trabajo manual, son las que probablemente todo proyecto de desarrollo puso en práctica alguna vez.
+
+Si pensamos en estas pruebas como "de abajo hacia arriba" o "de adentro hacia afuera", vemos que cada tipo está más lejos del código y más cerca de cómo un usuario utiliza nuestro sistema. Mientras vamos "hacia arriba", crece también el nivel de complejidad de las pruebas porque vamos incluyendo cada vez más componentes, llegando en última instancia a trabajar con el sistema completo. También se vuelven más complejas las _aserciones_ que hacemos para verificar que el código funcione: verificar que una serie de filas se borraron de la base de datos, que el botón de "Guardar" se deshabilitó o que el reporte PDF se generó de manera correcta. Y como consecuencia de todo esto, estas pruebas ya no se ejecutarán en una fracción de segundo sino en varios minutos o incluso horas, dependiendo de qué tan complejo sea el sistema.
+
+A modo de resumen, podemos decir que **a medida que las pruebas se alejan del código se vuelven cada vez más complejas de desarrollar, mantener y ejecutar**.  Habrá entonces que analizar el costo-beneficio de automatizar las pruebas, siendo una opción perfectamente razonable la de decidir no automatizar cierto tipo de pruebas y sí automatizar otras. Dependerá, como usualmente sucede en el mundo del software, de muchos factores: el _seniority_ del equipo de desarrollo, la visión de la empresa, el dominio del sistema, los recursos disponibles y un largo etcétera. 
+
+<!-- **Para ir mechando en el relato:**
 
 Algunas ventajas de la automatización:
 * la obvia, ahorrar tiempo: la computadora tarda mucho menos que un humano en hacer tareas repetitivas;
@@ -113,4 +112,4 @@ Algunas ventajas de la automatización:
 
 Desde la _visión de desarrollador_, aportan además las siguientes ventajas:
 * documentar la forma esperada de utilizar los módulos (funciones, clases, etcétera);
-* especificar con menor ambigüedad qué es lo que se espera de dicho módulo.
+* especificar con menor ambigüedad qué es lo que se espera de dicho módulo. -->
