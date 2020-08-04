@@ -1,7 +1,13 @@
 # Unidad 4 - Testing
 
+[Errores, defectos y test - un panorama general](./testing-panorama.md)
+
 ## Sistematización de la gestión
-Test Plans & Test Scripts
+[Tipos de test, documentación de testing](./sistematizacion/tipos-documentacion.md)
+
+[Test Plan](./sistematizacion/test-plan.md)
+
+[Test Script = Test Case](./sistematizacion/test-case.md)
 
 Severidad y Tipos de Bugs
 
