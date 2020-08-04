@@ -2,6 +2,9 @@
 
 [Errores, defectos y test - un panorama general](./testing-panorama.md)
 
+[De errores a defectos](./errores-defectos.md)
+
+
 ## Sistematización de la gestión
 [Tipos de test, documentación de testing](./sistematizacion/tipos-documentacion.md)
 
