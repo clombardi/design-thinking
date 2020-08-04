@@ -81,10 +81,27 @@ A diferencia de los dos casos anteriores, en este ejemplo _el código productivo
 Creo que acá se podría:
 * razonar sobre el hecho de que esto es efectivamente un programa que se puede ejecutar (HECHO)
 * ejecución: mostrar success, failure y error. (HECHO)
-* ¿quién ejecuta este programa? lxs devs, un servidor de CI, un qa
+* ¿quién ejecuta este programa? lxs devs, un servidor de CI, un qa (HECHO)
 * casuística: ¿por qué se eligieron esos valores? ¿qué representan? ¿se puede mejorar?
 * ¿qué se puede testear? costo/beneficio a medida que vamos alejándonos del código
  -->
+
+## ¿Quién corre los tests?
+
+Ya tenemos nuestro código productivo y tenemos nuestros tests... ¿y ahora?
+
+El testeo automatizado se lleva especialmente bien con las [metodologías ágiles](../programacion-a-desarrollo/intro-agil.md) que ya discutimos anteriormente. Si bien nunca las pruebas pueden garantizar al 100% que el código funciona (porque después de todo, siguen siendo herramientas construidas por humanos), nos dan cierta seguridad de que el comportamiento de nuestro programa es el deseado. Poder probar todo nuestro código en pocos segundos (o minutos) ayuda a perder el _miedo_ a introducir cambios y mejoras, y nos acerca a la _agilidad_ que prometen estas metodologías.
+
+Un ciclo de desarrollo típico, de los tantos posibles, podría ser el siguiente:
+1. se detecta una falla a corregir o una funcionalidad nueva que hay que implementar;
+1. se escribe el código que resuelve el problema;
+1. **se ejecutan los tests**, para verificar que lo que teníamos sigue funcionando;
+1. se modifican los tests existentes y/o se agregan nuevos, que garanticen que lo nuevo que hicimos funciona;
+1. se sube el código a algún repositorio;
+1. un servidor de integración continua detecta los cambios y **ejecuta los tests**;
+1. el equipo aprueba los cambios y el nuevo código se integra a algún ambiente pre-productivo o productivo.
+
+En este ejemplo, vemos que los tests son útiles en dos momentos bien distintos: cuando la desarrolladora está trabajando, como herramienta de soporte de su trabajo; y cuando su trabajo finalizó, como garantía de que sus cambios no introdujeron errores nuevos. Esto sin dudas eleva la calidad del código, pero también ayuda a tener procesos más dinámicos y confiables.
 
 **Para ir mechando en el relato:**
 
