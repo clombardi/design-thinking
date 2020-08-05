@@ -36,3 +36,9 @@ Para derivar test cases a partir de un escenario, y evitar por otro lado la gene
 - **Negative Testing**: consiste simplemente en considerar condiciones inesperadas, p.ej. la carga de una cantidad negativa en la compra de un producto.
 
 Es importante encontrar un buen balance entre la _cobertura_ del test, o sea qué posibles defectos puede detectar, y el _esfuerzo_ de redactar, ejecutar y mantener los test cases. La cobertura total es imposible en la mayor parte de los casos, debiéndose utilizar técnicas de _verificación formal_ en aquellas situaciones en las que la criticidad de los recursos controlados por una aplicación hace pertinente la búsqueda de estrategias que eliminen de raíz la posibilidad de defectos.
+
+
+## Ejecución de un test case
+De acuerdo a lo que se establezca en el [Test Plan](./test-plan.md) y en otras instancias de gestión, se deben ejecutar los Test Cases definidos ante ciertos eventos, p.ej. generación de una nueva versión, cambios en el código que afectan una cierta funcionalidad, etc..  
+Se debe registar el _resultado_ de la ejecución de cada Test Case. Primariamente, si se obtuvieron los resultados esperados o no, o dicho informalmente, si el test _pasa_ o _no pasa_.  
+En el segundo caso, se deben registrar los defectos encontrados. Para esto existen herramientas específicas utilizadas en la gestión de defectos, de las que hablaremos más adelante.
