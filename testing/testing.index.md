@@ -10,7 +10,7 @@
 
 [Test Plan](./sistematizacion/test-plan.md)
 
-[Test Script = Test Case](./sistematizacion/test-case.md)
+[Test Case, Test Script](./sistematizacion/test-case.md)
 
 Severidad y Tipos de Bugs
 
