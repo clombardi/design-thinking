@@ -10,9 +10,9 @@ Partimos de dos premisas, que creemos dignas de mención aunque puedan parecer o
 1. Es inevitable que el software que se construye presente **defectos** de distinto tipo.  
 Entre los distintos fenómenos que llevan al surgimiento de defectos, señalamos algunos que hemos mencionado en unidades anteriores: 
     - los múltiples aspectos en los que un producto de software puede resultar _complejo_, mencionados [al comienzo de la Unidad 3](../abstracciones-patrones/abstracciones-paradigmas/abstracciones.md), 
-    - la gran cantidad de _componentes_ que pueden formar parte de una aplicación, y que deben colaborar adecuadamente, de acuerdo a lo descripto al presentar el dominio de la [arquitectura de software](../programacion-a-desarrollo/arquitectura-de-software.md) en la Unidad 1,
+    - la gran cantidad de _componentes_ que pueden formar parte de una aplicación, y que deben combinarse adecuadamente, como se indica al presentar la [arquitectura de software](../programacion-a-desarrollo/arquitectura-de-software.md) en la Unidad 1,
     - los _distintos roles_ que participan en un proyecto de desarrollo, descriptos brevemente al [principio de la Unidad 1](../programacion-a-desarrollo/construccion-tareas-roles.md), que deben trabajar en forma sincronizada y colaborativa,
-    - la existencia de cambios en los requerimientos, comentada al hablar sobre [ciclo de vida](../programacion-a-desarrollo/ciclo-de-vida.md) y sobre [marcos de trabajo ágiles](../programacion-a-desarrollo/intro-agil.md), también en la Unidad 1.
+    - la inexorable aparición de cambios en los requerimientos, comentada al hablar sobre [ciclo de vida](../programacion-a-desarrollo/ciclo-de-vida.md) y sobre [marcos de trabajo ágiles](../programacion-a-desarrollo/intro-agil.md), también en la Unidad 1.
 
 2. Es de la máxima relevancia que estos defectos sean **detectados y corregidos**, antes que los componentes de software producidos se desplieguen para su operación normal.
 
@@ -31,7 +31,7 @@ Los reportes de defectos son el punto inicial de la **gestión de defectos**: la
 
 
 ## Contenido de esta unidad
-Las tareas de _testing de software_ y _gestión de defectos_, tienen sus roles, técnicas y herramientas específicas. En esta unidad haremos una rápida descripción de los principales, con el objetivo de elevar nuestro nivel de comprensión, sobre estas tareas en particular, y sobre el proceso global de desarrollo de software en general. 
+Las tareas de _testing de software_ y _gestión de defectos_, tienen sus conceptos, roles, técnicas y herramientas específicas. En esta unidad haremos una rápida descripción de los principales, con el objetivo de elevar nuestro nivel de comprensión, sobre estas tareas en particular, y sobre el proceso global de desarrollo de software en general. 
 
 
 
