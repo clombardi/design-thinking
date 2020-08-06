@@ -4,7 +4,7 @@ layout: default
 
 # Definamos un algoritmo
 
-En la [página anterior](./estrategia.md) diseñamos una estrategia para resolver el [desafío que queremos resolver](../desafio-enunciado.md).
+En la [página anterior](./estrategia) diseñamos una estrategia para resolver el [desafío que queremos resolver](../desafio-enunciado).
 
 En esta página, vamos a definir un **algoritmo** que lleve la estrategia a algo más parecido a un programa. Pero antes, respondamos una pregunta que tal vez esté en el aire.
 
@@ -26,7 +26,7 @@ Por lo que acabamos de decir, podemos suponer que la tarea técnica está resuel
 
 
 ### Un reflejo de desarrollador - elección de nombre de variable
-En los algoritmos, muchas veces se hace uso de [variables](../basicos/variables.md).  
+En los algoritmos, muchas veces se hace uso de [variables](../basicos/variables).  
 En este caso, vamos a usar una variable para obtener el _resultado_. Recordemos que este resultado va a ser un booleano, o sea `true`  o `false`.  
 Antes de seguir, pensemos en un _nombre_ para esta variable. Elegir nombres que ayuden a leer nuestros programas es una práctica que es muy saludable adquirir, eso lo mencionamos al hablar sobre [la diferencia entre programar y desarrollar](../../programacion-a-desarrollo/programar-y-desarrollar). En este caso podría ser `resultado`, pero busquemos una alternativa.  
 Esta es una variable cuyo valor va a ser booleano, en breve es una _variable booleana_. Para darle nombre a una variable booleana, conviene pensar _qué representa que el valor de esa variable sea `true`. En este caso, la variable es true si cada archivo es más grande que el anterior. Ahí tenemos un nombre, un poco largo pero muy descriptivo: `cada_tamanio_es_mas_grande_que_el_anterior`. Me gustó.  
@@ -72,7 +72,7 @@ Este problema tiene muchas soluciones. Elegimos una que, aunque se aleja de "la 
 
 Empecemos diciendo que para comparar dos números, tengo que poder acceder a ambos. En cada comparación, el tamaño actual es el valor de la variable `tamanio` introducida en el `for`. Para el tamaño anterior, vamos a definir una variable adicional, `tamanio_anterior`.
 
-Teniendo en cuenta que debemos realizar una comparación menos, vamos a "separar" el primer elemento de la lista del resto. El primer elemento lo vamos a asignar a `tamanio_anterior` _antes_ del recorrido. Y para el recorrido tomamos el "slice" que comienza con el segundo elemento, hablamos sobre slices en la [página sobre listas/arrays](../basicos/arrays-listas.md).
+Teniendo en cuenta que debemos realizar una comparación menos, vamos a "separar" el primer elemento de la lista del resto. El primer elemento lo vamos a asignar a `tamanio_anterior` _antes_ del recorrido. Y para el recorrido tomamos el "slice" que comienza con el segundo elemento, hablamos sobre slices en la [página sobre listas/arrays](../basicos/arrays-listas).
 
 Con estos elementos, ya podemos proceder
 ``` bash
@@ -89,7 +89,7 @@ return cada_tamanio_es_mas_grande_que_el_anterior
 ```
 La línea marcada como **importante** es, efectivamente, crucial: el valor que es el `tamanio` de una comparación, debe pasar a ser el `tamanio_anterior` en la siguiente. 
 
-Les sugerimos que revisen el comportamiento de este algoritmo con los ejemplos que brindamos al describir la [estrategia](./estrategia.md), para seguir la mecánica. En el primero de esos ejemplos, la lista `tamanios` toma el valor `[3, 8, 5, 22]`; por lo tanto, `tamanios[1:]` será `[8, 5, 22]`.
+Les sugerimos que revisen el comportamiento de este algoritmo con los ejemplos que brindamos al describir la [estrategia](./estrategia), para seguir la mecánica. En el primero de esos ejemplos, la lista `tamanios` toma el valor `[3, 8, 5, 22]`; por lo tanto, `tamanios[1:]` será `[8, 5, 22]`.
 
 > Una observación antes de seguir: creemos que la **legibildad** del algoritmo es buena, a lo cual contribuye el (largo) nombre de la variable que registra el resultado.  
 Este algoritmo discierne si `cada_tamanio_es_mas_grande_que_el_anterior`, lo que no ocurre si para algún elemento a partir del segundo, resulta que `tamanio_anterior > tamanio`. Todos estos elementos aparecen _explícitamente_ en el algoritmo. Más adelante, buscaremos alternativas que lleguen a programas más claros.

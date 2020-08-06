@@ -25,6 +25,6 @@ Como se indica en cualquier referencia a la palabra, la idea de "algoritmo" vien
 ![el parrafito anterior es para justificar una imagen de Al Juarismi, que puede venir simpática](../images/logoelevate.jpg) 
 
 Los _datos_ que se manejan en algoritmos matemáticos son números, o en todo caso estructuras matemáticas como p.ej. matrices.
-En programación, muchas veces nuestros algoritmos van a trabajar con datos más complejos. En el [ejemplo de la unidad 1](../programacion-a-desarrollo/programar-y-desarrollar-ejemplo-apendice.md), analizamos cada línea en el contenido de un archivo.
+En programación, muchas veces nuestros algoritmos van a trabajar con datos más complejos. En el [ejemplo de la unidad 1](../programacion-a-desarrollo/programar-y-desarrollar-ejemplo-apendice), analizamos cada línea en el contenido de un archivo.
 
 

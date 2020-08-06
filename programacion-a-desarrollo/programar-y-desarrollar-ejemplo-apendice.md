@@ -4,7 +4,7 @@ layout: default
 
 # Ejemplo de programa con _visión desarrollador_ - un apéndice algorítmico
 
-En esta sección, aprovechamos el programa descripto en [la sección anterior](./programar-y-desarrollar-ejemplo-dev.md) para realizar algunos comentarios, que nos ubican de lleno en el terreno de la Unidad 2, sobre razonamiento algorítmico.  
+En esta sección, aprovechamos el programa descripto en [la sección anterior](./programar-y-desarrollar-ejemplo-dev) para realizar algunos comentarios, que nos ubican de lleno en el terreno de la Unidad 2, sobre razonamiento algorítmico.  
 En concreto, analizaremos diferentes variantes de la obtención de los servicios que incluyen a un puerto determinado entre los host ports.  
 Estas variantes surgieron naturalmente durante la preparación del material, por lo tanto son un ejemplo bien real de la evolución que puede hacerse sobre una sección de código.
 

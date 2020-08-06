@@ -78,7 +78,7 @@ A diferencia de los dos casos anteriores, en este ejemplo _el código productivo
 
 Ya tenemos nuestro código productivo y tenemos nuestros tests... ¿y ahora?
 
-El testeo automatizado se lleva especialmente bien con las [metodologías ágiles](../programacion-a-desarrollo/intro-agil.md) que ya discutimos anteriormente. Si bien nunca las pruebas pueden garantizar al 100% que el código funciona (porque después de todo, siguen siendo herramientas construidas por humanos), nos dan cierta seguridad de que el comportamiento de nuestro programa es el deseado. Poder probar todo nuestro código en pocos segundos (o minutos) ayuda a perder el _miedo_ a introducir cambios y mejoras, y nos acerca a la _agilidad_ que prometen estas metodologías.
+El testeo automatizado se lleva especialmente bien con las [metodologías ágiles](../programacion-a-desarrollo/intro-agil) que ya discutimos anteriormente. Si bien nunca las pruebas pueden garantizar al 100% que el código funciona (porque después de todo, siguen siendo herramientas construidas por humanos), nos dan cierta seguridad de que el comportamiento de nuestro programa es el deseado. Poder probar todo nuestro código en pocos segundos (o minutos) ayuda a perder el _miedo_ a introducir cambios y mejoras, y nos acerca a la _agilidad_ que prometen estas metodologías.
 
 Un ciclo de desarrollo típico, de los tantos posibles, podría ser el siguiente:
 1. se detecta una falla a corregir o una funcionalidad nueva que hay que implementar;

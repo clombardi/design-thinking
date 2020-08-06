@@ -4,7 +4,7 @@ layout: default
 
 # Tipos de test, documentación de testing
 La diversidad de los defectos que pueden aparecer en un producto de software, implica la existencia de una amplia variedad de actividades que pueden incluirse en un proyecto de desarrollo, con el fin de detectar dichos defectos.
-Mencionamos algunas de estas actividades en la [introducción de esta unidad](../testing-panorama.md).
+Mencionamos algunas de estas actividades en la [introducción de esta unidad](../testing-panorama).
 
 Se utiliza el término **test** para referirnos a cualquiera de estas actividades.
 
@@ -48,7 +48,7 @@ Algunos tests funcionales analizan un único flujo de interacción (p.ej. una co
 ### Tests no funcionales
 Son tests que apuntan a condiciones y características generales de operación, que por lo general no están ligadas a una funcionalidad en particular.
 Entre ellas, mencionamos: seguridad, performance, tolerancia a fallos, concurrencia, experiencia de usuario.  
-Varios de estos aspectos coinciden con las cuestiones independientes del dominio, o _cross-cutting concerns_, mencionados al presentar la [arquitectura de software](../programacion-a-desarrollo/arquitectura-de-software.md) en la Unidad 1.
+Varios de estos aspectos coinciden con las cuestiones independientes del dominio, o _cross-cutting concerns_, mencionados al presentar la [arquitectura de software](../programacion-a-desarrollo/arquitectura-de-software) en la Unidad 1.
 
 Existe una gran variedad de tests no funcionales, mencionamos algunos que son particularmente conocidos.
 - **Tests de penetración**: se verifica que una aplicación presenta un grado adecuado de seguridad, mediante la simulación de ataques por parte de entidades maliciosas.

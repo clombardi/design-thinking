@@ -17,13 +17,13 @@ Entre los objetivos de la confección de un test plan mencionamos.
 - en algunos casos, establecer un contrato respecto de las actividades y condiciones de test entre la organización que se encarga del desarrollo, y el cliente o solicitante.
 - servir como vehículo de comunicación entre los distintos actores relacionados con las actividades de testing: en particular los roles directamente ligados al testing, pero también los product owners, personal de operaciones, desarrolladoras, etc..
 
-La necesidad de contar con una buena organización de las actividades de test puede ser esecialmente relevante en un esquema de [desarrollo continuo](../programacion-a-desarrollo/ciclo-de-vida.md), en el que estas actividades se desarrollan en paralelo con las otras tareas de desarrollo.  
+La necesidad de contar con una buena organización de las actividades de test puede ser esecialmente relevante en un esquema de [desarrollo continuo](../programacion-a-desarrollo/ciclo-de-vida), en el que estas actividades se desarrollan en paralelo con las otras tareas de desarrollo.  
 Señalamos que este escenario implica una necesidad de sincronización que eleva el nivel necesario de gestión del testing.
 
 
 ## Elementos de un test plan
 Un test plan debe incluir, al menos
-- una descripción general de los [tipos de test](./tipos-documentacion.md) que deben implementarse, con indicaciones de nivel o alcance de cada uno.
+- una descripción general de los [tipos de test](./tipos-documentacion) que deben implementarse, con indicaciones de nivel o alcance de cada uno.
 - una estimación de los recursos de personal y equipamiento necesarios.
 - un schedule para las actividades planificadas.
 - la asignación de responsabilidades a los distintos actores que formen parte de las actividades de testing.
@@ -35,5 +35,5 @@ Un test plan debe incluir, al menos
 La preparación de un test plan puede redundar en beneficios más allá de los objetivos indicados.
 
 En particular, destacamos que la tarea de redactar un test plan puede ayudar a refinar la comprensión sobre los requerimientos de una aplicación. 
-En particular, para debatir los niveles adecuados de requerimiento para los factores asociados a los [tests no funcionales](./tipos-documentacion.md), y la priorización entre los mismos.
+En particular, para debatir los niveles adecuados de requerimiento para los factores asociados a los [tests no funcionales](./tipos-documentacion), y la priorización entre los mismos.
 

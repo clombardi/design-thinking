@@ -14,6 +14,6 @@ Para cada patrón, indicaremos
 - su objetivo.
 - su motivación, a partir de situaciones en las que el patrón ayuda a resolver un problema de diseño.
 - algunos comentarios sobre cómo implementarlo.
-- un ejemplo relacionado con el dominio de recursos, usuarios y permisos descripto [anteriormente](../abstracciones-paradigmas/oop-algo-mas.md).
+- un ejemplo relacionado con el dominio de recursos, usuarios y permisos descripto [anteriormente](../abstracciones-paradigmas/oop-algo-mas).
 
 Incluiremos código en lenguaje Python, como forma de brindar material adicional al incluido en la unidad 2, para la familiarización con el código en general, y con Python en particular.

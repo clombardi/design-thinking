@@ -4,7 +4,7 @@ layout: default
 
 # all - condición que cumplen todos los elementos
 
-Comencemos este último paso de transformación, transcribiendo el código de la función luego de aplicar las sintaxis de [list comprehension y destructuring](./solo-tamanios.md)
+Comencemos este último paso de transformación, transcribiendo el código de la función luego de aplicar las sintaxis de [list comprehension y destructuring](./solo-tamanios)
 
 ``` python
 def los_tamanios_son_crecientes(files):

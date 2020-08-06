@@ -21,7 +21,7 @@ En el modelo de programa que propone la POO, se distinguen unidades bien definid
 Estas unidades se relacionan, formando una _estructura_. El principal medio para establecer esta estructura son las relaciones que se establecen mediante los valores de los atributos de cada objeto.  
 Por lo tanto, la _configuración_ de un programa construido según la POO, consistirá en la creación de los objetos necesarios, y la asignación de los valores de atributos que genere la estructura deseada.
 
-En el ejemplo de la [página anterior](./oop-algo-mas.md), esta configuración consiste en:
+En el ejemplo de la [página anterior](./oop-algo-mas), esta configuración consiste en:
 - la creación de los objetos que representan recursos, usuarios y permisos especiales.
 - algunas configuraciones particulares, en este caso los días a los que se refieren los permisos de un día por mes, y los usuarios que están en licencia.
 - la configuración de la whitelist para cada recurso.

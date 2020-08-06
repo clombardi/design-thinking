@@ -4,7 +4,7 @@ layout: default
 
 # Programación Orientada a Objetos - una aproximación
 
-En esta página, vamos a presentar algunos conceptos básicos de la **Programación Orientada a Objetos (POO)**, tal vez el [paradigma de programación](./lenguajes-paradigmas.md) más influyente actualmente en la industria del software.
+En esta página, vamos a presentar algunos conceptos básicos de la **Programación Orientada a Objetos (POO)**, tal vez el [paradigma de programación](./lenguajes-paradigmas) más influyente actualmente en la industria del software.
 
 No pretendemos dar una descripción completa de este paradigma, sino solamente brindar una aproximación parcial, destacando los elementos que utilizaremos luego al mencionar patrones en desarrollo de software.  
 Quienes estén interesado en un panorama más completo, pueden consultar el [libro clásico de Bertrand Meyer](https://www.amazon.com/-/es/Bertrand-Meyer/dp/0136291554), o el material más conciso que conforma la [serie de apuntes utilizados en varias universidades argentinas](https://www.wollok.org/documentacion/apuntes/).
@@ -12,11 +12,11 @@ Quienes estén interesado en un panorama más completo, pueden consultar el [lib
 Antes de comenzar, una pequeña puntualización. La POO admite varias variantes, que ponen énfasis en distintos conceptos y presentan diferencias en las formas de organizar el código que forma un programa o aplicación.  
 Aquí presentaremos los elementos básicos de la versión más difundida del paradigma, en la que es preponderante el concepto de _clase_.
 
-Incluiremos extractos de código en el lenguaje Python, que hemos utilizado en la unidad sobre [lógica algorítmica](../../logica-algoritmica/logica-algoritmica.index.md).
+Incluiremos extractos de código en el lenguaje Python, que hemos utilizado en la unidad sobre [lógica algorítmica](../../logica-algoritmica/logica-algoritmica.index).
 
 
 ## Modelo basado en objetos
-En la [página anterior](./lenguajes-paradigmas.md), mencionamos que los elementos básicos que conforman un programa en la POO son los _objetos_, y que el procesamiento surge de la interacción entre estos objetos, que están vinculados formando una red a partir de _referencias_.  
+En la [página anterior](./lenguajes-paradigmas), mencionamos que los elementos básicos que conforman un programa en la POO son los _objetos_, y que el procesamiento surge de la interacción entre estos objetos, que están vinculados formando una red a partir de _referencias_.  
 También indicamos que cada objeto será capaz de responder a determinadas consultas. 
 
 En el ejemplo esbozado sobre manejo de permisos, indicamos que una forma posible de organizar el programa correspondiente es definir un objeto para cada recurso, para cada usuario, para cada rol, etc..   

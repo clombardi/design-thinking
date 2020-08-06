@@ -4,7 +4,7 @@ layout: default
 
 # Generadores - ahora sí, hablemos de eficiencia
 
-Al [aplicar la función `all`](./all.md), llegamos a una versión notablemente compacta de la función que estamos estudiando.
+Al [aplicar la función `all`](./all), llegamos a una versión notablemente compacta de la función que estamos estudiando.
 
 ``` python
 def los_tamanios_son_crecientes(files):
@@ -16,13 +16,13 @@ def los_tamanios_son_crecientes(files):
 ```
 
 Aunque parecería que ya no queda lugar para seguir optimizando, hay un paso más que podemos dar, que va a afectar en particular a la eficiencia.  
-Como indicamos al [definir el algoritmo](../resolvamos/algoritmo.md), entendemos que a menos que se trate con una gran cantidad de archivos, el tiempo de ejecución no será un factor de preocupación. 
+Como indicamos al [definir el algoritmo](../resolvamos/algoritmo), entendemos que a menos que se trate con una gran cantidad de archivos, el tiempo de ejecución no será un factor de preocupación. 
 Por lo tanto, no consideramos como un problema que se realicen todas las comparaciones, aunque probablemente pudiera obtenerse el resultado haciendo sólo algunas, y en algunos casos (si el segundo archivo es más pequeño que el primero) sólo una.  
 Como veremos a continuación, en el formato actual del programa, es muy sencillo realizar esta mejora.
 
 
 ## Generadores vs. listas
-Al introducir [la operación `zip`](./zip.md), indicamos que siempre se "encerraran" los usos de `zip` dentro de un `list(...)`.  
+Al introducir [la operación `zip`](./zip), indicamos que siempre se "encerraran" los usos de `zip` dentro de un `list(...)`.  
 Veamos el efecto de obviar este paso.
 
 ``` python
@@ -81,7 +81,7 @@ Notemos que no se genera ninguna lista de pares ni de booleanos, y que _todas_ l
 
 ## Eficiencia de la función `all` 
 Y aquí la **buena noticia** (respecto de la eficiencia): la función `all` puede trabajar con una lista, o con un generador, de valores booleanos. En el segundo caso, al encontrarse con un `False` ya devuelve `False` como resultado del `all`, _sin generar el resto de los valores_.  
-Por lo tanto, el mismo efecto que en la versión descripta al elaborar el [algoritmo](./algoritmo.md) se logra agregando un `break`, se puede lograr reemplazando las listas por generadores. El código es casi idéntico.
+Por lo tanto, el mismo efecto que en la versión descripta al elaborar el [algoritmo](./algoritmo) se logra agregando un `break`, se puede lograr reemplazando las listas por generadores. El código es casi idéntico.
 
 ``` python
 def los_tamanios_son_crecientes(files):

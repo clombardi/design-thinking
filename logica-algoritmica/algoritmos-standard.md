@@ -5,12 +5,12 @@ layout: default
 # Programación: algoritmos comunes y particulares
 
 ## Un caso ultra-común: seleccionar-y-extraer
-En la [página anterior](./algoritmo-filosofia.md) relacionamos la palabra "algoritmo" con el procesamiento de datos.
+En la [página anterior](./algoritmo-filosofia) relacionamos la palabra "algoritmo" con el procesamiento de datos.
 
 Hay algunos esquemas de procesamiento que son extremadamente comunes en programación.  
 Uno típico es: a partir de una lista o secuencia, _seleccionar_ los elementos que cumplen una condición, y de esos, _extraer_ cierto dato particular. Este esquema se asocia a las ideas de `filter` (selección) y `map` (extracción).
 
-Esto es lo que hicimos en el [ejemplo de la unidad 1](../programacion-a-desarrollo/programar-y-desarrollar-ejemplo-apendice.md): de todas las definiciones de servicio, _seleccionamos_ la que exponen un host port determinado, y de esos, _extraemos_ el nombre del servicio. 
+Esto es lo que hicimos en el [ejemplo de la unidad 1](../programacion-a-desarrollo/programar-y-desarrollar-ejemplo-apendice): de todas las definiciones de servicio, _seleccionamos_ la que exponen un host port determinado, y de esos, _extraemos_ el nombre del servicio. 
 
 La forma final del código Python expresa claramente (OK, tal vez lo de "claramente" es una vez que una se acostumbra a la sintaxis) esta idea
 ``` python

@@ -3,7 +3,7 @@ layout: default
 ---
 
 # Corrigiendo el programa a partir del análisis de casos límite
-En la sección anterior, llevamos a cabo un [análisis del algoritmo propuesto](./casos-limite.md) partiendo de la idea de _caso límite_.
+En la sección anterior, llevamos a cabo un [análisis del algoritmo propuesto](./casos-limite) partiendo de la idea de _caso límite_.
 
 Transcribimos las conclusiones obtenidas.
 1. Si hay menos de cuatro archivos, no se analiza si los tamaños son crecientes, y se informa que "Hay pocos archivos, no alcanzan para analizar crecimiento".

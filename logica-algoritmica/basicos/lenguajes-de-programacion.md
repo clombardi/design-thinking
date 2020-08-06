@@ -42,7 +42,7 @@ Por estas razones, elegimos Python como lenguaje de propósito general para esta
 ![logos de PowerShell y bash, o imagen/imágenes que remitan a estos lenguajes](../../images/logoelevate.jpg) 
 
 También trabajaremos con lenguajes de scripting, para mostrar que muchos conceptos básicos de programación y algoritmia se pueden aplicar en distintos lenguajes, y a la vez apreciar las diferencias entre distintos tipos de lenguaje.  
-En particular, vamos a utilizar _PowerShell_ para realizar un desarrollo completo del desarrollo y evolución de un programa que resuelva el [problema planteado](../desafio-enunciado.md). 
+En particular, vamos a utilizar _PowerShell_ para realizar un desarrollo completo del desarrollo y evolución de un programa que resuelva el [problema planteado](../desafio-enunciado). 
 También vamos a mostrar algunos ejemplos en _bash_.
 
 

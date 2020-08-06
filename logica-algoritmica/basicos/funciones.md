@@ -4,7 +4,7 @@ layout: default
 
 # Funciones
 
-En la [sección anterior](./arrays-listas.md) trabajamos con listas, que es un concepto que nos permite _organizar datos_.  
+En la [sección anterior](./arrays-listas) trabajamos con listas, que es un concepto que nos permite _organizar datos_.  
 En esta sección, el tema van a ser las _funciones_, que nos van a permitir _organizar código_.
 
 ## Definición rápida
@@ -207,6 +207,6 @@ Por lo tanto, el indentado y la definición en una línea separada son _obligato
 
 
 ## Más sobre funciones
-Está claro que este ejemplo "matemático" tiene como _único_ objetivo introducir el concepto de función. Más adelante, veremos un ejemplo (que esperamos resulte) algo más interesante al realizar una pequeña integración, dentro del [estudio de repetición](./repeticion.md). 
+Está claro que este ejemplo "matemático" tiene como _único_ objetivo introducir el concepto de función. Más adelante, veremos un ejemplo (que esperamos resulte) algo más interesante al realizar una pequeña integración, dentro del [estudio de repetición](./repeticion). 
 También utilizaremos funciones al trabajar con el [problema que planteamos para su resolución](../desafio-enunciado).
 

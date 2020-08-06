@@ -59,7 +59,7 @@ La siguiente imagen muestra, en forma esquemática, una implementación de este 
 
 La consecuencia principal del uso del patrón Ambassador, es que el desarrollo de la aplicación que necesite comunicarse con un servicio, puede abstraerse de la existencia de varias instancias de dicho servicio en el entorno de producción. La comunicación es idéntica a si existiera una única instancia; el _ambassador_ se encarga de la complejidad agregadas por la existencia de múltiples instancias.
 
-Finalmente, señalamos la similitud de esta idea con la expresada en el [patrón Proxy](../patrones-desarrollo-software/proxy.md) para desarrollo de software. 
+Finalmente, señalamos la similitud de esta idea con la expresada en el [patrón Proxy](../patrones-desarrollo-software/proxy) para desarrollo de software. 
 
 
 

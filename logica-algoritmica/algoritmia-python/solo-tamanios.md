@@ -4,7 +4,7 @@ layout: default
 
 # Repaso de list comprehension - sólo los tamaños
 
-Transcribimos el código de la función luego de [utilizar la función `zip`](./zip.md).
+Transcribimos el código de la función luego de [utilizar la función `zip`](./zip).
 ``` python
 def los_tamanios_son_crecientes(files):
     cada_tamanio_es_mas_grande_que_el_anterior = True
@@ -19,7 +19,7 @@ def los_tamanios_son_crecientes(files):
     return cada_tamanio_es_mas_grande_que_el_anterior
 ```
 
-En esta página vamos a dar un pequeño paso que nos permita refrescar la sintaxis de _list comprehension_, que fue introducida al hablar sobre distintas formas de [repetición](../basicos/repeticion.md). Allí se mencionó como una forma "Pythónica" de expresar un ciclo `for`.  
+En esta página vamos a dar un pequeño paso que nos permita refrescar la sintaxis de _list comprehension_, que fue introducida al hablar sobre distintas formas de [repetición](../basicos/repeticion). Allí se mencionó como una forma "Pythónica" de expresar un ciclo `for`.  
 
 Esta es la forma general de una _list comprehension_.
 ``` python

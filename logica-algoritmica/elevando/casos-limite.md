@@ -8,7 +8,7 @@ Tenemos un programa más robusto, y más modular, que el inicial.
 En particular, sabemos que se comporta correctamente si se le pasa un parámetro que no es un nombre de carpeta.  
 El siguiente paso es pensar si funciona correctamente en _cualquier_ caso en que, efectivamente, se le da una carpeta para analizar. 
 
-Este análisis, como la mayor parte del contenido restante de esta unidad, se focaliza en la función que modela la tarea algorítmica, la llamada `los_tamanios_son_crecientes` en [la página donde se hace máxima la modularidad](./librerias-propias.md).  
+Este análisis, como la mayor parte del contenido restante de esta unidad, se focaliza en la función que modela la tarea algorítmica, la llamada `los_tamanios_son_crecientes` en [la página donde se hace máxima la modularidad](./librerias-propias).  
 Transcribimos la versión en Python de esta función.
 
 ``` python
@@ -49,7 +49,7 @@ Ahora supongamos que la carpeta bajo análisis tiene un solo archivo. Como no ha
 ¿Cuál será el resultado en este caso? Traten de pensarlo, antes de verlo en el screenshot siguiente.
 ![comportamiento ante carpeta con un archivo](./images/singleton-folder-naive-behavior.jpg)
 
-O sea, el resultado del algoritmo es `True`. Analizando el código entendemos la razón: el resultado será `False` solamente si se encuentra alguna comparación "mala" (de acuerdo a lo definido al pensar la [estrategia](../resolvamos/estrategia.md)), y si no se hace _ninguna_ comparación, entonces es imposible que haya alguna "mala".
+O sea, el resultado del algoritmo es `True`. Analizando el código entendemos la razón: el resultado será `False` solamente si se encuentra alguna comparación "mala" (de acuerdo a lo definido al pensar la [estrategia](../resolvamos/estrategia)), y si no se hace _ninguna_ comparación, entonces es imposible que haya alguna "mala".
 
 Esto resulta un poco decepcionante: si hay un solo archivo, en rigor no hay nada que pueda ir "creciendo". Pero sigamos.
 
@@ -70,7 +70,7 @@ El mismo proceso de haber armado una primer versión del programa, nos permite p
 En casos más complejos, el descubrimiento de casos en los que las definiciones no resultan coincidir con lo que en realidad se necesita, se produce recién cuando el programa comienza a funcionar y se observan sus resultados.  
 
 Por lo general, ante cualquier situación suficientemente compleja, uno de los problemas más difíciles que deben resolverse en un desarrollo es determinar el comportamiento _deseado_ del software.  
-Este es uno de los fenómenos que llevaron a adoptar la idea de [ciclo de vida](../../programacion-a-desarrollo/ciclo-de-vida.md) y los [marcos de trabajo ágiles](../../programacion-a-desarrollo/intro-agil.md) en el desarrollo de software.  
+Este es uno de los fenómenos que llevaron a adoptar la idea de [ciclo de vida](../../programacion-a-desarrollo/ciclo-de-vida) y los [marcos de trabajo ágiles](../../programacion-a-desarrollo/intro-agil) en el desarrollo de software.  
 
 Este pequeño ejemplo es suficiente para mostrar que las mismas problemáticas presentes en el desarrollo de aplicaciones, pueden aparecer al armar programas específicos para el uso en operaciones; y que por lo tanto, resulta conveniente aplicar ideas del ámbito del desarrollo de software.
 
@@ -92,7 +92,7 @@ Para este ejercicio, supondremos que este problema no se va a presentar: digamos
 
 ### La peor decisión es no tomar ninguna decisión
 Se podrían analizar más situaciones _ad infinitum_.  
-Salvo en sistemas enormemente críticos (como podría ser el control de una central nuclear), es conveniente tomar una decisión, aplicarla, y observar el comportamiento del programa para definir si resulta conveniente efectuar ulteriores ajustes. La idea de desarrollo iterativo e incremental descripto al hablar de [marcos de trabajo ágiles](../../programacion-a-desarrollo/intro-agil.md).
+Salvo en sistemas enormemente críticos (como podría ser el control de una central nuclear), es conveniente tomar una decisión, aplicarla, y observar el comportamiento del programa para definir si resulta conveniente efectuar ulteriores ajustes. La idea de desarrollo iterativo e incremental descripto al hablar de [marcos de trabajo ágiles](../../programacion-a-desarrollo/intro-agil).
 
 En este caso, tomamos las siguientes decisiones
 1. Si hay menos de cuatro archivos, no se analiza si los tamaños son crecientes, y se informa que "Hay pocos archivos, no alcanzan para analizar crecimiento".

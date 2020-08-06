@@ -3,14 +3,14 @@ layout: default
 ---
 
 # Repetición, recorrido, y algo de integración
-La _alternativa_, que repasamos brevemente en la [sección anterior](./alternativa.md), es uno de los dos elementos básicos de la algoritmia. El otro es la _repetición_.
+La _alternativa_, que repasamos brevemente en la [sección anterior](./alternativa), es uno de los dos elementos básicos de la algoritmia. El otro es la _repetición_.
 
 Como vimos, la alternativa permite la _ejecución condicional_ de una unidad de código. La repetición permite ejecutar una unidad de código _varias veces_. 
 
 ¿_Cuántas_ veces, _hasta cuándo_ se repite el código incluido en una repetición?  
 La respuesta a esta pregunta distingue a los dos tipos principales de estructuras de repetición.
 1. Se define la _cantidad de veces_ que se quiere repetir el código, 3 veces, 5, 80. El número puede ser conocido, o puede ser el resultado de una cuenta.  
-Un ejemplo típico de lo segundo es cuando se quiere realizar una operación para cada elemento de una [lista](./arrays-listas.md), en este caso la cantidad de repeticiones coincide con la cantidad de elementos de una lista.  
+Un ejemplo típico de lo segundo es cuando se quiere realizar una operación para cada elemento de una [lista](./arrays-listas), en este caso la cantidad de repeticiones coincide con la cantidad de elementos de una lista.  
 Esta idea se suele asociar a la palabra `for`.
 1. Se define una _condición_, la unidad de código se repite mientras se cumple una condición, o hasta que deja de cumplirse.  
 Por ejemplo: hasta que se encuentre un usuario habilitado para una operación, mientras la suma del tamaño de ciertos archivos a copiar no supere el tamaño del dispositivo donde queremos copiarlos, mientras haya errores de carga.  
@@ -144,7 +144,7 @@ Hacemos esta puntualización sobre la diferencia entre **objetivo** y **técnica
 
 
 ## Recorrido simplificado en Python, _list comprehension_, código "Pythónico"
-De hecho, la estructura que mencionamos brevemente en la descripción de [algoritmos standard](./algoritmos-standard.md):
+De hecho, la estructura que mencionamos brevemente en la descripción de [algoritmos standard](./algoritmos-standard):
 ``` python
 [<que_quiero_extraer>
     for <elemento> in <secuencia_o_lista>

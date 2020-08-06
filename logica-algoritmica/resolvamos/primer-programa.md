@@ -4,7 +4,7 @@ layout: default
 
 # De algoritmo a programa
 
-En la [página anterior] diseñamos un [algoritmo](./algoritmo.md) que resuelve el análisis que necesitamos hacer sobre el tamaño de los archivos en una carpeta.
+En la [página anterior] diseñamos un [algoritmo](./algoritmo) que resuelve el análisis que necesitamos hacer sobre el tamaño de los archivos en una carpeta.
 
 El paso siguiente, que vamos a dar ahora, es transformar este algoritmo en un _programa_, que pueda funcionar en un equipo.
 
@@ -18,7 +18,7 @@ En En Python tenemos que poner `python` adelante, para que interprete el script
 
 
 ## La tarea técnica - muy dependiente del lenguaje
-Al describir el [desafío a resolver](../desafio-enunciado.md), mencionamos que además del algoritmo, debe resolverse una _tarea técnica_: obtener los tamaños de los archivos en la carpeta indicada.
+Al describir el [desafío a resolver](../desafio-enunciado), mencionamos que además del algoritmo, debe resolverse una _tarea técnica_: obtener los tamaños de los archivos en la carpeta indicada.
 
 Para obtener los tamaños de los archivos necesitamos saber tres cosas:
 1. Cómo acceder al parámetro CLI.
@@ -90,7 +90,7 @@ for file in files[1:]:          # a partir del segundo archivo
 ``` 
 pero con gran daño a la legibilidad. Tal vez una _programadora_ consideraría hacerlo así para "ahorrarse una línea", pero una _desarrolladora_ que es consciente de que tal vez tenga que volver a este código más adelante, muy probablemente no.
 
-El resto son sencillamente la "traducción a Python": desaparecen el `fi` y el `done` porque Pyhton delimita bloques de acuerdo a la indentación (esto lo mencionamos en la [página sobre funciones](../basicos/funciones.md)), se agregan los dos-puntos en algunas líneas, y hay que poner `True` y `False` en mayúscula.
+El resto son sencillamente la "traducción a Python": desaparecen el `fi` y el `done` porque Pyhton delimita bloques de acuerdo a la indentación (esto lo mencionamos en la [página sobre funciones](../basicos/funciones)), se agregan los dos-puntos en algunas líneas, y hay que poner `True` y `False` en mayúscula.
 
 
 ## La salida

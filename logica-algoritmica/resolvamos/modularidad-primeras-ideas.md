@@ -3,7 +3,7 @@ layout: default
 ---
 
 # Organización del programa - primeras ideas
-Podríamos preguntarnos si es necesario "esperar" al final para poner todos los "print". Con una idea análoga a la del comando `break` introducido [durante la explicación del algoritmo](./algoritmo.md), cuando se detecta una comparación "mala", podría cortarse directamente la ejecución, dado que ya tenemos el resultado.  
+Podríamos preguntarnos si es necesario "esperar" al final para poner todos los "print". Con una idea análoga a la del comando `break` introducido [durante la explicación del algoritmo](./algoritmo), cuando se detecta una comparación "mala", podría cortarse directamente la ejecución, dado que ya tenemos el resultado.  
 Eso se puede hacer en Python usando `exit`, un comando incluido en la librería `sys`. Queda de esta forma.
 ``` python
 from pathlib import Path
@@ -83,7 +83,7 @@ Esta separación de los tres aspectos que constituyen el programa, hace más sen
 
 Respecto de la _salida_, si en lugar de informar por consola, se debe generar un archivo con el resulado, enviarlo por mail, o cualquier otra forma de salida, sabemos que con modificar la tercera parte alcanza.  
 
-Respecto de la _operación_, podemos encapsularla en una [función](../basicos/funciones.md)
+Respecto de la _operación_, podemos encapsularla en una [función](../basicos/funciones)
 ``` python
 def los_tamanios_son_crecientes(files):
     cada_tamanio_es_mas_grande = True
@@ -102,13 +102,13 @@ Por otro lado, tener claramente separada la parte del programa que resuelve la l
 
 
 ## Separar - una actitud básica de desarrollador/a
-Al introducir las primeras formas de [repetición](../basicos/repeticion.md), se mencionó la conveniencia de _separar_ entre un objetivo y la técnica para lograrlo.  
+Al introducir las primeras formas de [repetición](../basicos/repeticion), se mencionó la conveniencia de _separar_ entre un objetivo y la técnica para lograrlo.  
 En esta sección, subrayamos las ventajas de _separar_ el tratamiento de distintos aspectos involucrados en un programa.
 
 En general, la actitud de _separar_, organizar, dividir, va a estar presente en una desarrolladora. Esto tiene que ver con lo descripto al hablar de la [diferencia entre programar y desarrollar](../../programacion-a-desarrollo/programar-y-desarrollar), respecto de tener la visión amplia sobre un proyecto de desarrollo. 
-Muchas veces los proyectos abordan aplicaciones (o conjuntos de aplicaciones) extensos, con mucha funcionalidad para resolver. Además, en general para desarrollar una aplicación interviene una [multitud de aspectos](../../programacion-a-desarrollo/construccion-tareas-roles.md).  
+Muchas veces los proyectos abordan aplicaciones (o conjuntos de aplicaciones) extensos, con mucha funcionalidad para resolver. Además, en general para desarrollar una aplicación interviene una [multitud de aspectos](../../programacion-a-desarrollo/construccion-tareas-roles).  
 De ahí la necesidad de separar, para pasar de un problema enorme a muchos problemas, que cada uno por separado son abordables.  
 
 Está claro que la estrategia de separar conlleva la problemática de armonizar y relacionar los distintos componentes que se generan.  
 En este script, alcanza con tener claro cuáles son las variables que forman la _interface_ entre las distintas partes.  
-En una aplicación de mayor volumen, esta problemática entra en el dominio de la [arquitectura de software](../../programacion-a-desarrollo/arquitectura-de-software.md).
+En una aplicación de mayor volumen, esta problemática entra en el dominio de la [arquitectura de software](../../programacion-a-desarrollo/arquitectura-de-software).

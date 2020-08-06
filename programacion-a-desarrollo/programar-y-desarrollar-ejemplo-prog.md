@@ -20,7 +20,7 @@ Se decide construir un programa que se ejecutará mediante línea de comandos, q
 Al programa se le pasan dos parámetros: el nombre del archivo donde está la definición, y el numero de puerto.   
 En los ejemplos, el segundo caso marca un posible conflicto entre los dos servicios, que están declarando el mismo host port.
 
-En lo que sigue, vamos a mostrar dos programas que resuelven este requerimiento. El primero está pensado con lo que en la [sección anterior](./programar-y-desarrollar.md) llamamos _visión de programador_, acotada a la respuesta que se espera del programa. En el segundo adoptamos una _visión de desarrollador_, que incorpora varios elementos adicionales. Estos elementos van a ir apareciendo en la descripción.
+En lo que sigue, vamos a mostrar dos programas que resuelven este requerimiento. El primero está pensado con lo que en la [sección anterior](./programar-y-desarrollar) llamamos _visión de programador_, acotada a la respuesta que se espera del programa. En el segundo adoptamos una _visión de desarrollador_, que incorpora varios elementos adicionales. Estos elementos van a ir apareciendo en la descripción.
 
 Elegimos **Python** como lenguaje de programación, porque reúne varias condiciones interesantes.  
 
@@ -196,7 +196,7 @@ Si se consulta la versión completa del programa, se podrá verificar que el arc
 
 
 ## Código completo del recorrido de archivo
-Consignamos a continuación el código completo de la parte del programa que analiza el archivo. Esto servirá para compararlo con el código de [la sección siguiente](./programar-y-desarrollar-ejemplo-dev.md) que realiza la misma tarea. A efectos de esta comparación, se excluye la apertura del archivo, que se supone fue realizada previamente.
+Consignamos a continuación el código completo de la parte del programa que analiza el archivo. Esto servirá para compararlo con el código de [la sección siguiente](./programar-y-desarrollar-ejemplo-dev) que realiza la misma tarea. A efectos de esta comparación, se excluye la apertura del archivo, que se supone fue realizada previamente.
 
 ``` python
 servicesForPort = []

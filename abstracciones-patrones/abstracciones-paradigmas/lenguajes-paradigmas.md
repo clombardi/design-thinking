@@ -42,7 +42,7 @@ Respecto del flujo, este bucle en assembler
             jump    :loop
 :after_loop
 ```
-se transforma en este [ciclo `for`](../../logica-algoritmica/basicos/repeticion-2.md)
+se transforma en este [ciclo `for`](../../logica-algoritmica/basicos/repeticion-2)
 ``` c
 for (i=0; i < 10; i++) {
     // ... acciones ...
@@ -71,7 +71,7 @@ El surgimiento de los primeros lenguajes de programación como Fortran, Lisp, Co
 
 
 ## Paso 2 - paradigmas de programación
-Entre los conceptos principales que aportaron las primeras generaciones de lenguajes de programación, encontramos las [variables](../../logica-algoritmica/basicos/variables.md), los [arrays o listas](../../logica-algoritmica/basicos/arrays-listas.md), la [alternativa](../../logica-algoritmica/basicos/alternativa.md), las [estructuras de repetición](../../logica-algoritmica/basicos/repeticion.md), y las [funciones](../../logica-algoritmica/basicos/funciones.md) u otros conceptos similares.  Estos conceptos fueron mencionados brevemente en la unidad sobre lógica algorítmica. 
+Entre los conceptos principales que aportaron las primeras generaciones de lenguajes de programación, encontramos las [variables](../../logica-algoritmica/basicos/variables), los [arrays o listas](../../logica-algoritmica/basicos/arrays-listas), la [alternativa](../../logica-algoritmica/basicos/alternativa), las [estructuras de repetición](../../logica-algoritmica/basicos/repeticion), y las [funciones](../../logica-algoritmica/basicos/funciones) u otros conceptos similares.  Estos conceptos fueron mencionados brevemente en la unidad sobre lógica algorítmica. 
 
 Todos estos conceptos, más otros como los [registros](https://en.wikipedia.org/wiki/Struct_(C_programming_language)), apuntan a organizar la _estructura_, tanto del programa como de los datos que maneja.  
 El foco está puesto en los programas en sí, más que en la representación de la  información relevante del _dominio de aplicación_ (sistema bancario, industria, extracción, ventas y facturación, manejo de personal, etc.) de cada programa o aplicación.  

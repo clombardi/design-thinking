@@ -3,11 +3,11 @@ layout: default
 ---
 
 # Una forma de arrancar
-Después de haber refrescado algunas ideas básicas sobre programación, es hora de usarlas para armar un programa que resuelva el [desafío propuesto](../desafio-enunciado.md) antes.
+Después de haber refrescado algunas ideas básicas sobre programación, es hora de usarlas para armar un programa que resuelva el [desafío propuesto](../desafio-enunciado) antes.
 
 Recordemos que distinguimos entre una tarea _técnica_, la de obtener el tamaño de cada archivo en la carpeta, y otra _algorítmica_, la de determinar si cada tamaño es mayor al anterior.  
 Relacionemos rápidamente estas dos tareas con algunos conceptos básicos de programación.
-- Como resultado de la _tarea técnica_, la información sobre los archivos va a tener que estar disponible en alguna lista, o más genéricamente, una estructura que se pueda recorrer. Ver lo que se habló sobre el objetivo de las [estructuras de repetición](../basicos/repeticion.md).
+- Como resultado de la _tarea técnica_, la información sobre los archivos va a tener que estar disponible en alguna lista, o más genéricamente, una estructura que se pueda recorrer. Ver lo que se habló sobre el objetivo de las [estructuras de repetición](../basicos/repeticion).
 - para resolver la _tarea algorítmica_, seguramente nos va a servir utilizar alguna de las formas de recorrido que repasamos.
 
 
@@ -44,6 +44,6 @@ Cuando tengamos que resolver una tarea algorítmica, hay tres elementos que muy 
 1. El _resultado_ que queremos obtener, si va a ser un booleano, un número, o qué.
 1. La _estrategia_, difícil pensar en un algoritmo o programa si no sabemos qué queremos hacer.
 
-En esta página definimos las tres cosas para el problema que se nos planteó. El próximo paso es definir un [algoritmo](./algoritmo.md).
+En esta página definimos las tres cosas para el problema que se nos planteó. El próximo paso es definir un [algoritmo](./algoritmo).
 
 

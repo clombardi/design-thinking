@@ -6,10 +6,10 @@ layout: default
 
 En esta unidad, cuyo título es tal vez (admitámoslo) un poco pomposo, intentaremos describir algunos elementos (conceptos, técnicas, herramientas) que utilizan las desarrolladoras en su trabajo diario. Vamos a focalizar sobre aspectos bien cercanos al código.
 
-En la unidad 1 tratamos brevemente cuestiones de este estilo, al hablar de la [diferencia entre programar y desarrollar](../programacion-a-desarrollo/programar-y-desarrollar.md), y en particular, al resolver un requerimiento concreto mediante dos programas, uno [construido con visión de programador](../programacion-a-desarrollo/programar-y-desarrollar-ejemplo-prog.md) y otro [con visión de desarrollador](../programacion-a-desarrollo/programar-y-desarrollar-ejemplo-dev.md).  
+En la unidad 1 tratamos brevemente cuestiones de este estilo, al hablar de la [diferencia entre programar y desarrollar](../programacion-a-desarrollo/programar-y-desarrollar), y en particular, al resolver un requerimiento concreto mediante dos programas, uno [construido con visión de programador](../programacion-a-desarrollo/programar-y-desarrollar-ejemplo-prog) y otro [con visión de desarrollador](../programacion-a-desarrollo/programar-y-desarrollar-ejemplo-dev).  
 En ese material, se mostró la gran diversidad de enfoques para construir un programa que resuelva un problema dado, y la conveniencia de aplicar las actitudes asociadas a lo que llamamos "visión de desarrollador".
 
-En [un apéndice](../programacion-a-desarrollo/programar-y-desarrollar-ejemplo-apendice.md), nos concentramos en un análisis típico del trabajo con un programa: cómo ir transformando iterativamente el código para llegar a una forma que es, a la vez, más compacta y más clara.  
+En [un apéndice](../programacion-a-desarrollo/programar-y-desarrollar-ejemplo-apendice), nos concentramos en un análisis típico del trabajo con un programa: cómo ir transformando iterativamente el código para llegar a una forma que es, a la vez, más compacta y más clara.  
 Uno de los focos que queremos darle a esta unidad es profundizar en este tipo de razonamientos.
 
 
@@ -18,7 +18,7 @@ En la unidad 1, mencionamos (e intentamos justificar) la relevancia de adquirir 
 
 Puntualizemos una vez más, las motivaciones para elevar nuestras capacidades en el ámbito de la automatización, como profesionales IT.
 
-Por un lado, el establecimiento de dinámicas de construcción de software que incorporan el concepto de _desarrollo continuo_ (mencionado al hablar sobre [ciclo de vida](../programacion-a-desarrollo/ciclo-de-vida.md)), la tendencia a organizar las aplicaciones como federaciones de múltiples componentes, y los múltiples requerimientos de operaciones provocados por varias de las [tareas involucradas en el desarrollo](../programacion-a-desarrollo/construccion-tareas-roles.md), provocan un enorme flujo de pedidos de tareas de operaciones.  
+Por un lado, el establecimiento de dinámicas de construcción de software que incorporan el concepto de _desarrollo continuo_ (mencionado al hablar sobre [ciclo de vida](../programacion-a-desarrollo/ciclo-de-vida)), la tendencia a organizar las aplicaciones como federaciones de múltiples componentes, y los múltiples requerimientos de operaciones provocados por varias de las [tareas involucradas en el desarrollo](../programacion-a-desarrollo/construccion-tareas-roles), provocan un enorme flujo de pedidos de tareas de operaciones.  
 En este contexto la automatización, lejos de ser un factor que puede disminuir la relevancia o necesidad del trabajo de operaciones IT, resulta un aliado fundamental para poder responder a las demandas de los proyectos de desarrollo actuales, y por lo tanto constituir el factor diferencial que realza la valoración de este trabajo.
 
 Por otro, y ya en forma independiente de visiones u opiniones, la automatización es una tendencia que está avanzando con mucha fuerza, por lo cual, contar con estos conocimientos está pasando de ser un skill opcional a ser requerido.

@@ -4,9 +4,9 @@ layout: default
 
 # Incorporamos pipelines en nuestra función
 En esta página, comenzamos con el estudio de técnicas más específicas de lenguajes de scripting, utilizando la implementación en PowerShell. 
-Tal como hicimos al analizar técnicas más generales sobre Python, vamos a trabajar con la función que implementa el [algoritmo](../resolvamos/algoritmo.md).
+Tal como hicimos al analizar técnicas más generales sobre Python, vamos a trabajar con la función que implementa el [algoritmo](../resolvamos/algoritmo).
 
-Partimos del código de dicha función en la [última versión](../elevando/casos-limite-correcciones.md) del programa, generada en la etapa en la que trabajamos sobre la calidad.
+Partimos del código de dicha función en la [última versión](../elevando/casos-limite-correcciones) del programa, generada en la etapa en la que trabajamos sobre la calidad.
 
 ``` powershell
 function LosTamaniosSonCrecientes {
@@ -40,7 +40,7 @@ $files | Select-Object -Skip 1
 la entrada del cmdlet `Select-Object` es el _valor_ de la variable `$files`, una lista. 
 
 ## Extracción de los tamaños
-Como primer paso de simplificación de la función, vamos a generar la lista conformada por _el tamaño_ de cada archivo al principio, tal como lo hicimos [al utilizar list comprehensions](../algoritmia-python/solo-tamanios.md) en Python.  
+Como primer paso de simplificación de la función, vamos a generar la lista conformada por _el tamaño_ de cada archivo al principio, tal como lo hicimos [al utilizar list comprehensions](../algoritmia-python/solo-tamanios) en Python.  
 Para esto, vamos a usar el [cmdlet `ForEach-Object`](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/foreach-object?view=powershell-7), que sirve para extraer datos de cada elemento de una lista o secuencia.  
 La especificación de qué dato extraer se realiza mediante una expresión entre llaves, en la que el elemento de la lista se referencia mediante `$_`.
 
@@ -72,7 +72,7 @@ Hasta ahora, no parece mucho más sencilla que la anterior. Al igual que en la e
 
 
 ## Analogía entre pipelines de PowerShell y list comprehension en Python
-Notemos que el propósito del cmdlet `ForEach-Object` es similar al de las list comprehension de Python, que presentamos al [repasar conceptos básicos sobre repetición](../basicos/repeticion.md). 
+Notemos que el propósito del cmdlet `ForEach-Object` es similar al de las list comprehension de Python, que presentamos al [repasar conceptos básicos sobre repetición](../basicos/repeticion). 
 
 Por ejemplo, la expresión de PowerShell
 ``` powershell

@@ -7,7 +7,7 @@ En este apéndice presentamos algunos elementos acerca de cómo se concibió lo 
 
 Comencemos mencionando que la mayoría de los conceptos y principios que aparecen aplicados al desarrollo de software, provienen en realidad de la industria manufacturera y tienen sus orígenes en muchas de las ideas, normas, prácticas y estándares definidos luego de la Segunda Guerra Mundial, específicamente en Japón, en Inglaterra y en Estados Unidos de Norteamérica.
 
-Volviendo a la industria del software, a partir de la constatación de las problemáticas de obsolescencia temprana de la documentación, falta de capacidad para estimar esfuerzos y plazos, e insatisfacción de las desarrolladoras, que mencionamos en [la página que describe los marcos de trabajo ágiles](./intro-agil.md), se conformó una corriente de pensamiento que cristalizó en lo que se llamó "manifiesto ágil".
+Volviendo a la industria del software, a partir de la constatación de las problemáticas de obsolescencia temprana de la documentación, falta de capacidad para estimar esfuerzos y plazos, e insatisfacción de las desarrolladoras, que mencionamos en [la página que describe los marcos de trabajo ágiles](./intro-agil), se conformó una corriente de pensamiento que cristalizó en lo que se llamó "manifiesto ágil".
 
 ## El "Manifiesto ágil" y sus principios
 Los “fundadores de la corriente ágil” idearon un encuentro para explorar juntos las similitudes en sus distintos trabajos y definir valores comunes que querían promulgar.  

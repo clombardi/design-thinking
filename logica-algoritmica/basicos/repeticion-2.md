@@ -3,7 +3,7 @@ layout: default
 ---
 
 # Repetición - otras variantes
-En esta página completamos el tratamiento de la repetición, estudiando variantes que son, actualmente, menos utilizadas que el "for estructural" descripto en la [página anterior](./repeticion.md).
+En esta página completamos el tratamiento de la repetición, estudiando variantes que son, actualmente, menos utilizadas que el "for estructural" descripto en la [página anterior](./repeticion).
 
 
 ## For, versión "clásica" o "indexada"

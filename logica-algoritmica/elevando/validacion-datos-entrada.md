@@ -4,7 +4,7 @@ layout: default
 
 # Validación de datos de entrada
 
-Analicemos la primera de las preguntas que nos realizamos [al cuestionar la calidad del programa generado](./cuestionar-calidad.md): ¿qué pasa si **no** se le suministra al programa lo que espera?  
+Analicemos la primera de las preguntas que nos realizamos [al cuestionar la calidad del programa generado](./cuestionar-calidad): ¿qué pasa si **no** se le suministra al programa lo que espera?  
 
 Experimentemos con la versión en Python
 ![no hay chequeo de datos de entrada](./images/wrong-input-wrong-behavior.jpg)
@@ -26,7 +26,7 @@ Las tareas técnicas a resolver son:
 - verificar si el parámetro es o no un elemento del file system.
 - en caso afirmativo, verificar que sea una carpeta.
 
-Al igual que cuando armamos el [programa](../resolvamos/primer-programa.md), resumimos en la siguiente tabla las expresiones para estas validaciones, en los tres lenguajes con los que estamos trabajando.
+Al igual que cuando armamos el [programa](../resolvamos/primer-programa), resumimos en la siguiente tabla las expresiones para estas validaciones, en los tres lenguajes con los que estamos trabajando.
 
 | Lenguaje | No se pasaron parámetros | `<valor>` está en el file system | `<valor>` es una carpeta |
 | --- | --- | --- | --- | 
@@ -57,7 +57,7 @@ Funciona como se espera
 
 
 ## Integrar la validación en el programa
-Para obtener una versión del programa que chequee correctamente el valor de entrada, alcanza con integrar estas validaciones con la [primera versión que generamos](../resolvamos/primer-programa.md). A continuación, la _segunda_ versión del programa, en Python.
+Para obtener una versión del programa que chequee correctamente el valor de entrada, alcanza con integrar estas validaciones con la [primera versión que generamos](../resolvamos/primer-programa). A continuación, la _segunda_ versión del programa, en Python.
 
 ``` python
 from pathlib import Path
@@ -95,7 +95,7 @@ Hemos logrado un avance en la calidad del programa: es **más robusto** que la p
 
 
 ## Recuperando la modularidad
-Aunque está claro que hemos dado un paso adelante en la calidad del programa, hay un aspecto en el que percibimos un retroceso: el de la [modularidad](../resolvamos/modularidad-primeras-ideas.md).  
+Aunque está claro que hemos dado un paso adelante en la calidad del programa, hay un aspecto en el que percibimos un retroceso: el de la [modularidad](../resolvamos/modularidad-primeras-ideas).  
 En la nueva versión, las tareas de manejo de datos de entrada, procesamiento y salida _no son independientes_: el procesamiento y la salida están dentro de un `else` que forma parte del manejo de datos de entrada.
 
 En rigor, la solución encontrada es bastante prolija: el código está bien organizado, a pesar de que analizado rigurosamente, es cierto que se pierde la modularidad.   
@@ -139,7 +139,7 @@ else:
 
 
 ## Más separación, funciones ... y un poco de magia
-Ahora que tenemos las validaciones bien separadas, es más fácil pensar en definir [funciones](../basicos/funciones.md) que las resuelvan. 
+Ahora que tenemos las validaciones bien separadas, es más fácil pensar en definir [funciones](../basicos/funciones) que las resuelvan. 
 Vamos a definir dos funciones
 - `checkArgCount(n)`: verifica que se hayan ingresado al menos `n` argumentos por línea de comandos.
 - `checkFolder(name)`: verica que el `name` sea un nombre de carpeta.

@@ -4,7 +4,7 @@ layout: default
 
 # Zip - juntando de a pares
 En esta página comenzamos con el análisis de técnicas de programación, que aplicaremos a la función que determina si los tamaños de los archivos son crecientes.  
-Transcribimos la versión de esta función, incluida en la [última versión](../elevando/casos-limite-correcciones.md) del programa generada en la etapa anterior.
+Transcribimos la versión de esta función, incluida en la [última versión](../elevando/casos-limite-correcciones) del programa generada en la etapa anterior.
 
 ``` python
 def los_tamanios_son_crecientes(files):
@@ -73,7 +73,7 @@ Aunque cada par que forma el resultado de `zip` no es exactamente una lista, pod
 ## Uso del `zip` en nuestro programa
 En nuestro caso tenemos una sola lista, la de tamaños. ¿Cuáles son las "dos" listas a "zipear"?  
 Esta problemática particular también es conocida, junto con su solución: las dos listas a considerar son la original, y la que resulta de eliminar su primer elemento. Por ejemplo, si la lista original es `[3,8,5,22]`, obtenemos los pares a comparar calculando su `zip` con `[8,5,22]`.  
-Para obtener esta segunda lista, se utiliza la notación `[1:]` que ya aplicamos en el programa, y que analizamos al repasar el manejo de [listas/arrays](../basicos/arrays-listas.md).
+Para obtener esta segunda lista, se utiliza la notación `[1:]` que ya aplicamos en el programa, y que analizamos al repasar el manejo de [listas/arrays](../basicos/arrays-listas).
 ``` python
 >>> tamanios = [3,8,5,22]
 >>> list(zip(tamanios, tamanios[1:]))

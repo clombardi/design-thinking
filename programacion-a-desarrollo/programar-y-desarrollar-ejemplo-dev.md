@@ -3,7 +3,7 @@ layout: default
 ---
 
 # La visión de desarrollador en la práctica
-En esta sección, describiremos la construcción de un segundo programa que responde al mismo requerimiento del que describimos en [la sección anterior](./programar-y-desarrollar-ejemplo-prog.md). Aparecerán varios de los aspectos que compon lo que dimos en denominar _visión de desarrollador_ al tratar las [diferencias entre programar y desarrollar](./programar-y-desarrollar.md).
+En esta sección, describiremos la construcción de un segundo programa que responde al mismo requerimiento del que describimos en [la sección anterior](./programar-y-desarrollar-ejemplo-prog). Aparecerán varios de los aspectos que compon lo que dimos en denominar _visión de desarrollador_ al tratar las [diferencias entre programar y desarrollar](./programar-y-desarrollar).
 
 ## Detección de una tarea habitual, búsqueda de una librería
 El programa que debemos construir, involucra la lectura y análisis de un archivo en formato YAML. 
@@ -151,7 +151,7 @@ def test_parse_port_range_proper():
     assert 41904 not in theRange
 ```
 
-Como se describe al hablar de la [visión de desarrollador](./programar-y-desarrollar.md), los tests muestran cómo utilizar la función: qué valor debe suministrarse por parámetro, y qué se puede hacer con su resultado.
+Como se describe al hablar de la [visión de desarrollador](./programar-y-desarrollar), los tests muestran cómo utilizar la función: qué valor debe suministrarse por parámetro, y qué se puede hacer con su resultado.
 
 
 ## Conclusiones

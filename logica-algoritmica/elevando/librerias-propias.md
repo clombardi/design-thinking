@@ -4,7 +4,7 @@ layout: default
 
 # Nuestras propias librerías, y el máximo de modularidad
 
-En los últimos ejemplos de la sección sobre [validación de datos de entrada](./validacion-datos-entrada.md) se definen funciones separadas que implementan las validaciones.
+En los últimos ejemplos de la sección sobre [validación de datos de entrada](./validacion-datos-entrada) se definen funciones separadas que implementan las validaciones.
 
 Aparte de aumentar el grado de modularidad del programa, este enfoque nos brinda la posibilidad de definir _nuestras propias librerías_ donde podemos incluir funciones que pueden ser utilizadas en distintos scripts.
 
@@ -15,7 +15,7 @@ En PowerShell, el archivo debe tener extensión `psm1` y hay que declarar explí
 
 En los programas, se indica al principio qué librería/s se usa/n o _importa/n_. En Python, las librerías propias se agregan a las genéricas.
 
-Veamos el ejemplo en cada lenguaje. Aprovechamos para definir el algoritmo en una función separada, tal como comentamos al hablar sobre [modularidad](../resolvamos/modularidad-primeras-ideas.md), y aprovechar esto para reducir al mínimo el programa principal.
+Veamos el ejemplo en cada lenguaje. Aprovechamos para definir el algoritmo en una función separada, tal como comentamos al hablar sobre [modularidad](../resolvamos/modularidad-primeras-ideas), y aprovechar esto para reducir al mínimo el programa principal.
 
 
 ## PowerShell

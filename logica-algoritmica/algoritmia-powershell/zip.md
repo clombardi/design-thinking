@@ -3,7 +3,7 @@ layout: default
 ---
 
 # zip - concebimos e implementamos una nueva función
-Al [incorporar los pipelines en la función](./pipelines-intro.md), pasamos a esta variante
+Al [incorporar los pipelines en la función](./pipelines-intro), pasamos a esta variante
 ``` powershell
 function LosTamaniosSonCrecientes {
     param($files)
@@ -24,7 +24,7 @@ function LosTamaniosSonCrecientes {
 ```
 que trabaja sobre la lista de los tamaños.
 
-El siguiente paso de simplificación que proyectamos es aplicar la operación `zip` para trabajar con una _lista de pares_, tal como [lo hicimos en Python](../algoritmia-python/zip.md).
+El siguiente paso de simplificación que proyectamos es aplicar la operación `zip` para trabajar con una _lista de pares_, tal como [lo hicimos en Python](../algoritmia-python/zip).
 
 Lamentablemente, PowerShell no incluye una función que realice la operación `zip`. Tomamos la decisión de _implementarla_, agregándola a nuestra librería. De esta forma, podremos ver cómo definir una función que puede integrarse en pipes de PowerShell.  
 
@@ -50,7 +50,7 @@ function LosTamaniosSonCrecientes {
     return $cada_tamanio_es_mas_grande
 }
 ```
-Observemos que estamos aprovechando la capacidad de _destructuring_ de PowerShell. Lamentablemente, debe hacerse en una sentencia separada, no puede integrarse dentro del `foreach` como hicimos [en Python](../algoritmia-python/solo-tamanios.md).
+Observemos que estamos aprovechando la capacidad de _destructuring_ de PowerShell. Lamentablemente, debe hacerse en una sentencia separada, no puede integrarse dentro del `foreach` como hicimos [en Python](../algoritmia-python/solo-tamanios).
 
 
 ## Implementamos la función `ZipPipe`

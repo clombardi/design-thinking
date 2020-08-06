@@ -58,7 +58,7 @@ Transcribimos una definición de un sitio Web especializado en calidad de softwa
 > Un _defecto_ en un producto de software refleja su incapacidad, o falta de eficacia, para cumplir con los requerimientos y criterios especificados, y por lo tanto evita que dicho producto tenga un funcionamiento **acorde a lo esperado y deseado**.
 
 De aquí surge otro fenómeno que tiene un gran impacto en el desarrollo de software: es frecuente que las _definiciones o especificaciones_ sobre un producto de software no correspondan con lo que realmente es _esperado y deseado_ por sus usuarias o comitentes. Muchas veces, este fenómeno puede apreciarse recién cuando se cuenta con versiones, a veces parciales, del producto que pueden probarse.  
-Este fenómeno es una de las motivaciones para los [marcos de trabajo ágiles](../programacion-a-desarrollo/intro-agil.md) descriptos en la Unidad 1.
+Este fenómeno es una de las motivaciones para los [marcos de trabajo ágiles](../programacion-a-desarrollo/intro-agil) descriptos en la Unidad 1.
 
 Desde una perspectiva guiada por los objetivos que dan lugar al desarrollo, estos casos también pueden considerarse defectos que deben ser gestionados adecuadamente.  
 

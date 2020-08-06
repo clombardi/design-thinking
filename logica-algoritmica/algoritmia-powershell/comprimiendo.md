@@ -3,7 +3,7 @@ layout: default
 ---
 
 # Comprimimos la función aprovechando el pipeline
-Luego de [implementar la operación `zip`](./zip.md) llegamos a esta variante de la función que estamos estudiando
+Luego de [implementar la operación `zip`](./zip) llegamos a esta variante de la función que estamos estudiando
 ``` powershell
 function LosTamaniosSonCrecientes {
     param($files)
@@ -22,14 +22,14 @@ function LosTamaniosSonCrecientes {
 }
 ```
 
-Como lo indicamos al [introducir la idea de `all` en Python](../algoritmia-python/all.md), al llegar a este punto se ve claramente que la condición es que no haya ningún par que cumpla la condición `$tamanio_anterior -gt $tamanio`.
+Como lo indicamos al [introducir la idea de `all` en Python](../algoritmia-python/all), al llegar a este punto se ve claramente que la condición es que no haya ningún par que cumpla la condición `$tamanio_anterior -gt $tamanio`.
 
 Tal como ocurre con `zip`, la idea de `all` no está implementada en PowerShell. En lugar de tomar el camino de implementarla, utilicemos un elemento que sí está presente en este lenguaje, que nos va a permitir llegar a la versión comprimida.  
 
-En concreto, vamos a expresar exactamente la condición indicada más arriba. Si definimos (de acuerdo a lo expresado al [diseñar el algoritmo](../resolvamos/algoritmo.md)) como "par malo" aquel en el que el tamaño "anterior" es mayor al "actual", entonces la condición que queremos definir es que no haya pares malos. 
+En concreto, vamos a expresar exactamente la condición indicada más arriba. Si definimos (de acuerdo a lo expresado al [diseñar el algoritmo](../resolvamos/algoritmo)) como "par malo" aquel en el que el tamaño "anterior" es mayor al "actual", entonces la condición que queremos definir es que no haya pares malos. 
 Para esto, obtendremos la lista de pares malos, y verificaremos que su tamaño sea 0. 
 
-Para obtener la lista de "pares malos" a partir de la lista que contiene todos los pares, utilizaremos el cmdlet `Where-Object` que presentamos [al describir la analogía entre expresiones PowerShell y list comprehensions](./pipelines-intro.md).  
+Para obtener la lista de "pares malos" a partir de la lista que contiene todos los pares, utilizaremos el cmdlet `Where-Object` que presentamos [al describir la analogía entre expresiones PowerShell y list comprehensions](./pipelines-intro).  
 Obtenemos la forma final de la función.
 ``` powershell
 function LosTamaniosSonCrecientes {

@@ -8,7 +8,7 @@ El término _test script_ se usa en el mismo sentido. Las diferencias son de mat
 En algunos casos, están ligadas a la automatización de la ejecución, tema del cual hablaremos más adelante en esta misma unidad. 
 En otros, se describe un test script como un documento de nivel más detallado que un test case, donde el procedimiento se describe en forma más precisa.
 
-El concepto de test case está, por lo general, vinculado a los [tests funcionales](./tipos-documentacion.md), que suelen ser ejecutados por testers. En este caso, un test case describe la actividad que permite verificar el correcto funcionamiento, ya sea de una funcionalidad particular, ya sea de la integración entre varias funcionalidades, en circunstancias específicas cuya definición forma parte del test case.  
+El concepto de test case está, por lo general, vinculado a los [tests funcionales](./tipos-documentacion), que suelen ser ejecutados por testers. En este caso, un test case describe la actividad que permite verificar el correcto funcionamiento, ya sea de una funcionalidad particular, ya sea de la integración entre varias funcionalidades, en circunstancias específicas cuya definición forma parte del test case.  
 También puede aplicarse también a tests no funcionales, en cuya ejecución suele intervenir personal de operaciones.
 
 
@@ -35,7 +35,7 @@ Para desarrollar uno o varios test cases se parte de una situación vinculada co
 A partir de un escenario, pueden aparecer distintas condiciones (producto fuera de stock, el usuario no ingresa explícitamente una cantidad, etc.). En rigor, cada test case corresponde a _un caso específico_, si hay varias variantes y/o combinaciones que se quieran comprobar, cada una es un test case distinto.
 
 Para derivar test cases a partir de un escenario, y evitar por otro lado la generación de una cantidad exagerada de test que acarrearía costos innecesarios para su ejecución, se han definido distintas técnicas, entre las cuales mencionamos:
-- **Boundary Value**: se recomienda pensar en los valores límite de las variables involucradas en el test data. P.ej. un valor límite para la cantidad de productos es 0. Es lo que hicimos al [analizar el algoritmo](../../logica-algoritmica/elevando/casos-limite.md) desarrollado en la Unidad 2.
+- **Boundary Value**: se recomienda pensar en los valores límite de las variables involucradas en el test data. P.ej. un valor límite para la cantidad de productos es 0. Es lo que hicimos al [analizar el algoritmo](../../logica-algoritmica/elevando/casos-limite) desarrollado en la Unidad 2.
 - **Equivalence Partitioning**: se analizan rangos o conjuntos de valores que tienen el mismo efecto en el test, a los que se llama _clases de equivalencia_. En el ejemplo del agregado de un producto a un carrito de compras, se pueden dividir los productos entre los que tienen stock suficiente para cubrir la cantidad a comprar, los que tienen stock insuficiente, y los que no tienen stock. El análisis de las clases de equivalencia generadas puede ayudar a armar combinaciones que cubran la mayor parte de los casos posibles, evitando la generación de una cantidad exagerada de test cases.
 - **Negative Testing**: consiste simplemente en considerar condiciones inesperadas, p.ej. la carga de una cantidad negativa en la compra de un producto.
 
@@ -43,6 +43,6 @@ Es importante encontrar un buen balance entre la _cobertura_ del test, o sea qu�
 
 
 ## Ejecución de un test case
-De acuerdo a lo que se establezca en el [Test Plan](./test-plan.md) y en otras instancias de gestión, se deben ejecutar los Test Cases definidos ante ciertos eventos, p.ej. generación de una nueva versión, cambios en el código que afectan una cierta funcionalidad, etc..  
+De acuerdo a lo que se establezca en el [Test Plan](./test-plan) y en otras instancias de gestión, se deben ejecutar los Test Cases definidos ante ciertos eventos, p.ej. generación de una nueva versión, cambios en el código que afectan una cierta funcionalidad, etc..  
 Se debe registar el _resultado_ de la ejecución de cada Test Case. Primariamente, si se obtuvieron los resultados esperados o no, o dicho informalmente, si el test _pasa_ o _no pasa_.  
 En el segundo caso, se deben registrar los defectos encontrados. Para esto existen herramientas específicas utilizadas en la gestión de defectos, de las que hablaremos más adelante.
