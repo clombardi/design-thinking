@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Un pequeño resumen del camino transitado
 
 Hagamos una pequeña reseña de los pasos dados, a partir de que abordamos la resolución del [problema](../desafio-enunciado.md) planteado.

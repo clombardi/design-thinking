@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Validación de datos de entrada
 
 Analicemos la primera de las preguntas que nos realizamos [al cuestionar la calidad del programa generado](./cuestionar-calidad.md): ¿qué pasa si **no** se le suministra al programa lo que espera?  

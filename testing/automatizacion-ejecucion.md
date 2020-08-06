@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!-- 
 Creo que acá se podría:
 * razonar sobre el hecho de que esto es efectivamente un programa que se puede ejecutar (HECHO)

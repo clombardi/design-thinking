@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Abstracciones
 
 La **abstracción** es un concepto clave en todas las facetas relacionadas al software.

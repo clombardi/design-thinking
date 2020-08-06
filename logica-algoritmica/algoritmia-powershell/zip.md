@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # zip - concebimos e implementamos una nueva función
 Al [incorporar los pipelines en la función](./pipelines-intro.md), pasamos a esta variante
 ``` powershell

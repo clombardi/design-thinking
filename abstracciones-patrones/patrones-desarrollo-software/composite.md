@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Composite
 (imagen que represente "objeto compuesto en forma de árbol")  
 ![imagen que represente "objeto compuesto en forma de árbol"](https://refactoring.guru/images/patterns/diagrams/composite/problem-en.png) 

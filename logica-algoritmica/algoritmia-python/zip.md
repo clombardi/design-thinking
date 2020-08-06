@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Zip - juntando de a pares
 En esta página comenzamos con el análisis de técnicas de programación, que aplicaremos a la función que determina si los tamaños de los archivos son crecientes.  
 Transcribimos la versión de esta función, incluida en la [última versión](../elevando/casos-limite-correcciones.md) del programa generada en la etapa anterior.

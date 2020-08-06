@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Corrigiendo el programa a partir del análisis de casos límite
 En la sección anterior, llevamos a cabo un [análisis del algoritmo propuesto](./casos-limite.md) partiendo de la idea de _caso límite_.
 

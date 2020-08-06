@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 (... acá vendría algún texto general sobre el curso ...)
 
 ## Contenido

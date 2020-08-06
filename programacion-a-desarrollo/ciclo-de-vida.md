@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Ciclo de vida en desarrollo de software
 Cuenta la leyenda, que en una época hoy lejana, la construcción de productos de software se organizaba de la siguiente manera: primero se definía, a partir de esta definición se "programaba". Cuando el producto estaba "listo", se realizaba un proceso llamado "pasaje a operaciones", hecho lo cual se desplegaba en entornos productivos, entrando así en "fase de mantenimiento".
 

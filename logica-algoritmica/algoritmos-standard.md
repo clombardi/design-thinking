@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Programación: algoritmos comunes y particulares
 
 ## Un caso ultra-común: seleccionar-y-extraer

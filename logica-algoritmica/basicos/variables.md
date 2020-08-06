@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Variables
 Prácticamente todos los lenguajes de programación incorporan un concepto de _variable_.
 

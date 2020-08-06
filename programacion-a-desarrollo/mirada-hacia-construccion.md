@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Una mirada hacia el desarrollo de software
 
 ¡Hola!

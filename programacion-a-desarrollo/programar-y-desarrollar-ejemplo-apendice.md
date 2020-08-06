@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Ejemplo de programa con _visión desarrollador_ - un apéndice algorítmico
 
 En esta sección, aprovechamos el programa descripto en [la sección anterior](./programar-y-desarrollar-ejemplo-dev.md) para realizar algunos comentarios, que nos ubican de lleno en el terreno de la Unidad 2, sobre razonamiento algorítmico.  

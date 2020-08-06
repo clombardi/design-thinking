@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Repetición, recorrido, y algo de integración
 La _alternativa_, que repasamos brevemente en la [sección anterior](./alternativa.md), es uno de los dos elementos básicos de la algoritmia. El otro es la _repetición_.
 

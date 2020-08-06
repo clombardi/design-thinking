@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Lenguajes de programación
 No descubrimos nada al decir que los lenguajes son una herramienta de primerísimo orden para la programadora/desarrolladora, al mismo tiempo que un tema recurrente de debates, motivo del desarrollo de comunidades alrededor de cada lenguaje, e incluso objeto de defensas (o ataques) apasionados.  
 En este material, intentaremos adoptar un estilo más calmo respecto del gusto por uno u otro lenguaje. 

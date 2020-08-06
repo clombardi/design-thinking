@@ -1,2 +1,7 @@
+# Generación de epub
 epub/*.md
 epub/*.epub
+
+# Jekyll
+_site
+.sass-cache

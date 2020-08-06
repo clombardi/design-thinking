@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Test case, test script
 Un _test case_ especifica una actividad puntual de testing, que podrá ser ejecutada una o varias veces durante el ciclo de vida de un producto.  
 El término _test script_ se usa en el mismo sentido. Las diferencias son de matiz y varían según la fuente que se tome. 

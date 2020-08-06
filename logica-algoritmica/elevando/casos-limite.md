@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Análisis de casos límite
 Tenemos un programa más robusto, y más modular, que el inicial. 
 

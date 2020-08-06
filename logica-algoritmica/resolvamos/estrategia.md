@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Una forma de arrancar
 Después de haber refrescado algunas ideas básicas sobre programación, es hora de usarlas para armar un programa que resuelva el [desafío propuesto](../desafio-enunciado.md) antes.
 

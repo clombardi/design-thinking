@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Programación orientada a objetos - un ejemplo un poco más elaborado
 En el ejemplo presentado en la página anterior, la interacción entre los objetos era muy sencilla: los únicos objetos que intervienen son recursos y usuarios, y la interacción se limita a verificar si un usuario está o no en una lista.
 

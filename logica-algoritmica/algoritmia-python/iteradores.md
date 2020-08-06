@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Generadores - ahora sí, hablemos de eficiencia
 
 Al [aplicar la función `all`](./all.md), llegamos a una versión notablemente compacta de la función que estamos estudiando.

@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Unidad 1 - desde la programación al desarrollo de software
 
 [Introducción - una mirada hacia el desarrollo de software](./mirada-hacia-construccion.md)  

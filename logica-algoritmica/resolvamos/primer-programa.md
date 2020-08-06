@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # De algoritmo a programa
 
 En la [página anterior] diseñamos un [algoritmo](./algoritmo.md) que resuelve el análisis que necesitamos hacer sobre el tamaño de los archivos en una carpeta.

@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Repaso de list comprehension - sólo los tamaños
 
 Transcribimos el código de la función luego de [utilizar la función `zip`](./zip.md).

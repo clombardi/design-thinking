@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Una pequeña historia de la concepción ágil
 En este apéndice presentamos algunos elementos acerca de cómo se concibió lo que se llama "movimiento ágil".
 

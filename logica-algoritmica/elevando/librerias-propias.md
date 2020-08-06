@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Nuestras propias librerías, y el máximo de modularidad
 
 En los últimos ejemplos de la sección sobre [validación de datos de entrada](./validacion-datos-entrada.md) se definen funciones separadas que implementan las validaciones.

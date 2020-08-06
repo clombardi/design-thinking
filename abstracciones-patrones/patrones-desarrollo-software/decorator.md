@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Decorator
 (imagen que represente mamuschas o algo parecido. En este caso, el de RefactoringGuru no me gusta mucho, pero es lo que hay.)  
 ![imagen que represente mamuschas o algo parecido](https://refactoring.guru/images/patterns/content/decorator/decorator.png) 

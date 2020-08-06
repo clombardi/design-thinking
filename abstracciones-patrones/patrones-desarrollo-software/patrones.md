@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Patrones para desarrollo de software
 
 > ### Nota para la edición

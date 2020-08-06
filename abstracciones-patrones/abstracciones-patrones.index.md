@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 ## Abstracciones, paradigmas de programación, patrones de diseño
 
 [Abstracciones](./abstracciones-paradigmas/abstracciones.md)

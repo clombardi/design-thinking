@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Programar y desarrollar
 Después de haber descripto varias facetas de los proyectos de construcción de software, es hora de volver a una cuestión que mencionamos algunas veces. 
 

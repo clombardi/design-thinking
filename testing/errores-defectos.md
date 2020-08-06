@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # De errores a defectos
 ¿Cuál es la primera imaen que se nos aparece al pensar en la palabra "error" relacionada con software?
 

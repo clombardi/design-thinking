@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Organización del programa - primeras ideas
 Podríamos preguntarnos si es necesario "esperar" al final para poner todos los "print". Con una idea análoga a la del comando `break` introducido [durante la explicación del algoritmo](./algoritmo.md), cuando se detecta una comparación "mala", podría cortarse directamente la ejecución, dado que ya tenemos el resultado.  
 Eso se puede hacer en Python usando `exit`, un comando incluido en la librería `sys`. Queda de esta forma.

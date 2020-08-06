@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Funciones
 
 En la [sección anterior](./arrays-listas.md) trabajamos con listas, que es un concepto que nos permite _organizar datos_.  

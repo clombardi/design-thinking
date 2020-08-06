@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Errores, defectos y test - un panorama general
 En esta nueva unidad, nos despegamos de las cuestiones mayormente técnicas tratadas en las Unidades 2 y 3, elevando nuevamente nuestra visión para englobar al desarrollo de software en forma general.
 

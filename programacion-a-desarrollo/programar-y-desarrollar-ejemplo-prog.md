@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Programar y desarrollar - con un ejemplo
 
 En esta sección vamos a observar las características de la visión de desarrollador, a partir de la resolución de un requerimiento bien práctico.

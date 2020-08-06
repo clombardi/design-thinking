@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Singleton
 
 (imagen que represente "todos hablan con el mismo")  

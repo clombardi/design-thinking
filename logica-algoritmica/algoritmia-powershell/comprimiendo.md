@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Comprimimos la función aprovechando el pipeline
 Luego de [implementar la operación `zip`](./zip.md) llegamos a esta variante de la función que estamos estudiando
 ``` powershell

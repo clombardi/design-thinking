@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Patrones de diseño
 
 En esta página comenzaremos con la descripción de uno de los tópicos principales de esta unidad, los _patrones de diseño_.

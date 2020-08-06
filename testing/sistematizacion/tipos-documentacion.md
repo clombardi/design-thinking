@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Tipos de test, documentación de testing
 La diversidad de los defectos que pueden aparecer en un producto de software, implica la existencia de una amplia variedad de actividades que pueden incluirse en un proyecto de desarrollo, con el fin de detectar dichos defectos.
 Mencionamos algunas de estas actividades en la [introducción de esta unidad](../testing-panorama.md).

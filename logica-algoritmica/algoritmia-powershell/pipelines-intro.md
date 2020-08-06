@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Incorporamos pipelines en nuestra función
 En esta página, comenzamos con el estudio de técnicas más específicas de lenguajes de scripting, utilizando la implementación en PowerShell. 
 Tal como hicimos al analizar técnicas más generales sobre Python, vamos a trabajar con la función que implementa el [algoritmo](../resolvamos/algoritmo.md).

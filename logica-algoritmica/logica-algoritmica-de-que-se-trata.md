@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # "Lógica algorítmica" - de qué se trata, por qué nos interesa
 
 En esta unidad, cuyo título es tal vez (admitámoslo) un poco pomposo, intentaremos describir algunos elementos (conceptos, técnicas, herramientas) que utilizan las desarrolladoras en su trabajo diario. Vamos a focalizar sobre aspectos bien cercanos al código.

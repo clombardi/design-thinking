@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Programación Orientada a Objetos - una aproximación
 
 En esta página, vamos a presentar algunos conceptos básicos de la **Programación Orientada a Objetos (POO)**, tal vez el [paradigma de programación](./lenguajes-paradigmas.md) más influyente actualmente en la industria del software.

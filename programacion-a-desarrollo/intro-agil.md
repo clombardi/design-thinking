@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Marcos de trabajo ágiles
 Desde hace ya varios años, la comunidad de desarrollo de software está crecientemente atravesada por lo que podemos llamar _fenómeno ágil_: se habla de prácticas, metodologías, filosofía, rituales, roles en un equipo, prácticas del día a día, relacionados de alguna forma a la palabra "ágil".  
 Hoy en día, es natural e incluso esperado, que un proyecto se desarrolle  (o en todo caso, que _declare_ que se desarrolla) dentro de un marco de trabajo o metodología ágil; esta forma de trabajar se ha transformado en el _estándar de facto_ de la industria del software.  

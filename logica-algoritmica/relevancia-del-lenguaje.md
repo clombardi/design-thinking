@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # ¿Cuánto importa el lenguaje?
 Una de las conclusiones que podemos obtener a partir del repaso sobre conceptos iniciales de programación, es que las construcciones básicas (variables, funciones, alternativa, repetición) se pueden expresar en los lenguajes que elegimos ... y también en, prácticamente, cualquier otro lenguaje utilizado en el desarrollo de software industrial.
 

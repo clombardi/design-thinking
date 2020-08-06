@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Alternativa - "el if"
 Repasemos brevemente un elemento presente en cualquier lenguaje de programación: la _alternativa_, o (en un lenguaje más coloquial) "el `if`".
 

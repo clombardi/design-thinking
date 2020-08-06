@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Arrays - listas - secuencias
 Prácticamente cualquier lenguaje de programación incluye alguna estructura que permita trabajar con listas ordenadas de elementos. Los conceptos más usuales son los de _array_ y _lista_.  
 Para este material, vamos a tratar a estos dos conceptos como sinónimos salvo aclaración explícita.

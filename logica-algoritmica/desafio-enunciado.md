@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # El problema a resolver
 El escenario al que (en principio) se aplica el problema que se nos plantea, es el análisis de una carpeta en la que se acumulan archivos de logs.
 Se nos indica que los archivos llevan el nombre de cada día en formato YYYYMMDD, de forma tal que al ordenarlos por nombre, quedan ordenados también cronológicamente.

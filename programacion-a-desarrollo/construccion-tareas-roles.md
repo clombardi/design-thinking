@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Desarrollo de software - ¿de qué se trata?
 Tal vez, la versión popular sobre el desarrollo es ... como lo muestra (p.ej.) la serie "Silicon Valley": un grupo (o un montón, si la aplicación es grande) de nerds sentados en sus computadoras codeando sin parar, hablando de tecnologías, comiendo en el escritorio, y explotando de alegría cuando resuelven un problema aplicando una genialidad. De todo ese código que escribe este grupo de nerds, mágicamente surge una aplicación que se puede instalar.
 

@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Strategy
 (acá Refactoring Guru me falló, hay que poner una imagen que sugiera "distintas estrategias para realizar una tarea, y una persona en el acto de elegir una")  
 ![imagen sobre estrategia](../../images/logoelevate.jpg) 

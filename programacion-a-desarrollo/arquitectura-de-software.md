@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Arquitectura de software
 
 Alrededor de la figura del "arquitecto" (o arquitecta, claro) de software, se fue formando una imagen un poquito hasta legendaria, en el gremio IT, y un poco también fuera del mismo.  

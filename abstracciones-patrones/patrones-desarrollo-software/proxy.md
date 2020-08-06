@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Proxy
 (imagen que represente "hablar con un proxy")  
 ![imagen que represente "hablar con un proxy"](https://refactoring.guru/images/patterns/diagrams/proxy/solution-en.png) 

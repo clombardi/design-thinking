@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Patrones de diseño para containers
 Concluimos esta unidad con una descripción suscinta de algunos de los patrones de diseño para containers más extensamente difundidos.  
 La aplicación de la idea de patrón de diseño a las redes de containers para despliegue de software es más reciente que su correlato en desarrollo de software. 

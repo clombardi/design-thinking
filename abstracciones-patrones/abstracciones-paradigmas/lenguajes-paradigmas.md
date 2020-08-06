@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Abstracciones básicas en programación
 
 Al principio fue el código-máquina.

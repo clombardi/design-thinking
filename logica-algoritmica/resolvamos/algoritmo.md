@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Definamos un algoritmo
 
 En la [página anterior](./estrategia.md) diseñamos una estrategia para resolver el [desafío que queremos resolver](../desafio-enunciado.md).

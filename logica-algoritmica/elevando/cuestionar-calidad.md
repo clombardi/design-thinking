@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Cuestionar la calidad de nuestro producto
 En este punto, tenemos un programa andando: si se le suministra el nombre de una carpeta como parámetro de CLI, brinda una respuesta de acuerdo al algoritmo que definimos.
 

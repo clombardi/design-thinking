@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Test plan
 El _test plan_ es un documento que incluye la información que permite planificar y gestionar las actividades de testing para un proyecto, o para parte del mismo en el caso de proyectos de gran envergadura.  
 Puede considerarse el mapa general que guía el esfuerzo de testing, que de acuerdo a lo comentado en páginas anteriores, puede involucrar una gran cantidad y diversidad de actividades.

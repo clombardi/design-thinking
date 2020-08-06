@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Unidad 4 - Testing
 
 [Errores, defectos y test - un panorama general](./testing-panorama.md)

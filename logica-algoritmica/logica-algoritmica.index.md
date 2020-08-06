@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Unidad 2 - Introducción a la lógica algorítmica
 
 ## Introducción y problema motivador
