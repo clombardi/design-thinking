@@ -16,7 +16,7 @@ layout: default
 
 [Test Case, Test Script](./sistematizacion/test-case)
 
-Severidad y Tipos de Bugs
+[Defectos: tipos, severidad, prioridad](./sistematizacion/defectos-exploracion)
 
 Bug Tracking. Bugzilla, Jira, Redmine
 
