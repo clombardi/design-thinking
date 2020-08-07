@@ -8,8 +8,7 @@ layout: default
 
 [De errores a defectos](./errores-defectos)
 
-
-## Gestión de defectos
+## Sistematización de la gestión
 [Tipos de test, documentación de testing](./sistematizacion/tipos-documentacion)
 
 [Test Plan](./sistematizacion/test-plan)
@@ -23,18 +22,11 @@ layout: default
 ## Testing de software
 [Testing Unitario](./testing-software/testing-unitario)
 
-Casos de Testing Unitario
+[Casuística: análisis de los casos de test](./testing-software/casuistica)
 
-Regresión y Automatización
-
-Creación de casos de prueba. El Plan de Pruebas
-
-## Otros tipos de test
-Tests de integración
-
-Smoke tests
+[Regresión](./testing-software/regresion)
 
 ## Anexo
-TDD o Test Driven Development
+[TDD o Test Driven Development](./testing-software/tdd)
 
-Conceptos generales de Debugging
+[Conceptos generales de Debugging](./testing-software/debugging)
