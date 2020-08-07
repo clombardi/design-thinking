@@ -18,7 +18,7 @@ layout: default
 
 [Defectos: tipos, severidad, prioridad](./sistematizacion/defectos-exploracion)
 
-[Bug Tracking. Bugzilla, Jira, Redmine](./sistematizacion/bug-tracking)
+[Gestión de defectos: conceptos y herramientas](./sistematizacion/bug-tracking)
 
 ## Testing de software
 [Testing Unitario](./testing-software/testing-unitario)
