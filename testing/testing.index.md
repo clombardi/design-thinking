@@ -20,8 +20,8 @@ layout: default
 
 [Bug Tracking. Bugzilla, Jira, Redmine](./sistematizacion/bug-tracking)
 
-## [Automatización de la ejecución](./automatizacion-ejecucion)
-Testing Unitario
+## Testing de software
+[Testing Unitario](./testing-software/testing-unitario)
 
 Casos de Testing Unitario
 
