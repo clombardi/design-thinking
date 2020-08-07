@@ -5,3 +5,4 @@ epub/*.epub
 # Jekyll
 _site
 .sass-cache
+.jekyll-cache

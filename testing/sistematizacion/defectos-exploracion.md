@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Defectos: tipos, severidad, prioridad
 Al [comienzo de esta unidad](../errores-defectos) señalamos la existencia de una _gran diversidad_ de formas en las que el comportamiento de un producto de software puede ser distinto a lo que se requiere y/o se espera; englobando estos fenómenos con nombre genérico de _defectos_.  
 También mencionamos la necesidad de una adecuada _gestión_ de los defectos, luego de su _detección_ que es el objetivo de las actividades de testing.
