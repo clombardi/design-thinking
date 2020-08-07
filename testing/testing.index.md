@@ -9,7 +9,7 @@ layout: default
 [De errores a defectos](./errores-defectos)
 
 
-## Sistematización de la gestión
+## Gestión de defectos
 [Tipos de test, documentación de testing](./sistematizacion/tipos-documentacion)
 
 [Test Plan](./sistematizacion/test-plan)
