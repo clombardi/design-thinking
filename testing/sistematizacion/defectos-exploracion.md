@@ -61,6 +61,59 @@ Esto puede dar lugar a que haya casos en los que un usuario piense que realizó 
 ## Severidad y prioridad
 Otros criterios de clasificación de defectos están relacionados con su _relevancia_. Estos criterios resultan muy útiles para el tratamiento de cada defecto, dentro de la gestión de un proyecto.
 
-En este sentido, hay dos criterios ampliamente utilizados: la _severidad_ de un defecto, y su _prioridad_.
+En este sentido, hay dos criterios ampliamente utilizados: la _severidad_ de un defecto, y su _prioridad_.  
+En amobs casos, las categorías que se definen, y sobre todo la caracterización de cada una, difieren según la fuente que se consulte. Las descripciones que siguen integran ideas presentes en varias de las definiciones disponibles. Obviamente, los criterios pueden diferir de proyecto en proyecto.
+
+
+### Severidad
+La **severidad** de un defecto es una medida desu impacto en los servicios que brinda un producto de software y de los riesgos que conlleva no corregirlo.  
+Distinguimos cuatro categorías.
+
+**Crítico** o **bloqueante**  
+Impide el funcionamiento de la aplicación, o de uno o varios de sus componentes más necesarios para la operación. 
+Alternativamente, genera corrupción de datos relevantes, de una forma que no puede recuperarse.
+En breve, un error es bloqueante si impide, o desaconseja, el funcionamiento de la aplicación en su conjunto.  
+<u>Ejemplos</u>: crash del sistema, un error 500 o 404 ante cualquier intento de login.
+
+**Grave** o **Major**  
+Hay componentes importantes de una aplicación que no están operativos, o su  comportamiento difiere en forma sustancial de lo definido o requerido.  
+Dicho de otra forma, mirando a la aplicación en conjunto, su funcionamiento está degradado severamente.  
+Por ejemplo, en una aplicación de venta online, sólo se pueden vender algunos productos.
+
+**Moderado** o **Minor**  
+El comportamiento de la aplicación difiere de lo especificado, en formas y aspectos no sustanciales. No hay daño en los datos, o son mínimos y recuperables.  
+Dicho de otra forma, representa una pérdida leve de funcionalidad y/o eficiencia.  
+
+**Leve** o **Low**  
+Detalles, muchas veces de estética o presentación. No afectan a la funcionalidad, usabilidad, ni datos.
+
+
+### Prioridad
+La **prioridad** de un defecto indica la urgencia con que debe ser corregido, y por lo tanto, en qué medida afecta al flujo de trabajo. 
+Distinguimos cuatro categorías.
+
+**Inmediato** o **urgente**  
+Requiere atención inmediata, p.ej. dentro de las 24 horas. 
+Su consideración debe anteponerse al trabajo que estén llevando a cabo quienes se designe para su corrección.
+
+**Alta**  
+La corrección debe formar parte del siguiente release planificado del, o de los, componente/s involucrados en la resolución. 
+Se puede combinar con el trabajo en curso de quienes se designe para su corrección.
+
+**Media**  
+La corrección puede planificarse para releases posteriores.
+
+**Baja**  
+La corrección puede postergarse sin una fecha específica.
+
+
+### Relación entre severidad y prioridad
+Está claro que hay una fuerte correlación entre los niveles de severidad y de prioridad que se asignen a un determinado defecto. En particular, un defecto bloqueante tendrá prioridad urgente, y por lo general, los siguientes niveles de severidad se corresponderán con los correspondientes de prioridad.
+
+Por otro lado, esta correlación no es absoluta. En particular, es perfectamente posible que a un defecto no crítico se le asigne una prioridad urgente.
+En el ejemplo indicado para severidad grave, si los productos que no se pueden vender son aquellos de los que más se desea impulsar la venta por alguna razón de negocio, este defecto puede ser considerado como de prioridad urgente.  
+Incluso un defecto de severidad leve, como la falta de una imagen, puede ser considerado urgente si se trata p.ej. del logo de la empresa.
+
+
 
 
