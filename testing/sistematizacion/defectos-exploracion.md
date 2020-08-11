@@ -66,7 +66,7 @@ En amobs casos, las categorías que se definen, y sobre todo la caracterización
 
 
 ### Severidad
-La **severidad** de un defecto es una medida desu impacto en los servicios que brinda un producto de software y de los riesgos que conlleva no corregirlo.  
+La **severidad** de un defecto es una medida de su impacto en los servicios que brinda un producto de software y de los riesgos que conlleva no corregirlo.  
 Distinguimos cuatro categorías.
 
 **Crítico** o **bloqueante**  

@@ -29,9 +29,9 @@ La segura existencia de defectos de distinto tipo, conlleva la necesidad de real
 Estas tareas pueden tener distintas características: desde un tester que opera manualmente cada pantalla / página y verifica que los distintos flujos se comportan de acuerdo a lo definido, pasando por un proceso automático que genera una cantidad de operaciones y luego verifica que los datos correspondientes fueron registrados exitosamente, hasta un test de usabilidad en el que se presenta la aplicación a distintas personas y se estudia qué tan cómoda y amigable resulta la interfaz gráfica.
 
 Esta multiplicidad de tareas conlleva la necesidad de definirlas, gestionarlas y documentarlas; este es el dominio de lo que se conoce como **testing de software**.  
-En este ámbito, resulta especialmente relevante el _reporte_: los defectos encontrados deben ser registrados en una forma que permita su posterior tratamiento, y por lo tanto, que sean corregidos.
+En este ámbito, resulta especialmente relevante el _reporte_: los defectos encontrados deben ser registrados en una forma que permita su posterior tratamiento.
 
-Los reportes de defectos son el punto inicial de la **gestión de defectos**: las acciones necesarias para corregir los defectos encontrados deben entrelazarse con las otras tareas de desarrollo, debe llevarse una gestión de las mismas (asignación, seguimiento, registro de la finalización de tareas de corrección), y finalmente debe volver a testearse para verificar que la corrección es adecuada.
+Este registro es el punto inicial de la **gestión de defectos**: las acciones necesarias para corregir los defectos encontrados deben entrelazarse con las otras tareas de desarrollo, debe llevarse una gestión de las mismas (asignación, seguimiento, registro de la finalización de tareas de corrección), y finalmente debe volver a testearse para verificar que la corrección es adecuada.
 
 
 ## Contenido de esta unidad

@@ -41,11 +41,12 @@ Mencionamos algunos de los issue trackers más conocidos:
 (screenshots y/o logos de JIRA/RedMine/BugZilla)  
 ![screenshots y/o logos de JIRA/RedMine/BugZilla](../../images/logoelevate.jpg) 
 
-Actualmente, también se están integrando funcionalidades de issue tracking en los _repositorios de código_ más populares, tales como [GitHub](https://github.com/) o [GitLab](https://about.gitlab.com/).
+Estos productos, en particular JIRA, en realidad son más ambiciosos: se ofrecen para llevar la gestión de _todas las tareas_ relacionadas con un proyecto de desarrollo de software, no solamente la gestión de defectos.
+
+Mencionemos finalmente que en la actualidad, también se están integrando funcionalidades de issue tracking en los _repositorios de código_ más populares, tales como [GitHub](https://github.com/) o [GitLab](https://about.gitlab.com/).
 
 (una imagen sobre "maridaje de issue tracker y repo", puede ser la imagen de un proyecto en GitHub señalando la parte de "issues")  
 ![una imagen sobre "maridaje de issue tracker y repo"](../../images/logoelevate.jpg) 
 
-Estos productos, en particular JIRA, en realidad son más ambiciosos: se ofrecen para llevar la gestión de _todas las tareas_ relacionadas con un proyecto de desarrollo de software, no solamente la gestión de defectos.
 
 
