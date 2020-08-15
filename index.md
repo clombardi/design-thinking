@@ -13,3 +13,5 @@ layout: default
 [Unidad 3 - Patrones de diseño y abstracciones](./abstracciones-patrones/abstracciones-patrones.index)  
 
 [Unidad 4 - Testing](./testing/testing.index)  
+
+[Unidad 5 - Gestión del código fuente](./scm-git/scm-git.index)  
