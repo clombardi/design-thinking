@@ -15,7 +15,7 @@ En el nivel de un componente, pueden aparecer conflictos si hay modificación co
 En ambos niveles, pueden definirse criterios de validación automática, en particular la ejecución de baterías de test o el uso de herramientas de análisis estático de código (para chequear fallas que pueden encontrarse usando análisis estático y verificar cumplimiento de estándares de codificación).  
 Por otro lado, los cambios en el código pueden ser sujetos a aprobación.
 Esto da lugar a la definición de workflows, que pueden activarse a partir de eventos específicos, típicamente relacionados con el repositorio de código fuente.
-Estos eventos disparan una serie de verificaciones y procesos de generación de entregables.
+Estos eventos disparan una serie de verificaciones y procesos de generación de entregables. (decir que las verificaciones incluyen tests)
 
 Actualmente hay una tendencia a la automatización y rutinización de estos procesos, que lleva a la movida conocida como CI.
 
