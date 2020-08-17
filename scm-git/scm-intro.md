@@ -48,29 +48,66 @@ Los fenómenos recién mencionados hacen que resulte crítica la necesidad de co
 En suma, se trata de evitar que un proyecto de software caiga en las negras aguas del caos.
 
 El ámbito de SCM abarca todas las tareas, herramientas y técnicas que se definen para perseguir este objetivo.
-Se suele asociar a la idea de "gestión del cambio", subrayando al fenómeno del cambio constante como motivador del rol cada vez más central de SCM en un proyecto de desarrollo.
+Se suele asociar a la idea de **gestión del cambio**, subrayando al fenómeno del cambio constante como motivador del rol cada vez más central de SCM en un proyecto de desarrollo.
 
 
 ### Punto de encuentro entre desarrollo y operaciones
+Varias de las tareas que abarca SCM, en particular la generación y/o gestión de productos desplegables, y también la gestión del código fuente (sobre todo, su almacenamiento y resguardo) se asocian al ámbito de operaciones IT.
 
-Tal vez decir "devops" acá.
+Por otro lado, son los/las desarrolladores quienes generan y mantienen los archivos que componen el código fuente.
+Por lo tanto, ellos/as tienen el conocimiento de qué archivos, y en qué versiones, deben tomarse para generar un determinado producto desplegable, y también los encargados de resolver los conflictos que pudieran aparecer por modificaciones concurrentes.
+
+De esta forma, SCM resulta ser un punto en el que la confluencia de los ámbitos de desarrollo y operaciones se da naturalmente.  
+De aquí que no sea casual que el concepto de _DevOps_ haya surgido a partir de, y se asocia mayormente con, tareas de SCM.
+
 
 ## Configuration items
-No se refieren solamente a archivos de config. 
+Volviendo al significado de la sigla, "Software _Configuration_ Management", cabe la pregunta sobre cuáles son los elementos que conforman una "configuración".  
+En una mirada , podría pensarse que se refiere únicamente a los archivos que definen elementos de configuración de un producto de software, asociados p.ej. a bases de datos, formas de comunicación (URL, puertos, etc.), carpetas para guardar o recuperar información, internacionalización, detalles gráficos (como colores, tipos de letra o detalles sobre ventanas), entre otros.
 
-Es todo elemento que forma parte del producto, o incluso del proceso. 
-Incluye código fuente (que incluye a los tests), recursos (como imágenes), config de varios tipos, y también documentación.
+En realidad, se define como **configuration item** todo archivo que forma parte de la generación de los productos desplegables, o incluso del proceso del desarrollo.  
+Por lo tanto, incluye al código fuente, a los recursos (imágenes, archivos de texto, etc.) que se integrarán al mismo en los desplegables, tests, y documentación de distinto tipo, además de los archivos de configuración mencionados.  
+El término _work product_ también es utilizado para denotar cada una de las unidades incluidas en un proyecto de desarrollo.
 
-Dentro de estos, el que requiere de cuidados más precisos es el código fuente. 
-Habría que explicar por qué, yo lo asocio a que cambia todo el tiempo y tiene muchas unidades.
+En la mayor parte de los proyectos, los items que requieren de cuidados más precisos son los que constituyen el _código fuente_, debido a varios factores.
+Entre ellos mencionamos: la _gran cantidad_ de archivos fuente que incluye un proyecto, la _alta frecuencia de cambio_ para algunos de ellos que implica la necesidad de registrar correctamente autor y contenido de cada modificación, y la característica _sutil_ del código, que provoca que pequeños cambios en el texto de un archivo fuente puedan generar cambios importantes o errores en el software.
 
 
 ## Aspectos del proceso de SCM
-(esto lo saco del Pressman)
-- Identificación de items
-- Control de versiones
-- Manejo de cambios
-- Auditoría de configuraciones
+Para completar una primer mirada hacia el ámbito de SCM, distinguimos varios de los aspectos que deben considerarse para la correcta gestión de un proyecto de software y de los productos generados.
+
+**Identificación**  
+Cada _configuration item_ debe contar con una identificación única, este es el punto inicial para su gestión. La identificación de un item se asocia, en muchos casos, al nombre del archivo y su ubicación en una estructura de carpetas/directorios.  
+En algunos proyectos se establecen _convenciones de nombre_ para facilitar la identificación de carpetas. Algunas tecnologías o prácticas de desarrollo, imponen convenciones análogas para la _organización_ de archivos en carpetas.
+
+**Control de versiones**  
+Cada versión de un desplegable involucra una gran cantidad de archivos. 
+A su vez, varios de estos archivos, en particular dentro del código fuente, se modifican frecuentemente, dando lugar a una historia particular de versiones de cada uno.  
+
+Debe llevarse un registro cuidadoso de cada versión de cada desplegable, estableciendo las relaciones correctas con la versión correspondiente de cada archivo utilizado para su generación.
+Esto permite volver a generar el desplegable de ser necesario, y también tener una base cierta para el análisis de su comportamiento a partir de su código fuente.
+Este registro debe incluir qué versión de cada componente está desplegada, en un determinado momento, en cada uno de los ambientes relevantes: el o los ambientes de producción, los que se utilizan para los tests de aceptación, y eventualmente otros.
+
+Además, es importante que cada _defecto_ que se detecte, sea asociado a las versiones de los componentes involucrados sobre los cuales fue detectado. Esto es imprescindible para una gestión correcta del defecto.
+
+**Gestión del cambio**  
+Partiendo de la premisa de que el cambio es inevitable, deben establecerse procedimientos y técnicas para la gestión de los cambios que se producen en un proyecto de software.  
+Esto aplica tanto a la gestión de los archivos a partir de los cuales se generan los entregables, en particular el código fuente; como a los componentes o porductos vistos como un todo.
+
+Respecto del _código fuente_, debe llevarse cuenta de cada modificación hecha sobre uno o varios archivos, incluyendo su autor, y el detalle de los cambios efectuados en el código, idealmente línea-por-línea.  
+Debe tenerse en cuenta la posibilidad de _modificaciones concurrentes_, que se verifican cuando varias desarrolladoras registran cambios sobre un mismo archivo que parten de una misma versión inicial, de modo tal que ninguna de ellas conoce los cambios hechos por las otras. 
+Deben establecerse procedimientos adecuados que ayuden a incorporar las modificaciones hechas por distintas personas si son mutuamente compatibles, y a resolver los _conflictos_ encontrados en caso contrario, p.ej. dos propuestas de cambio afectan a la misma línea de código.
+
+Respecto de los _productos_, debe mantenerse un registro de las solicitudes de modificación hechas por clientes o usuarios, o debidas a necesidades técnicas.
+Para cada propuesta o pedido de cambio, debe analizarse su impacto sobre el código, incorporarlo al flujo de trabajo, y asociarlo con versiones de código y componentes que contengan las modificaciones solicitadas.
+
+**Auditoría y reportes**  
+Debe ser posible reconstruir la información sobre la historia de cambios, ya sea a nivel de producto o de código fuente, y poder generar reportes al respecto, que sean capaces de responder preguntas como:
+- ¿qué desarrolladores contribuyeron a la generación de una determinada versión de un componente?
+- ¿qué componentes estaban desplegados en un ambiente en una determinada fecha, y qué versión de cada uno?
+- ¿cuál es la historia de versiones de un componente?
+- ¿en qué versiones de qué componentes se incorporó la resolución de un defecto?
+
 
 
 ## Herramientas
@@ -80,3 +117,7 @@ Seguro hay un repo de código, que resuelve la identificación, organización, y
 
 Históricamente, el control de versiones, y el manejo de los otros items, se maneja utilizando otras herramientas.
 Actualmente, existe una fuerte tendencia a integrar todas las responsabilidades de SCM en los repos de código, tal vez + plugins.
+
+
+## Apéndice - nota de actualidad
+Destacamos que en muchos proyectos de desarrollo, el hecho de haber incorporado prácticas y herramientas de SCM que provienen del ámbito del desarrollo colaborativo, permitió mitigar en una buena medida, el impacto de la pandemia provocada por la COVID-19.
