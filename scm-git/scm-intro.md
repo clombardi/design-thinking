@@ -39,6 +39,10 @@ Mencionamos un estilo de desarrollo de software en el que los fenómenos que dan
 Se trata de los proyectos en los que el desarrollo de un producto de software se realiza de forma _colaborativa_. Tal vez el más renombrado, y que dio lugar a algunas de las herramientas y técnicas que describiremos en esta unidad, es el desarrollo del sistema operativo Linux.  
 Estos proyectos están abiertos a la colaboración de cualquier interesado que cumpla con un mínimo de requisitos, lo que provoca que el código fuente incluya contribuciones de muchas personas (que llegan a estar en el orden de los cientos en algunos casos), que no tienen contacto entre ellas.
 
+(tal vez, algún logo de Linux o algo así)  
+![tal vez, algún logo de Linux o algo así](../images/logoelevate.jpg) 
+
+
 En este tipo de proyectos, un manejo adecuado de los archivos que componen el código fuente, y de la generación y registro de versiones, resulta particularmente crítico.
 
 
@@ -60,6 +64,9 @@ Por lo tanto, ellos/as tienen el conocimiento de qué archivos, y en qué versio
 De esta forma, SCM resulta ser un punto en el que la confluencia de los ámbitos de desarrollo y operaciones se da naturalmente.  
 De aquí que no sea casual que el concepto de _DevOps_ haya surgido a partir de, y se asocia mayormente con, tareas de SCM.
 
+(imagen asociada a DevOps)  
+![imagen asociada a DevOps](../images/logoelevate.jpg) 
+
 
 ## Configuration items
 Volviendo al significado de la sigla, "Software _Configuration_ Management", cabe la pregunta sobre cuáles son los elementos que conforman una "configuración".  
@@ -69,6 +76,9 @@ En realidad, se define como **configuration item** todo archivo que forma parte 
 Por lo tanto, incluye al código fuente, a los recursos (imágenes, archivos de texto, etc.) que se integrarán al mismo en los desplegables, tests, y documentación de distinto tipo, además de los archivos de configuración mencionados.  
 El término _work product_ también es utilizado para denotar cada una de las unidades incluidas en un proyecto de desarrollo.
 
+(imagen asociada a distintos tipos de archivos)  
+![imagen asociada a distintos tipos de archivos](../images/logoelevate.jpg) 
+
 En la mayor parte de los proyectos, los items que requieren de cuidados más precisos son los que constituyen el _código fuente_, debido a varios factores.
 Entre ellos mencionamos: la _gran cantidad_ de archivos fuente que incluye un proyecto, la _alta frecuencia de cambio_ para algunos de ellos que implica la necesidad de registrar correctamente autor y contenido de cada modificación, y la característica _sutil_ del código, que provoca que pequeños cambios en el texto de un archivo fuente puedan generar cambios importantes o errores en el software.
 
@@ -76,21 +86,24 @@ Entre ellos mencionamos: la _gran cantidad_ de archivos fuente que incluye un pr
 ## Aspectos del proceso de SCM
 Para completar una primer mirada hacia el ámbito de SCM, distinguimos varios de los aspectos que deben considerarse para la correcta gestión de un proyecto de software y de los productos generados.
 
-**Identificación**  
+#### Identificación
 Cada _configuration item_ debe contar con una identificación única, este es el punto inicial para su gestión. La identificación de un item se asocia, en muchos casos, al nombre del archivo y su ubicación en una estructura de carpetas/directorios.  
 En algunos proyectos se establecen _convenciones de nombre_ para facilitar la identificación de carpetas. Algunas tecnologías o prácticas de desarrollo, imponen convenciones análogas para la _organización_ de archivos en carpetas.
 
-**Control de versiones**  
+#### Control y generación de versiones
 Cada versión de un desplegable involucra una gran cantidad de archivos. 
 A su vez, varios de estos archivos, en particular dentro del código fuente, se modifican frecuentemente, dando lugar a una historia particular de versiones de cada uno.  
 
-Debe llevarse un registro cuidadoso de cada versión de cada desplegable, estableciendo las relaciones correctas con la versión correspondiente de cada archivo utilizado para su generación.
+Debe llevarse un registro cuidadoso de _cada versión de cada desplegable_, estableciendo las relaciones correctas con la versión correspondiente de cada archivo utilizado para su generación.
 Esto permite volver a generar el desplegable de ser necesario, y también tener una base cierta para el análisis de su comportamiento a partir de su código fuente.
 Este registro debe incluir qué versión de cada componente está desplegada, en un determinado momento, en cada uno de los ambientes relevantes: el o los ambientes de producción, los que se utilizan para los tests de aceptación, y eventualmente otros.
 
-Además, es importante que cada _defecto_ que se detecte, sea asociado a las versiones de los componentes involucrados sobre los cuales fue detectado. Esto es imprescindible para una gestión correcta del defecto.
+Un aspecto importante, y que puede requerir de atenciones especiales, es la _generación_ de un desplegable a partir del código fuente y otros archivos necesarios. 
+Esta es una tarea habitualmente asociada a operaciones. Se vincula con las palabras _build_ o _make_, que se refieren específicamente a los procedimientos automatizados, o semi-automatizados, para la generación de un entregable.
 
-**Gestión del cambio**  
+Por otro lado, es importante que cada _defecto_ que se detecte, sea asociado a las versiones de los componentes involucrados sobre los cuales fue detectado. Esto es imprescindible para una gestión correcta del defecto.
+
+#### Gestión del cambio
 Partiendo de la premisa de que el cambio es inevitable, deben establecerse procedimientos y técnicas para la gestión de los cambios que se producen en un proyecto de software.  
 Esto aplica tanto a la gestión de los archivos a partir de los cuales se generan los entregables, en particular el código fuente; como a los componentes o porductos vistos como un todo.
 
@@ -101,7 +114,7 @@ Deben establecerse procedimientos adecuados que ayuden a incorporar las modifica
 Respecto de los _productos_, debe mantenerse un registro de las solicitudes de modificación hechas por clientes o usuarios, o debidas a necesidades técnicas.
 Para cada propuesta o pedido de cambio, debe analizarse su impacto sobre el código, incorporarlo al flujo de trabajo, y asociarlo con versiones de código y componentes que contengan las modificaciones solicitadas.
 
-**Auditoría y reportes**  
+#### Auditoría y reportes
 Debe ser posible reconstruir la información sobre la historia de cambios, ya sea a nivel de producto o de código fuente, y poder generar reportes al respecto, que sean capaces de responder preguntas como:
 - ¿qué desarrolladores contribuyeron a la generación de una determinada versión de un componente?
 - ¿qué componentes estaban desplegados en un ambiente en una determinada fecha, y qué versión de cada uno?
@@ -111,12 +124,31 @@ Debe ser posible reconstruir la información sobre la historia de cambios, ya se
 
 
 ## Herramientas
-Para organizar los items y el proceso definido sobre los mismos, hacen falta herramientas.
+El manejo adecuado de los aspectos recién mencionados involucra una enorme cantidad de información y de tareas, que escapan a las posibilidades de su gestión manual. El uso de _herramientas_ es imperioso para las tareas de SCM.
 
-Seguro hay un repo de código, que resuelve la identificación, organización, y manejo de cambios del código fuente, permitiendo auditar los cambios y ayudando a resolver eventuales conflictos por cambios concurrentes.
+Se destaca la ingente cantidad de _información asociada al código fuente_, incluyendo el registro minucioso de las modificaciones efectuadas en cada archivo, la resolución de conflictos, y en general el soporte dle trabajo simultáneo de una cantidad de desarolladores/as que puede ser importante.  
+Este es el dominio de los productos conocidos como _repositorios de código_.
 
-Históricamente, el control de versiones, y el manejo de los otros items, se maneja utilizando otras herramientas.
-Actualmente, existe una fuerte tendencia a integrar todas las responsabilidades de SCM en los repos de código, tal vez + plugins.
+Un **repositorio de código** es una especie de base de datos especializada en el manejo de archivos de texto y en la gestión de sus versiones.
+Los desarrolladores interactúan con el repositorio, obteniendo (en la jerga, _bajando/downloading_) los archivos que necesita, y luego registrando (en la jerga, _subiendo/uploading_) sus cambios.
+De esta forma, queda registrado para cada cambio, el detalle de qué archivos involucra y qué se modifica en cada uno, el autor, y la información de fecha/hora.
+También detecta conflictos por modificación concurrente, brindando herramientas para resolverlos.
+
+Se utilizaron, sucesivamente, distintos productos y protocolos de repositorios de código. Entre ellos mencionamos [Rational ClearCase](https://www.ibm.com/us-en/marketplace/rational-clearcase), [CVS](http://www.nongnu.org/cvs/), [SVN](https://subversion.apache.org/) y [Mercurial](https://www.mercurial-scm.org/).  
+Actualmente, el standard _de facto_ de la industria es [Git](https://git-scm.com/), creado originalmente para el desarrollo del sistema operativo Linux. 
+Entre los productos que soportan Git, los más populares son [GitHub](https://github.com/), [GitLab](https://about.gitlab.com/) y [BitBucket](https://bitbucket.org/).
+
+(logos de Git / GitHub / GitLab / BitBucket)  
+![logos de Git / GitHub / GitLab / BitBucket](../images/logoelevate.jpg) 
+
+
+### Integración en el repositorio de código
+Tradicionalmente, otras tareas de SCM como la generación y control de versiones de productos desplegables, se realizan mediante otras herramientas que se conectan de alguna forma con un repositorio de código.
+
+Actualmente, existe la tendencia a centralizar tareas de SCM en el repositorio; los productos actuales cuentan con agregados que permiten generar, distribuir, e incluso desplegar productos de software. Por otro lado, la centralización de la información simplifica las tareas de auditoría.
+
+Esta tendencia está asociada a la automatización de tareas de SCM en general, y de operaciones IT en general.
+
 
 
 ## Apéndice - nota de actualidad
