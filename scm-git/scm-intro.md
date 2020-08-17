@@ -17,19 +17,18 @@ Las tareas que se agrupan en la sigla SCM podrían ser vistas como meramente adm
 En cambio, en el estado del arte actual del desarrollo de software, se reconoce a SCM como una pieza clave del desarrollo, brindándole una atención creciente. 
 Hay varios fenómenos que provocan que la industria eleve la consideración de las tareas de SCM. 
 
-Uno de ellos es la creciente _complejidad_ de los productos de software, que conlleva la de su proceso de desarrollo.   
+Uno de ellos es la creciente **complejidad** de los productos de software, que conlleva la de su proceso de desarrollo. 
 Este fenómeno ya fue referido varias veces en este material, pues está en la base de varios de los conceptos que se describieron en las unidades anteriores, entre ellas: la definición de una gran diversidad de tareas y roles, la relevancia de la arquitectura de software, la búsqueda de la abstracción, la definición de patrones de diseño.  
 En relación con SCM, la complejidad se observa en que un producto puede estar formado por distintos componentes, lo que conlleva la necesidad de un registro y sincronización entre las versiones de cada componente. Por otro lado, el código fuente de dichos componentes se compone de una gran cantidad de archivos, en cuya confección participan distintas personas. De aquí deriva la importancia de contar con capacidades adecuadas de auditoría sobre cada elemento.
 
-Otro fenómeno relevante, que también ha aparecido en las unidades anteriores, es el _cambio constante_ que es una característica inescapable en muchos proyectos de desarrollo.  
+Otro fenómeno relevante, que también ha aparecido en las unidades anteriores, es el **cambio constante** que es una característica inescapable en muchos proyectos de desarrollo. 
 Mencionamos este fenómeno, en particular, entre las motivaciones para el surgimiento de los marcos de trabajo ágiles en la Unidad 1, y de la relevancia del testing en el desarrollo de software, en la Unidad 4.  
-
 Respecto de las tareas de SCM, el cambio constante implica una mayor frecuencia de ejecución, y a la vez, la necesidad de una sincronización más precisa entre las versiones de distintos elementos que forman un componente o un producto de software.  
 En particular, la modificación frecuente de los archivos que componen el código fuente, aumenta la probabilidad de _conflictos_ generados por la actualización concurrente de un mismo archivo. Las herramientas y técnicas de SCM deben brindar soluciones para estos casos.
 
-Finalmente, mencionamos que al igual que (p.ej.) los marcos de trabajo ágiles, la importancia de SCM surge de la experiencia acumulada en la industria, y en particular de problemas que fueron detectados.  
+Finalmente, mencionamos que al igual que (p.ej.) los marcos de trabajo ágiles, la importancia de SCM surge de la **experiencia acumulada** en la industria, y en particular de problemas que fueron detectados.  
 En particular, la generación de productos desplegables sufrió retrasos muy importanes, debido a problemas de _integración_ entre componentes desarrollados por distintos equipos.  
-En otros casos, los problemas se debieron a las diferencias de comportamiento del software en distintos _ambientes_: programas que funcionan correctamente en el equipo individual de un desarrollador, fallan al ser desplegados en un entorno productivo.
+En otros casos, los problemas se debieron a las diferencias de comportamiento del software en distintos _ambientes_: programas que funcionan correctamente en el equipo individual de un desarrollador, fallan al ser desplegados en un entorno productivo.  
 Finalmente, mencionamos un problema que se presenta repetidamente en entornos donde el SCM no es adecuado: ante un defecto que se detecta en un entorno productivo, resulta complejo reconstruir la historia del código fuente involucrado para entender en qué momento se introdujo el defecto, o peor aún, 
 simplemente encontrar la versión precisa del código fuente que corresponde al componente productivo.
 
@@ -44,10 +43,15 @@ En este tipo de proyectos, un manejo adecuado de los archivos que componen el c�
 
 
 
-## Qué es SCM en dos palabras
-Estos dos drivers generan una necesidad de coordinar el resultado del trabajo de cada participante en un proceso de desarrollo de software, para que los productos que se generan evolucionen en una forma organizada, minimizando conflictos y errores.
+## El rol de SCM - manejo del cambio
+Los fenómenos recién mencionados hacen que resulte crítica la necesidad de coordinar el esfuerzo de las participantes en un proyecto de software, generando entornos de trabajo en los que la evolución de los productos se dé en forma ordenada, evitando conflictos o fallas de sincronización entre el trabajo de distintos integrantes o equipos, y la aparición de errores.  
+En suma, se trata de evitar que un proyecto de software caiga en las negras aguas del caos.
 
-El término SCM se utiliza para abarcar todas las tareas, herramientas y técnicas que se definen para perseguir estos objetivos.
+El ámbito de SCM abarca todas las tareas, herramientas y técnicas que se definen para perseguir este objetivo.
+Se suele asociar a la idea de "gestión del cambio", subrayando al fenómeno del cambio constante como motivador del rol cada vez más central de SCM en un proyecto de desarrollo.
+
+
+### Punto de encuentro entre desarrollo y operaciones
 
 Tal vez decir "devops" acá.
 
