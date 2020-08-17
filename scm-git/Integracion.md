@@ -41,16 +41,10 @@ Si bien solo un desarrollador se percatará de este conflicto, será su responsa
 
 La dificultad de hacer este _merge_, dependerá de cuánto diverjan las versiones, y esta divergencia tiende a crecer con el tiempo. En un escenario ideal, la integración debería ocurrir a menudo (¿una vez por día?), evitando así llegar a un punto en que las versiones diverjan tanto que sea excesivamente trabajoso volver a hacer que confluyan.
 
-## Workflow de integración
-En ambos niveles, pueden definirse criterios de validación automática, en particular la ejecución de baterías de test o el uso de herramientas de análisis estático de código (para chequear fallas que pueden encontrarse usando análisis estático y verificar cumplimiento de estándares de codificación).  
+## Flujos de integración
+En ambos niveles, pueden definirse criterios de validación automática, en particular la ejecución de baterías de test o el uso de herramientas de análisis estático de código (para chequear fallas que pueden encontrarse con esta técnica y verificar cumplimiento de estándares de codificación).
+
 Por otro lado, los cambios en el código pueden ser sujetos a aprobación.
-Esto da lugar a la definición de workflows, que pueden activarse a partir de eventos específicos, típicamente relacionados con el repositorio de código fuente.
-Estos eventos disparan una serie de verificaciones y procesos de generación de entregables. (decir que las verificaciones incluyen tests)
+Esto da lugar a la definición de _flujos de trabajo_, que pueden activarse a partir de eventos específicos, típicamente relacionados con el repositorio de código fuente. Estos eventos disparan una serie de verificaciones como los que ya mencionamos y procesos de generación de entregables. 
 
-Actualmente hay una tendencia a la automatización y rutinización de estos procesos, que lleva a la movida conocida como CI.
-
-(se podría integrar la noción de branch en este discurso, y creo que estamos todos)
-
-
-
-
+Con todo esto, se va dejando atrás la idea de la integración como una étapa aislada, cargada de tensiones y malestar, para dar paso a una visión que considera a la integración como parte del ciclo (ampliado) de desarrollo. Esta tendencia a la automatización y rutinización de estos procesos, lleva a lo que hoy conocemos como _integración continua_, tema que será profundizado en la Unidad 7.

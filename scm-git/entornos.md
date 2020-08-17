@@ -12,7 +12,7 @@ En cada escenario en el que haya que tener una versión corriendo, debe generars
 ## Entornos de desarrollo
 Por otro lado, cada desarrollador que forma parte del equipo de desarrollo de un componente, debe ser capaz de comprobar que el código que produce funcione correctamente, no sólo en forma aislada, sino en el contexto general del componente.
 
-Esto trae aparejada la necesidad de configurar los llamados _entornos de desarollo_. A priori, podríamos pensar en simplemente sumar un entorno más a nuestro "paquete de entornos", pero eso ocasionaría algunas dificultades en el trabajo del equipo de desarrollo. Pensemos en un hipótetico escenario donde se trabaja de esta forma: 
+Esto trae aparejada la necesidad de configurar los llamados _entornos de desarrollo_. A priori, podríamos pensar en simplemente sumar un entorno más a nuestro "paquete de entornos", pero eso ocasionaría algunas dificultades en el trabajo del equipo de desarrollo. Pensemos en un hipotético escenario donde se trabaja de esta forma: 
 
 > Un equipo de tres desarrolladoras está trabajando en distintas funcionalidades sobre un mismo módulo y quisieran probar su código nuevo en el ambiente de desarrollo. 
 > 
