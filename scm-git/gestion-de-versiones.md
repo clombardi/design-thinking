@@ -52,13 +52,45 @@ Algunos productos, como GitHub, incorporan también un concepto de _release_, pe
 Un release se forma a partir de un tag, pudiendo agregarse documentación específica (los llamados _release notes_) y archivos adicionales que pudieran necesitarse para el despliegue.
 
 
-
-
 ## Dependencias
-Uso de librerías. Necesidad de registrar las versiones de las librerías que se usan.
+En la práctica totalidad de los casos, los proyectos de software se sirven de **librerías**, o sea, paquetes de software producidos generalmente por entidades externas, que resuelven aspectos específicos que es necesario manejar en un producto de software.  
+Además del obvio ahorro de tiempo de desarrollo, el uso de librerías propende a generar productos de software más _robustos_, porque se aprovechan de código que ya ha sido utilizado repetidas veces en otros proyectos, y más _alineados al estado del arte_, al utilizarse productos que son conocidos en el ámbito de desarrollo.  
 
-Sistemas de manejo de librerías: Maven, npm, pip.
+Las librerías utilizadas en un producto o componente se conocen como sus **dependencias**, o sea, de qué otros productos _dependen_ para poder generar el producto desplegable.
+
+En mucos casos, las librerías también son productos en evolución constante, que por lo tanto generan regularmente nuevas versiones.
+Por lo tanto, es importante incluir en cada baseline de un componente, la especificación de sus dependencias, incluyendo la versión específica de cada una.
+
+
+### Sistemas de gestión de paquetes
+Para varias de las tecnologías más populares en la actualidad, existen los llamados _sistemas de gestión de paquetes_, que incluyen repositorios centralizados en los que se puede buscar entre enormes cantidades de librerías, y también utilidades para la generación de productos desplegables y otras tareas asociadas al desarrollo.
+
+Los sistemas de gestión de paquetes también pueden ser instalados a nivel de una organización, de forma tal de incluir paquetes desarrollados dentro de la misma organización para ser incluidos en distintos proyectos asociados a la misma.
+
+Entre los sistemas de gestión de paquetes más conocidos mencionamos [Maven](https://maven.apache.org/), [npm](https://www.npmjs.com/) y [pip](https://pypi.org/project/pip/), asociados a los lenguajes Java, JavaScript y Python respectivamente.
+
+(logos de maven / npm / pip)  
+![logos de maven / npm / pip](../images/logoelevate.jpg) 
 
 
 ## La importancia de ser retrocompatible
-Decir algo
+Cada pieza de software: una función u otro elemento en un programa, un componente, una aplicación; _no funcionan en forma aislada_, sino que son utlizadas por, y utilizan a, otras unidades de software.
+
+Por lo tanto, resulta de la máxima importancia que al generarse cambios en una unidad de cualquier nivel, que lleven a una nueva versión, cualquier unidad que utiliza a la que se está modificando y que funciona correctamente en relación a la versión actual, lo haga de la misma manera respecto de la versión a generarse, sin necesidad de modificaciones adicionales.  
+Dicho de otra forma, se busca que el cambio de la versión actual por la nueva, no requiera de la modificación simultánea de ninguna otra unidad. 
+Esta característica se conoce como **retrocompatibilidad**.
+
+Una nueva versión puede agregar nueva funcionalidad, extender el ámbito de aplicación de la funcionalidad existente contemplando casos no previstos en versiones anteriores, y/o modificar aspectos no funcionales como eficiencia, seguridad, etc., sin dejar de ser retrocompatible.  
+La clave es que las operaciones incluidas en versiones anteriores, puedan ser invocadas de la misma manera respetándose las respuestas y los efectos de cada operación.
+
+La retrocompatibilidad resulta clave para que los componentes que forman parte de una aplicación puedan tener evoluciones independientes, de forma tal que desplegar una nueva versión de un componente no genere un efecto en cadena que implique la modificación simultánea de una cantidad importante de otros componentes.
+
+Los [tests de integración](../testing/sistematizacion/tipos-documentacion) mencionados en la unidad 4, tienen como uno de sus objetivos, verificar la retrocompatibilidad de nuevas versiones de componentes.
+
+
+### Manejo de las excepciones
+En proyectos con un tiempo de vida largo, a veces el respeto a ultranza de la retrocompatibilidad puede atentar contra la sencillez: se mantiene código sólo para mantener compatibilidad con versiones muy anteriores, complicando el diseño y/o el código de la unidad de software.  
+Por eso, se admite la posibilidad de que eventualmente deje de respetarse una parte de la interfaz de un componente. Esta decisión está muchas veces ligada al convencimiento de que una gran parte de quienes utilizan a la unidad en cuestión ya se han adaptado a las nuevas formas de la interfaz. En otros casos, se desea forzar un cambio de interfaz por razones específicas, p.ej. de seguridad.
+
+Para mitigar el impacto de una pérdida de compatibilidad, se puede anunciar con antelación, para dar tiempo a la adaptación de las unidades que utilizan a la que se está modificando.  
+P.ej. en un componente cuya versión actual es la 11, al liberarse la versión 12, se indica que _a partir de la versión 15_, deja de garantizarse la compatibilidad con las versiones 5 y anteriores, dando el tiempo a que quienes utilizan el componente, verifiquen qué versión están utilizando, y si está entre las que dejarán de ser soportadas, se adapten a las modalidades de las nuevas versiones.
