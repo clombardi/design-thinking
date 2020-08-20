@@ -49,7 +49,7 @@ La dificultad de hacer este _merge_, dependerá de cuánto diverjan las versione
 ## Entre componentes
 Sobre este tipo de integración, lamentablemente, no hay "recetas" tan claras de cómo proceder, pero sí podemos mencionar algunas ideas generales. 
 
-Recuperando lo que trabajamos en la unidad anterior, aquí serán de especial ayuda los [test funcionales](../testing/sistematizacion/tipos-documentacion.md), particularmente los _tests de integración_ y los _end-to-end tests_. El objetivo será entonces verificar que los cambios realizados en un cierto componente no introdujeron defectos en el funcionamiento de los demás.
+Recuperando lo que trabajamos en la unidad anterior, aquí serán de especial ayuda los [test funcionales](../testing/sistematizacion/tipos-documentacion), particularmente los _tests de integración_ y los _end-to-end tests_. El objetivo será entonces verificar que los cambios realizados en un cierto componente no introdujeron defectos en el funcionamiento de los demás.
 
 Para esta actividad, conviene pensar a los componentes como _cajas negras_, y enfocarnos en comprobar que determinadas entradas producen determinadas salidas. Como se ve, las tareas asociadas a este tipo de integración no tendrán que ver con la gestión del código fuente, sino más bien con el testing.
 
