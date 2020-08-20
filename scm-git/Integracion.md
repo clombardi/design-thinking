@@ -7,7 +7,12 @@ En todo proyecto donde participe más de una desarrolladora, se requiere la inte
 - integración del código de un _componente sobre el cual estuvieron trabajando distintos miembros del equipo_, para generar las sucesivas versiones de este;
 - integración entre _versiones de distintos componentes_, para generar los baselines que dan lugar a las versiones del producto completo, o para comprobar que una nueva versión de un componente puede reemplazar a la actual en un determinado ambiente.
 
-En el primer nivel, las tareas de integración tendrán más que ver con la gestión del código fuente, ya que la actividad de programar implica, básicamente, crear, borrar y editar archivos de texto. En cambio, en el segundo nivel deberemos pensar a los componentes como _cajas negras_, y evaluar si las interfaces que ofrecen permiten que se conecten adecuadamente con otros.
+En el primer nivel, las tareas de integración tendrán más que ver con la gestión del código fuente, ya que la actividad de programar implica, básicamente, crear, borrar y editar archivos de texto. Podemos hablar en este nivel de los componentes como _cajas blancas_, donde podemos "abrirlos" y trabajar sobre lo que hay adentro.
+
+En cambio, en el segundo nivel deberemos pensar a los componentes como _cajas negras_, y evaluar si las interfaces que ofrecen permiten que se conecten adecuadamente con otros.
+
+_(acá podría ir alguna imagen de este estilo, donde se termine de ver la idea de "blanco" VS "negro")_
+![Caja blanca y caja negra](./images/caja-negra-blanca.jpg)
 
 Veremos a continuación algunas de las tareas típicas de ambos tipos de integración.
 
@@ -40,6 +45,15 @@ Luego, al abrir el archivo en algún editor, veremos que se agregaron unos indic
 Si bien solo un desarrollador se percatará de este conflicto, será su responsabilidad comunicarse con quien introdujo el otro cambio y acordar entre ambos qué versión será la definitiva. En este ejemplo vemos que el conflicto es mínimo, pero podría incluir muchas más líneas, un archivo completo o incluso varios archivos. 
 
 La dificultad de hacer este _merge_, dependerá de cuánto diverjan las versiones, y esta divergencia tiende a crecer con el tiempo. En un escenario ideal, la integración debería ocurrir a menudo (¿una vez por día?), evitando así llegar a un punto en que las versiones diverjan tanto que sea excesivamente trabajoso volver a hacer que confluyan.
+
+## Entre componentes
+Sobre este tipo de integración, lamentablemente, no hay "recetas" tan claras de cómo proceder, pero sí podemos mencionar algunas ideas generales. 
+
+Recuperando lo que trabajamos en la unidad anterior, aquí serán de especial ayuda los [test funcionales](../testing/sistematizacion/tipos-documentacion.md), particularmente los _tests de integración_ y los _end-to-end tests_. El objetivo será entonces verificar que los cambios realizados en un cierto componente no introdujeron defectos en el funcionamiento de los demás.
+
+Para esta actividad, conviene pensar a los componentes como _cajas negras_, y enfocarnos en comprobar que determinadas entradas producen determinadas salidas. Como se ve, las tareas asociadas a este tipo de integración no tendrán que ver con la gestión del código fuente, sino más bien con el testing.
+
+Otra variable a tener en cuenta es que la idea de _componente_ representará algo diferente para cada equipo de trabajo. Pensando, por ejemplo, en una arquitectura de microservicios, podríamos llamar componente a cada uno de los servicios y la integración estará dada por el intercambio de mensajes que estos realicen. Otro ejemplo podría ser una arquitectura backend - frontend, y ahí la integración estará dada por los pedidos que el frontend haga al backend y las respuestas que este último otorgue. Si pensamos en bibliotecas de código dentro de un mismo lenguaje, la integración estará dada por la interfaz que cada una de estas piezas exponga. 
 
 ## Flujos de integración
 En ambos niveles, pueden definirse criterios de validación automática, en particular la ejecución de baterías de test o el uso de herramientas de análisis estático de código (para chequear fallas que pueden encontrarse con esta técnica y verificar cumplimiento de estándares de codificación).
