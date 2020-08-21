@@ -8,6 +8,8 @@ layout: default
 
 [Gestión de versiones](./gestion-de-versiones)
 
+[Git, el estándar de la industria](./git)
+
 [Entornos](./entornos)
 
 [Integración](./integracion)
