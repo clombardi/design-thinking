@@ -18,6 +18,29 @@ _(pienso que algún esquema como este, tal vez sumando forks, puede sumar)_
 
 ## Flujo básico de trabajo
 
-Operaciones principales: add, commit, push, pull.
+Si bien existe un sinfín de tutoriales en internet sobre cómo usar Git, describiremos aquí un flujo de trabajo básico que servirá para tener una noción de cómo funciona la herramienta. 
+
+La unidad de trabajo es el _commit_, que no tiene una traducción directa al español... podríamos llamarlo "compromiso" o "registro". En esencia, un _commit_ consta de dos partes:
+
+1. Una _serie de cambios_ asociados a los archivos del repositorio. Esos cambios pueden ser edición (se agregaron o quitaron líneas de un archivo), creación (de un archivo nuevo) o borrado (de un archivo preexistente).
+1. Un mensaje, que explica qué representan esos cambios en términos de la aplicación. Algunos ejemplos podrían ser `"Agregada validación de correo electrónico en la pantalla de registro"` o `"Corregido error de conexión al guardar nuevos productos en la base de datos"`. La posibilidad de escribir un mensaje también existía en herramientas anteriores (como SVN), pero en Git es obligatorio. Estos mensajes no solo servirán para mantener un historial de qué cambió en cada versión, sino que también pueden ser utilizados en herramientas automatizadas que generan documentación asociada a las nuevas versiones (_changelog_, _release notes_, etc.).
+
+Podemos decir entonces que al trabajar con Git tenemos dos tipos de interacción, una con el _repositorio remoto_, en el que colaboran todas las personas involucradas en el proyecto, y otra con el _repositorio local_, que inicialmente es un _clon_ del remoto y luego va evolucionando a medida que cada desarrollador trabaja. 
+
+El siguiente esquema da un panorama de ambos tipos de interacción:
 
 ![Comandos básicos de Git](./images/git-comandos.png)
+
+Haciendo foco primero en la interacción con el repositorio local, una posible metodología de trabajo sería la siguiente:
+
+1. La desarrolladora realiza su trabajo sobre el código, editando, creando y eliminando archivos. 
+1. Cuando finaliza una tarea, se dispone a hacer un _commit_ (o _commitear_, como se dice en la jerga). Para ello, decide cuáles de los archivos que modificó va a incluir, utilizando el comando `git add` para "marcar" cada uno de ellos.
+1. Una vez que seleccionó todos los archivos, realiza el _commit_ con el comando `git commit`, incluyendo el mensaje que explica qué cambios realizó.
+1. Toma otra tarea y vuelve a empezar este ciclo desde el paso 1.
+
+En algún momento de su jornada laboral (al menos al comienzo y al final, aunque podría ser en cualquier momento), la desarrolladora querrá _sincronizar_ sus cambios con el repositorio remoto, en alguno de los dos sentidos posibles: 
+
+* `git push`: publicar o _subir_ sus cambios para que sus compañeras puedan verlos.
+* `git pull`: descargar o _bajar_ los cambios de las demás para tener la última versión.
+
+En la sección sobre [integración](./integracion) veremos cómo lidiar con los _conflictos_ que pueden ocurrir al interactuar con el repositorio remoto y en la Unidad 6 hablaremos más en profundidad sobre distintos modos de organizar el trabajo en equipo utilizando _ramas_ o _branches_.
