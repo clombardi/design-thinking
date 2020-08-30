@@ -15,3 +15,5 @@ layout: default
 [Unidad 4 - Testing](./testing/testing.index)  
 
 [Unidad 5 - Gestión del código fuente](./scm-git/scm-git.index)  
+
+[Unidad 6 - Modelo de branch](./git-branch/git-branch.index)  
