@@ -12,7 +12,7 @@ Supongamos que todos ellos, y ellas, utilizan una única base de código común,
 Aunque el trabajo se organice de forma tal que cada persona o subgrupo pequeño, trabaje en funcionalidades o aspectos separados, algunas veces los cambios  introducidos por una persona o grupo incidirán sobre el trabajo de otros, porque afectan a funcionalidades utilizadas o compartidas por varios grupos. 
 Esto conlleva el riesgo de que el trabajo de otros grupos se vea perjudicado, si un componente compartido cambia su comportamiento o interfaz, se introduce un defecto como consecuencia de un cambio, o se requieren modificaciones en el entorno de ejecución de desarrollo.
 
-Señalemos también la posiblidad de que un commit defectuoso en el repositorio donde está la base compartida, puede provocar la pérdida o modificación involuntaria de código, lo que otra vez implica el riesgo asociado de perjudicar o retrasar el trabajo de varios equipos.
+Señalemos también la posibilidad de que un commit defectuoso en el repositorio donde está la base compartida, puede provocar la pérdida o modificación involuntaria de código, lo que otra vez implica el riesgo asociado de perjudicar o retrasar el trabajo de varios equipos.
 
 
 ### Posibles ejemplos
