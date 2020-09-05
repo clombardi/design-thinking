@@ -41,10 +41,10 @@ Se agregan dos archivos.
 
 
 El estado actual del repositorio cuenta con los archivos 
-- `uno.txt`, con contenido `uno - one - één`.
-- `dos.txt`, con contenido `dos - two - twee - deux`.
-- `tres.txt`, con contenido `tres - three - drie`
-- `cuatro.txt`, con contenido `cuatro - four`.
+- `uno.txt`, con contenido `uno - one - één` (commit `C2`).
+- `dos.txt`, con contenido `dos - two - twee - deux` (commit `C4`).
+- `tres.txt`, con contenido `tres - three - drie` (commit `C5`).
+- `cuatro.txt`, con contenido `cuatro - four` (commit `C5`).
 
 
 
@@ -65,10 +65,10 @@ Por lo tanto, entre los commits que incluye este repositorio, encontramos que
 Supongamos que los cambios de los commits `C1` a `C5` son los mismos que en el ejemplo anterior, que en `B4` se agrega el archivo `cinco.txt`, y en `B5` y `B6` se modifica dicho archivo, cuyo contenido final es `cinco - five - vijf - cinq`.  
 En tal caso, el estado actual de la rama 1 coincide con el estado del repositorio descripto en el ejemplo anterior.
 Por su parte, el estado actual de la rama 2 incluye los siguientes archivos.
-- `uno.txt`, con contenido `uno - one - één`.
-- `dos.txt`, con contenido `dos - two - twee`.
-- `tres.txt`, con contenido `tres - three`.
-- `cinco.txt`, con contenido `cinco - five - vijf - cinq`.
+- `uno.txt`, con contenido `uno - one - één` (commit `C2`).
+- `dos.txt`, con contenido `dos - two - twee` (commit `C3`).
+- `tres.txt`, con contenido `tres - three` (commit `C2`).
+- `cinco.txt`, con contenido `cinco - five - vijf - cinq` (commit `B6`).
 
 Notamos que las modificaciones hechas en los commits que pertenecen sólo a una rama, no afectan al estado de la otra.
 
@@ -88,11 +88,11 @@ El siguiente gráfico muestra el estado del repositorio del ejemplo con dos rama
 ![después del merge](./images/merge.jpg)   
 El commit `Merge 1` es el resultado del merge, es el último commit de la rama 1. Se considera que la secuencia de la rama secundaria termina en el commit `B6`.
 Luego de esta operación, el estado de la rama 1 incluye estos archivos.
-- `uno.txt`, con contenido `uno - one - één`.
-- `dos.txt`, con contenido `dos - two - twee - deux`.
-- `tres.txt`, con contenido `tres - three - drie`
-- `cuatro.txt`, con contenido `cuatro - four`.
-- `cinco.txt`, con contenido `cinco - five - vijf - cinq`.
+- `uno.txt`, con contenido `uno - one - één` (commit `C2`).
+- `dos.txt`, con contenido `dos - two - twee - deux` (commit `C4`).
+- `tres.txt`, con contenido `tres - three - drie` (commit `C5`).
+- `cuatro.txt`, con contenido `cuatro - four` (commit `C5`).
+- `cinco.txt`, con contenido `cinco - five - vijf - cinq` (commit `Merge 1`).
 
 Si en los commits exclusivos de cada rama que interviene en un merge se modifica un mismo archivo, se produce la posibilidad de conflicto descripta al comentar las cuestiones de [integración](../scm-git/integracion) en la Unidad 5.
 

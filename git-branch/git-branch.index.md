@@ -8,6 +8,6 @@ layout: default
 
 [Ramas en Git](./git-branch-merge)
 
-[Uso extendido de branches](./git-branch-escenario)
+[Uso extendido de ramas](./git-branch-escenario)
 
 [Pull requests](./pull-requests)
