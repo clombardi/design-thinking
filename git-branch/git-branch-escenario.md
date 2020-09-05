@@ -46,28 +46,29 @@ def test_comisiones_B():
 ```
 
 Puede ocurrir que como consecuencia de las modificaciones agregadas en el commit `C5`, se introduzca un defecto en la función `importe_comisiones`, que provoque que _deje de dar el resultado esperado_ en algunos casos que no aplican al trabajo del equipo A, pero sí al del equipo B. En particular, el ` test_comisiones_B` puede fallar, porque para la operación involucrada, el importe calculado de comisiones pase de 300 a p.ej. 500.  
-Por lo tanto, en este caso el equipo B debe interrumpir su trabajo, hasta compatibilizar las necesidades de los dos equipos respecto de la función, y realizar las modificaciones necesarias en la misma.
 
-### ... en qué commit anda qué cosa ...
+Resumiendo: 
+- En el commit `C4` funciona correctamente el `test_comisiones_B` pero no el `test_comisiones_A`. 
+- Al introducir el commit `C5` se _invierte_ la situación: funciona `test_comisiones_A` y deja de funcionar `test_comisiones_B`.
 
-<!-- 
-Otra posibilidad es que el equipo C, distinto a los anteriores, requiera que los cálculos que realiza la función puedan variar de acuerdo a un dato que no está presente en la operación, p.ej. datos de la negociación que llevó a la operación, como cuánto tiempo demoró, si requirió del concurso de algún agente externo, etc.. Por lo tanto, cambia la definición de la operación como sigue:
-``` python
-def calcular_comisiones(condiciones_negociacion, operacion):
-    # implementación
-```
-En este escenario, el código de los equipos A y B deja de funcionar, porque están invocando a la función solamente con el parámetro correspondiente a la operación. -->
+En este escenario, el equipo B **debe interrumpir su trabajo**, hasta compatibilizar las necesidades de los dos equipos respecto de la función, y realizar las modificaciones necesarias en la misma.
 
-Análogamente, si por un error involuntario, la función desaparece como consecuencia de un commit, el código de todos los equipos que la utilizan deja de funcionar.
+Análogamente, si por un error involuntario, la función desaparece como consecuencia de un commit agregado, el código de _todos los equipos que la utilizan_ deja de funcionar.
 
 
 ## Solución: trabajo con branches
-Los descriptos anteriormente, son algunos de los fenómenos por los cuales se alienta, en muchos proyectos, la utilización extensiva de **branches o ramas** en los proyectos de desarrollo.  
-Si cada persona o subgrupo trabaja en un branch particular, se minimiza el riesgo de que cambios hechos por otras personas o equipos puedan afectar su trabajo en el día a día. Al mismo tiempo, también se disminuye el riesgo de que los cambios realizados por esa persona o equipo, puedan perjudicar el día a día del resto del equipo de desarrollo general del proyecto.
+Para evitar este tipo de problemas se alienta, en muchos proyectos, la utilización extensiva de **branches o ramas** en los proyectos de desarrollo.  
+Si cada persona o subgrupo trabaja en un branch particular, se minimiza el riesgo de que cambios hechos por otras personas o equipos puedan afectar su trabajo en el día a día. Al mismo tiempo, también se disminuye el riesgo de que los cambios realizados por esa persona o equipo, puedan perjudicar el día a día del resto del equipo de desarrollo general del proyecto. En resumen, permite brindar un mejor manejo de los _efectos cruzados_ del trabajo de cada equipo.
 
-Una de las motivaciones principales para la rápida adopción de Git en la industria es porque provee un manejo de branches superior al de los repositorios de código más populares al momento de su popularización.
+Como ya apuntamos, una de las motivaciones principales para la rápida adopción de Git en la industria es que provee un manejo de branches superior al de los repositorios de código más populares al momento de su popularización.
 
-### ... falta comentar que los problemas se arreglan en la integración ...
+En el ejemplo anterior, si los equipos A y B trabajan en ramas separadas de esta forma  
+![dos equipos](./images/two-teams.jpg)  
+entonces las modificaciones introducidas por el equipo A no afectan al trabajo diario del equipo B.
+
+Obviamente, esta forma de trabajo no hace desaparecer mágicamente el problema; la ventaja que se obtiene es que se puede resolver en forma aislada del trabajo diario de cada equipo.  
+En concreto, el problema va a surgir durante la [integración](../scm-git/integracion) del trabajo de alguno de los equipos en la rama principal. 
+En esta instancia, los tests de [regresión](../testing/testing-software/regresion) son una herramienta importante para detectar posibles efectos del trabajo de un equipo en el resto del código.
 
 
 ## Diversidad de branches, surge un nuevo problema
