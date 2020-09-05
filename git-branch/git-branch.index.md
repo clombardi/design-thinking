@@ -12,6 +12,7 @@ layout: default
 
 [Pull requests](./pull-requests)
 
+[Historia de commits, commit messages](./commit-history)
 
 
 **Nota para les editores**   
