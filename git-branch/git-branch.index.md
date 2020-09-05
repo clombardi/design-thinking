@@ -14,7 +14,8 @@ layout: default
 
 [Historia de commits, commit messages](./commit-history)
 
+[Estrategias de branching][./estrategias-branching]
 
 **Nota para les editores**   
-Los gráficos fueron realizados usando [https://www.diagrameditor.com/](https://www.diagrameditor.com/) . 
+Algunos gráficos fueron realizados usando [https://www.diagrameditor.com/](https://www.diagrameditor.com/). 
 Los archivos `.drawio` pueden ser levantados usando esta herramienta.
