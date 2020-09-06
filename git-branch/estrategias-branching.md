@@ -65,5 +65,32 @@ _(sería bueno volver a armar todos los esquemas de esta unidad para que tengan 
 
 Una estrategia simple, pero que aún así aprovecha el poder de las ramas de Git. En este caso no hay un tratamiento especial para las versiones, aunque muchos proyectos combinan este flujo con el sistema de _tags_ que propone _git flow_. 
 
-Debe mencionarse también que estos flujos suelen estar sostenidos por herramientas automáticas que intentan impedir que el código defectuoso llegue a producción. Tal como lo mencionamos en la [Unidad 4](../testing/testing.index), en este tipo de proyectos será especialmente necesario contar con un elevado nivel de tests automatizados que garanticen la estabilidad del código.
+Debe mencionarse también que estos flujos suelen estar sostenidos por herramientas automáticas que impiden (en gran medida) que el código defectuoso llegue a producción. Tal como lo mencionamos en la [Unidad 4](../testing/testing.index), en este tipo de proyectos será especialmente necesario contar con un elevado nivel de tests automatizados que garanticen la estabilidad del código.
 
+## Trunk based development
+
+Llevando al extremo la estrategia anterior surge _trunk based development_, que propone utilizar una única rama para el desarrollo: `master` o `main`. De forma genérica, a esta rama se la llama _trunk_, de ahí el nombre de la estrategia. 
+
+Si bien existe hace mucho tiempo, cobró especial relevancia en 2016 cuando Google publicó [un artículo](https://cacm.acm.org/magazines/2016/7/204032-why-google-stores-billions-of-lines-of-code-in-a-single-repository/fulltext) en el que relataban cómo trabajaban con este flujo.
+
+Además de la rama principal, la estrategia contempla tener ramas de _release_, en las que únicamente alguien con el rol de _release manager_ trabaja. Esta persona (o equipo) se encarga de mover los commits desde el _trunk_ hacia un cierto _release_, mediante una operación que en Git es conocida como [`cherry-pick`](https://www.atlassian.com/git/tutorials/cherry-pick).
+
+Insistimos en que este tipo de estrategias, aparentemente más _relajadas_, suelen ir acompañadas de una gran batería de herramientas que automatizan la validación y buscan asegurar la calidad del código que se va a desplegar. 
+
+_(sería bueno volver a armar todos los esquemas de esta unidad para que tengan la misma estética)_
+![Trunk based flow](images/trunk-based-flow.png)
+
+## Apéndice: ¿cuál usar?
+
+Como en tantos otros aspectos del mundo del software, no existe una _bala de plata_ que podamos utilizar para todas los proyectos y equipos. Más aún, vimos que la elección de una estrategia de branching está íntimamente ligada con la visión sobre _ciclo de vida_ del software que tenga cada organización y la forma (y frecuencia) con que realice sus despliegues.
+
+En línea con lo que venimos hablando en unidades anteriores, vemos aquí cómo el repositorio de código termina volviéndose una pieza clave dentro del desarrollo y cómo las decisiones acerca de su utilización definen aspectos que van más allá de la programación. 
+
+La elección de una estrategia por sobre otra dependerá entonces de una gran cantidad de factores, entre los que podemos mencionar:
+* la cultura de la organización,
+* la experiencia que les desarrolladores tengan utilizando Git,
+* el _seniority_ de quienes se encargan de las tareas técnicas,
+* el tipo de software que se esté desarrollando: una aplicación web, una app mobile, un sistema desktop...
+* la frecuencia con la que se quiera publicar nuevas versiones del software,
+* el nivel de automatización que exista para las tareas de validación y despliegue,
+* y un largo etcétera.
