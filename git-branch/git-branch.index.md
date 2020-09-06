@@ -14,9 +14,9 @@ layout: default
 
 [Historia de commits, commit messages](./commit-history)
 
-[Estrategias de branching][./estrategias-branching]
+[Estrategias de branching](./estrategias-branching)
 
-[Apéndice: otros usos de Git][./apendice-otros-usos]
+[Apéndice: otros usos de Git](./apendice-otros-usos)
 
 **Nota para les editores**   
 Algunos gráficos fueron realizados usando [https://www.diagrameditor.com/](https://www.diagrameditor.com/). 
