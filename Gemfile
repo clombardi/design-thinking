@@ -1,7 +1,8 @@
 source "https://rubygems.org"
 
-# If you want to use GitHub Pages, remove the "gem "jekyll"" above and
-# uncomment the line below. To upgrade, run `bundle update github-pages`.
+ruby "2.6.3"
+
+gem "rake"
 gem "github-pages", group: :jekyll_plugins
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
