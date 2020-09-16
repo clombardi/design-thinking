@@ -4,6 +4,10 @@ layout: default
 
 (... acá vendría algún texto general sobre el curso ...)
 
+## Programa
+
+Puede verse haciendo [clic aquí](./programa.pdf).
+
 ## Contenido
 
 [Unidad 1 - desde la programación al desarrollo de software](./programacion-a-desarrollo/programacion-a-desarrollo.index)  
