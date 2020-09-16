@@ -1,6 +1,6 @@
 # Validación automática
 
-> Acá ya aparece la idea del server: se baja las dependencias, compila y ejecuta los tests. Para que esto funcione, hacer tests tiene que ser parte de la cultura del equipo.
+> Acá ya aparece la idea del server, que no es más que un entorno: se baja las dependencias, compila y ejecuta los tests. Para que esto funcione, hacer tests tiene que ser parte de la cultura del equipo.
 
 ## Chequeos estáticos
 

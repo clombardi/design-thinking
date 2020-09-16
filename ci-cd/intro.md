@@ -57,4 +57,4 @@ producción.
 
 ## La propuesta de esta unidad
 
-Brindaremos una especie de receta para lograr que un proyecto existente pueda ser trabajado con CI / CD.
+Brindaremos una especie de receta para lograr que un proyecto existente pueda ser trabajado con CI / CD. O sea, vamos a mostrar cómo armar el famoso pipeline.

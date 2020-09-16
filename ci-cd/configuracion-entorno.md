@@ -1,7 +1,8 @@
 # Configuraciones del entorno
 
 > Ya compilamos, corrimos los tests, validamos. Ahora hay que subir el código a los distintos entornos, con la configuración correspondiente. Tradicionalmente esto lo haríamos accediendo (por SSH, o FTP) al servidor y configurando todo lo necesario: variables de entorno, parámetros de la base de datos, etc.
-> En un enfoque de CI / CD, buscaremos que todas esas configuraciones estén también versionadas, en el mismo repositorio o en otro.
+> 
+> En un enfoque de CI / CD, buscaremos que todas esas configuraciones estén también versionadas, en el mismo repositorio o en otro. Una ventaja de esto es que podemos levantar nuevos entornos con relativa facilidad.
 
 ## Ejemplos
 

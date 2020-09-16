@@ -11,3 +11,5 @@ layout: default
 [Validación automática](./validacion-automatica)
 
 [Configuraciones del entorno](./configuracion-entorno)
+
+[Entrega continua](./entrega-continua)
