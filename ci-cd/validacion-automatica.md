@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Validación automática
 
 El proyecto ya tiene todo lo necesario para poder ser ejecutado: algún archivo que establece cuáles son sus dependencias, un mecanismo que permite descargarlas y el código propio. En un esquema tradicional, el siguiente paso sería desplegar la aplicación en algún entorno de _testing_ para que algún equipo de QA pueda comenzar las pruebas manuales. En un esquema de _integración continua_, lo que haremos es ejecutar una serie de **validaciones automáticas** que nos darán una idea inicial de cómo se comportan los nuevos cambios introducidos en el código. 

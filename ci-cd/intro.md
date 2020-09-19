@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Introducción: ¿cómo evitar una salida a producción traumática?
 
 > Hablar sobre el garrón que representa salir a producción cada 3 meses: el código no anda, hay nuevas configuraciones de las que nadie se dio cuenta, las pruebas de regresión no terminan nunca, etc.

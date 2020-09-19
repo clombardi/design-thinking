@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Gestión de dependencias
 
 > Todo programa actual tiene dependencias con bibliotecas externas (interacción con la DB, framework de vista, alguna otra cosa perdida por ahí, bibliotecas de la propia organización - dependencias de las dependencias), que además pueden variar según el sistema operativo y deberán actualizarse con el tiempo. En producción se puede elegir el SO, pero en desarrollo eso es más complejo.
