@@ -17,7 +17,7 @@ La visión en la que el "pasaje a operaciones" se ejecuta una única vez, o even
 En particular, destacamos las motivaciones para el cambio frecuente en los requerimientos de un proyecto mencionados al describir los [marcos de trabajo ágiles](../programacion-a-desarrollo/intro-agil), y la necesidad de reaccionar rápidamente al feedback que proporcionan los usuarios, y los comitentes, de un producto de software.
 
 Por otra parte, las tareas de integración y despliegue están sujetas a varios factores relevantes de riesgo, entre los que destacamos los siguientes.
-- Dificultades en los procesos sobre el código fuente necesarios para generar los desplegables: compilación, composición, empaquetado, etc..   
+- Fallas en los procesos sobre el código fuente necesarios para generar los desplegables: compilación, composición, empaquetado, etc..   
 - Dificultades para reunir el código fuente que debe formar parte de la versión a desplegar, por fallas graves en los procesos de SCM.
 - Incompatibilidades entre las piezas de software (funciones, módulos, servicios, etc.) construidas por separado, que deben funcionar en conjunto en el producto a desplegar.
 - Falta de archivos que deben acompañar a los desplegables generados en un ambiente productivo: archivos de configuración, imágenes, etc..
@@ -31,7 +31,7 @@ Estos factores han sido responsables, en muchas ocasiones, de retrasos important
 Para mitigar los riesgos recién mencionados, y elevar el valor del software producido, debemos evolucionar hacia formas de trabajo en las que la integración y el despliegue **pierdan su carácter excepcional**, transformándose en parte de las prácticas y procesos _habituales_ en el desarrollo.
 Así, se podrá realizar el despliegue de nuevas versiones con mayor frecuencia, sin por ello perder calidad o control de los procesos.
 
-Para lograr este objetivo, es necesario alinear varios aspectos del desarrollo, entre ellos.
+Para lograr este objetivo, es necesario alinear varios aspectos del desarrollo, entre los que destacamos:
 - Organizar el desarrollo en _tareas cortas_, evitando la definición de tareas individuales que lleven más de unos pocos días-hombre, y dividiendo las que resulten demasiado gravosas.  
 De esta forma, se evita la generación de [ramas](../git-branch/git-branch-merge) de código que se alejen demasiado del tronco principal del desarrollo, y se alienta el agregado de valor y funcionalidad en forma continua, de acuerdo a la idea de desarrollo evolutivo.
 - Contar con un buen nivel de [SCM](../scm-git/scm-intro), que permita obtener el conjunto de código fuente y otros archivos necesarios para generar cada entregable, en forma automatizada.
@@ -47,7 +47,7 @@ Mencionamos algunas de las ventajas que aporta este enfoque, relacionadas con la
 
 
 ## Integración continua
-Un horizonte posible en esta evolución es la llamada **integración continua**, concepto según el cual la generación de desplegables, e idealmente su despliegue en un entorno de test, ocurre _automáticamente_.  
+Un horizonte posible en esta evolución es la llamada **integración continua** (_Continuous Integration / CI_), concepto según el cual la generación de desplegables, e idealmente su despliegue en un entorno de test, ocurre _automáticamente_.  
 Una posibilidad es que el proceso se realice a intervalos regulares, idealmente una vez al día.
 Otra variante es que la integración se lance a partir de un evento relacionado con el repositorio de código, que puede ser: la aceptación de un [pull request](../git-branch/pull-requests), el agregado de un commit en una rama determinada de acuerdo a la [estrategia de branching](../git-branch/estrategias-branching) elegida para el proyecto, o la definición de un nuevo _tag_ o _release_.
 
@@ -57,39 +57,67 @@ Idealmente, luego del despliegue en un entorno de test previamente definidio y c
 
 
 
-## Siguiente nivel: despliegue continuo
+## Siguiente nivel: entrega continua
+El concepto de **entrega continua** (_Continuous Delivery / CD_) representa un paso adicional en el camino de incorporar las tareas de integración y despliegue dentro de un ciclo iterativo de producción de software. 
+Fue formulado originalmente en el libro [Continuous Delivery](https://www.amazon.com/dp/0321601912) de 2010, cuyos autores son Jez Humble y David Farley.  
 
-> Esta práctica, que llamaremos Entrega Continua (Continuous Delivery), debe aceitarse para
-poder alinearla con el concepto del desarrollo ágil. Por eso, Jez Humble y David Farley 87
-proponen ciertos principios que deben tenerse en cuenta a la hora de implementar un proceso de
-entrega continua: 
-• Debe ser repetible y confiable. 
-• Debe automatizarse todo lo que sea posible. 
-• Debe mantenerse todo bajo control de versiones. 
-• Si algo genera estado de pánico en el proceso, moverlo hacia el inicio. 
-• La calidad debe formar parte del proceso. 
-• Que algo está completo significa que está en producción. 
-• Todos los integrantes de un equipo son responsables del proceso de despliegue.
+En concreto, este concepto propone realizar todos los cambios y ajustes en el funcionamiento de un proyecto de construcción de software, que resulten necesarios para poder realizar entregas _que lleguen a los usuarios finales_ como resultado de un proceso rutinario que se ejecuta con alta frecuencia, idealmente en forma diaria.  
+De acuerdo con esta idea, la evolución de un producto se refleja en una secuencia de _builds_ con la incorporación de pequeños cambios en cada uno. De acuerdo a las características de cada proyecto, el concepto de build complementa o reemplaza al más tradicional de _versión_.
 
-> A partir de estos principios, se desprenden consideraciones a tener en cuenta como, por ejemplo,
-el significado de tener todo bajo control de versiones. Este punto implica ahora no sólo el código
-fuente sino el conjunto: 
-Código Fuente + Datos de Configuración + Datos del Ambiente + Datos del Programa 
+Para lograr estos objetivos, se propone una serie de principios, que resumen varias de las ideas que fueron comentadas en distintos pasajes de este material. Describimos brevemente los principios más destacados.
 
-> Para facilitar el entendimiento del proceso, Humble y Farley utilizaron el concepto de tubería
-(pipeline) donde el software va avanzando a través de la misma desde su creación hasta que queda
-productivo. Cada vez que hay un cambio se genera un build que avanza por la tubería intentando
-superar las diferentes pruebas y chequeos. En caso de no poder pasarlas, se genera una devolución
-que explica el motivo del fallo y permite al equipo saber qué cambiar. Una vez corregido el
-problema, un nuevo build se genera y vuelve a intentar atravesar la tubería hacia el ambiente de
-producción. 
+**Incorporar la calidad como parte del proceso**  
+Esto implica en particular contar con baterías extensas de tests automáticos, procesos que ejecutan estos tests en forma rutinaria incluyendo la gestión de los entornos necesrios.  
+Además, se sugiere que ante cada defecto detectado mediante testing exploratorio manual, además de proceder a su corrección, se revise y se amplíe la capacidad de testing automático para que detecte defectos similares.  
+El esfuerzo de creación y gestión de las baterías de test se justifica en la seguridad que agrega para el despliegue rutinario de nuevas versiones, y por el análisis que muestra que el costo de la [gestión de defectos](../testing/sistematizacion/bug-tracking) aumenta exponencialmente cuanto más tiempo pasa entre la introducción de un defecto y su detección.
+
+**Trabajar en ciclos cortos, pasar rápidamente a producción**  
+Se insiste en definir tareas de corta duración, de acuerdo a lo expresado anteriormente. 
+Adicionalmente, se propone reducir el tiempo entre que el desarrollo/programación asociado a una tarea se concluye, y que los cambios forman parte de una versión productiva. De esta forma, se espera agilizar la entrega de valor a los usuarios, y obtener rápidamente feedback que permita mejorar el producto.  
+En la visión de la entrega continua, _una tarea se considera concluida únicamente cuando está operativa en un entorno productivo_.
+
+**Automatizar todo lo posible**  
+Para lograr un entorno de entrega continua sostenible en el tiempo, debe reducirse al máximo la carga de tareas manuales repetitivas, y buscar continuamente nuevas oportunidades para la automatización, de acuerdo a la idea de _mejora continua_.  
+Aquí es donde entra de lleno la idea de gestionar tareas tradicionalmente asociadas a operaciones con una lógica similar a la del desarrollo, o sea el enfoque _DevOps_.
+
+**Considerar a todos los integrantes de un equipo como responsables del producto**  
+Con este principio, se apunta a fomentar la colaboración y la asistencia mutua entre las personas que cumplen [distintas tareas o roles](../programacion-a-desarrollo/construccion-tareas-roles) en un proyecto de desarrollo, en lugar de considerarlas "silos" separados.  
+Los autores proponen revisar las políticas de premios en una organización, para verificar que las conductas premiadas sean las que efectivamente mejoren el rendimiento del equipo de proyecto _tomado en conjunto_.
+
+**Tener todo bajo control de versiones**  
+Con este principio, se destaca la necesidad de que todos los archivos que intervienen en la generación y despliegue de entregables, y no sólo el código fuente, estén en repositorios de código administrados de acuerdo a una sólida [gestión de versiones](../scm-git/gestion-de-versiones).  
+En particular, se incluye en este concepto a los archivos de configuración que deban incluirse en los entornos productivos.
+
+
+### Pipeline
+Para facilitar el entendimiento del proceso, Humble y Farley utilizaron el concepto de **pipeline** o _tubería_.
+A partir del agregado de un commit o tag, o de la aceptación de un Pull Request, se dispara una secuencia de acciones que configuran la tubería que atraviesa el código hasta llegar al entorno productivo. Entre estas acciones encontramos: 
+- la generación de un nuevo build, 
+- su despliegue en distintos entornos; se dice que el build va "promoviendo" a distintos entornos, progresivamente más "cercanos" al productivo que constituye el fin de la tubería.
+- la ejecución de baterías crecientemente completas de tests, desde smoke tests hasta tests completos de performance, integración y regresión.
+- el _análisis estático de código_, que complementa los tests buscando posibles fuentes de defectos o puntos débiles en el código fuente.
+
+Si en algún estadío de esta tubería se encuentra un problema, se genera una devolución que explica el motivo del fallo, permitiendo así abordarlo rápidamente. Una vez corregido, se vuelve a activar esta "tubería" que intentará "promover" los cambios en el código hacia el ambiente de producción.
+
+ 
+### Entrega continua según el modo de uso del software
+Para cumplir con la idea de entrega continua, además de generar y verificar los sucesivos _builds_ o versiones, deben garantizarse que los mismos lleguen efectivamente a los usuarios finales en forma regular.
+
+El cumplimiento de este requisito resulta más sencillo para aplicaciones cuya instalación corre por cuenta de una organización encargada de su gestión, en lugar de tener que ser instaladas por cada usuaria.  
+Este es, en particular, el caso de las **aplicaciones Web**, a las que se accede mediante un navegador Internet.
+El enfoque de entrega continua resulta, por lo tanto, especialmente adecuado para este tipo de aplicaciones, que cada vez cubren un espectro mayor de funcionalidades, y cuya popularidad se encuentra en franco ascenso.
+
+Adicionalmente, mencionamos que la enorme difusión de las conexiones hogareñas a Internet, permite que aplicaciones instaladas en cada equipo, cuenten con mecanismos de actualización automática. 
+Esto posibilita que el concepto de entrega continua se pueda aplicar también en este tipo de productos.
+
+
 
 ## La propuesta de esta unidad
+En el resto de esta unidad, describiremos y destacaremos varios de los elementos que deben estar presentes en la gestión de un proyecto de software, para poder trabajar de acuerdo a las propuestas de CI / CD.  
+Dicho de otra forma, brindaremos los elementos necesarios para armar el _pipeline_ descripto anteriormente, llegando a suerte de "receta para CI / CD". 
 
-Brindaremos una especie de receta para lograr que un proyecto existente pueda ser trabajado con CI / CD. O sea, vamos a mostrar cómo armar el famoso pipeline.
 
-
-## El software y otras industrias - pequeña digresión
+## Anexo - el software y otras industrias - pequeña digresión
 Como señalamos al principio, la idea tradicional sobre cómo organizar la producción de software, propone la construcción por separado de partes  definidas en un proceso previo de diseño; y la posterior integración de estas partes en el producto final.
 
 Subyace a esta idea, la intención de trazar un _paralelismo_ entre la industria del software y otras ramas industriales, en cuales efectivamente, una fase inicial de diseño y planificación es seguida por la producción por separado (y muchas veces, en unidades de producción distintas) de distintas piezas, y finalmente por el ensamblado y puesta a punto del producto.
