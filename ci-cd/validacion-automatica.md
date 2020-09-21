@@ -18,14 +18,18 @@ Algunas de ellas están diseñadas para ser instaladas en una infraestructura pr
 
 A grandes rasgos, el servidor de integración continua se ocupará de:
 * **preparar el código para su ejecución:** descargar dependencias, ejecutar tareas de compilación (si el lenguaje lo requiere),
-* **ejecutar las validaciones automáticas**,
+* **ejecutar las validaciones automáticas**, entre las cuales probablemente se encuentren algunas de las que mencionamos en este material,
 * **notificar el resultado:** en general, nos interesará enterarnos lo más rápido posible si la integración falló. 
 
 Los detalles de cada uno de esos grandes pasos dependerán en gran medida de la tecnología y de los criterios sobre la _calidad_ del código que tenga la organización. Sería deseable que todo el proceso pueda ejecutarse en unos pocos minutos, para que la persona que introdujo los defectos pueda corregirlos antes de pasar a otra tarea. 
 
 ## Tipos de validaciones más comunes
 
-> Alguna intro.
+Mencionaremos a continuación algunos ejemplos de validaciones automáticas que son habituales en los proyectos de software. Sería imposible abarcarlas todas porque hay muchos factores que intervienen, pero intentaremos dar una posible clasificación que permita comprender lo que poco a poco se va transformando en un estándar. 
+
+Si bien estos ejemplos son agnósticos de la tecnología utilizada, es pertinente mencionar que la comunidad que se va armando alrededor de cada tecnología suele adoptar unos u otros mecanismos como "su propio estándar". Esto provoca que sea más sencillo configurar ciertas herramientas para validar software escrito en cierta tecnología, y también que quienes se especialicen con cierto lenguaje estén también familiarizados con algunas herramientas que suelen ir de la mano. 
+
+Con esto queremos decir, una vez más, que no existen aquí tampoco _balas de plata_ ni _navajas multiuso_: será tarea del equipo de operaciones, en colaboración con el de desarrollo, evaluar qué herramientas son más adecuadas para cada proyecto e implementarlas.  
 
 ### Chequeos estáticos
 
@@ -42,11 +46,8 @@ Nuevamente, cuáles utilizar y con qué severidad dependerá de los acuerdos que
 
 ### Chequeos dinámicos
 
-> Correr los tests, analizar la cobertura.
+Esencialmente, tienen que ver con ejecutar las pruebas automatizadas que las desarrolladoras hayan definido y detener el proceso de integración si alguna de ellas falla. 
 
-## Cuándo pasa
+Como ya hemos discutido, existen muchos tipos de pruebas (de unidad, de integración, de carga, etc.) y todos ellos podrían ser utilizados en esta etapa. En consonancia con el requerimiento de que las validaciones se ejecuten lo más rápido posible, podría ser interesante correr distintas validaciones en función de en qué punto del _pipeline_ nos encontremos: podríamos, por ejemplo, solo ejecutar las pruebas unitarias cuando se abre un _pull request_, reservar otra batería de pruebas de integración para cuando el pull request haya sido aprobado y finalmente ejecutar pruebas de carga luego de promocionar el código nuevo a un ambiente pre-productivo.
 
-> Todo depende de cómo se configure:
-> * cada vez que alguien sube un commit, una branch o un pull request
-> * todos los días a una cierta hora
-> * manualmente, cuando alguien lo requiere
+Además del resultado de las pruebas, es común también que en este punto se genere algún reporte de _cobertura_, que puede luego compararse con alguno anterior para saber si los nuevos cambios incrementaron, mantuvieron o perjudicaron al porcentaje anterior.
