@@ -4,9 +4,13 @@ layout: default
 
 # Configuraciones del entorno
 
-> Ya compilamos, corrimos los tests, validamos. Ahora hay que subir el código a los distintos entornos, con la configuración correspondiente. Tradicionalmente esto lo haríamos accediendo (por SSH, o FTP) al servidor y configurando todo lo necesario: variables de entorno, parámetros de la base de datos, etc.
-> 
-> En un enfoque de CI / CD, buscaremos que todas esas configuraciones estén también versionadas, en el mismo repositorio o en otro. Una ventaja de esto es que podemos levantar nuevos entornos con relativa facilidad.
+Llegado este punto, podemos decir que el proyecto ya está listo para ser publicado (al menos) en algún ambiente previo a producción. 
+
+En un enfoque tradicional, aquí se produciría el "pasaje a operaciones" y el equipo se encargaría de configurar el entorno con todo lo necesario para poder ejecutar la aplicación: valores inyectados desde variables de entorno, bases de datos, configuraciones de puertos y un largo etcétera. Dependiendo de la infraestructura de cada organización, estas tareas se harían de manera remota (por SSH, FTP o algún protocolo similar) y con una carga más o menos importante de trabajo manual.
+
+En un enfoque de _integración continua_, buscaremos mejorar este proceso de dos formas: haciendo que todas las configuraciones necesarias estén también versionadas (en el mismo repositorio donde está el código o en otro) y que su ejecución esté automatizada. El escenario ideal sería poder preparar un nuevo entorno simplemente ejecutando una serie de _scripts_, llegando incluso esto a posibilitar la creación o destrucción de entornos a demanda que propone la infraestructura basada en contenedores.
+
+Veremos a continuación algunos ejemplos de las facilidades que algunas herramientas ofrecen para automatizar esta configuración.
 
 ## Ejemplos
 
