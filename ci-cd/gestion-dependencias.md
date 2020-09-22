@@ -61,7 +61,7 @@ Por otro lado, algunos paquetes sí cuentan con variantes de acuerdo, en particu
 
 
 ## Sistemas de gestión de paquetes
-Las características recién decriptas, consideradas en conjunto, provocan que un esquema de gestión de dependencias que no cuente con un alto grado de automatización se vuelva prácticamente impracticable, salvo para proyectos de dimensiones muy reducidas.
+Las características recién descriptas, consideradas en conjunto, provocan que un esquema de gestión de dependencias que no cuente con un alto grado de automatización se vuelva prácticamente impracticable, salvo para proyectos de dimensiones muy reducidas.
 
 Para remediar esta situación, se popularizó en el ámbito del desarrollo la utilización de **sistemas de gestión de paquetes**.
 Estos sistemas comparten varias de sus características con aquellos que se utilizan para la instalación, configuración y actualización del SO y de las aplicaciones más populares, típicamente en entornos Linux.  
@@ -182,7 +182,7 @@ Este archivo especifica, además de los datos generales del producto, varios scr
 La primera incluye las dependencias directas que deben estar presentes al desplegar el producto en un entorno productivo.
 En la lista `devDependencies`, encontramos paquetes que se utilizan únicamente durante el desarrollo, ejecución de tests y/o proceso de despliegue, y que no es necesario incluir en entornos productivos.
 
-Notamos que en la mayor parte de los casos, la indicación de versión está precedida por un _caret_ `^`, que indica que el rango aceptable de versiones incluye a la indicada, y a todas las posteriores mientras no cambie el número principal, que es que está a la izquierda. P.ej. la especificación `^2.5.3` acepta a las versiones `2.5.3`, `2.5,8` y `2.7.1`, pero no a `1.5.9`, `2.3.8` o `2.5.2` (por ser anteriores) ni `3.2.4` (por cambiar el número principal).
+Notamos que en la mayor parte de los casos, la indicación de versión está precedida por un _caret_ `^`, que indica que el rango aceptable de versiones incluye a la indicada, y a todas las posteriores mientras no cambie el número principal, que es que está a la izquierda. P.ej. la especificación `^2.5.3` acepta a las versiones `2.5.3`, `2.5.8` y `2.7.1`, pero no a `1.5.9`, `2.3.8` o `2.5.2` (por ser anteriores) ni `3.2.4` (por cambiar el número principal).
 
 Al ejecutar el comando 
 ```
@@ -220,5 +220,5 @@ que actualiza las dependencias a la versión más actual que resulte compatible 
 
 
 ## Nota final - todo en el control de versiones
-Finalmente, desta camos que los archivos `package.json` y `package-lock.json` se consideran parte integrante del código fuente, y por lo tanto se incluyen en el repositorio de código que implementa las funciones de [SCM](../scm-git/scm-intro) del proyecto.  
+Finalmente, destacamos que los archivos `package.json` y `package-lock.json` se consideran parte integrante del código fuente, y por lo tanto se incluyen en el repositorio de código que implementa las funciones de [SCM](../scm-git/scm-intro) del proyecto.  
 De esta forma, se da cumplimiento con el principio de _continuous delivery_ que indica que "todo debe estar bajo control de versiones", como se describió en la [introducción a esta unidad](./intro).

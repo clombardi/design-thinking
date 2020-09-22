@@ -67,7 +67,7 @@ De acuerdo con esta idea, la evolución de un producto se refleja en una secuenc
 Para lograr estos objetivos, se propone una serie de principios, que resumen varias de las ideas que fueron comentadas en distintos pasajes de este material. Describimos brevemente los principios más destacados.
 
 **Incorporar la calidad como parte del proceso**  
-Esto implica en particular contar con baterías extensas de tests automáticos, procesos que ejecutan estos tests en forma rutinaria incluyendo la gestión de los entornos necesrios.  
+Esto implica en particular contar con baterías extensas de tests automáticos, procesos que ejecutan estos tests en forma rutinaria incluyendo la gestión de los entornos necesarios.  
 Además, se sugiere que ante cada defecto detectado mediante testing exploratorio manual, además de proceder a su corrección, se revise y se amplíe la capacidad de testing automático para que detecte defectos similares.  
 El esfuerzo de creación y gestión de las baterías de test se justifica en la seguridad que agrega para el despliegue rutinario de nuevas versiones, y por el análisis que muestra que el costo de la [gestión de defectos](../testing/sistematizacion/bug-tracking) aumenta exponencialmente cuanto más tiempo pasa entre la introducción de un defecto y su detección.
 
