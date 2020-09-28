@@ -53,7 +53,7 @@ Otra variante es que la integración se lance a partir de un evento relacionado 
 
 En cualquier caso, se activa una serie de tareas de empaquetado y despliegue que se ejecutan en forma automatizada, lanzando alarmas si se detectan fallas en el proceso.
 
-Idealmente, luego del despliegue en un entorno de test previamente definidio y configurado, pueden ejecutarse ciertas baterías de tests, y/o realizarse tareas de análisis estático de código para buscar posibles defectos o puntos débiles.
+Idealmente, luego del despliegue en un entorno de test previamente definido y configurado, pueden ejecutarse ciertas baterías de tests, y/o realizarse tareas de análisis estático de código para buscar posibles defectos o puntos débiles.
 
 
 

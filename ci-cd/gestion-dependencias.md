@@ -52,7 +52,7 @@ Por lo tanto, las dependencias no son de paquetes, sino de _versiones específic
 (acá se puede hacer una variante del dibujo de dependencias transitivas, incluyendo las versiones)  
 ![dependencia transitiva con versiones](../images/logoelevate.jpg) 
 
-Adicionalmente, es habitual que en un proyecto se quiera **actualizar la versión de un paquete** que se está usando, pra aprovechar agregados o la corrección de defectos incluidos en versiones previas.  
+Adicionalmente, es habitual que en un proyecto se quiera **actualizar la versión de un paquete** que se está usando, para aprovechar agregados o la corrección de defectos incluidos en versiones previas.  
 Por lo recién descripto, esto genera una _reacción en cadena_ de actualización de versiones: la nueva versión del paquete que incorporamos puede, a su vez, declarar dependencias sobre versiones distintas de los paquetes en los que confía, y así sucesivamente.
 
 Finalmente, mencionamos que en proyectos que cuentan con una multiplicidad de [entornos](../scm-git/entornos), en particular entornos de desarrollo para cada desarrollador (o cada equipo reducido), puede resultar difícil **controlar las características de cada equipo** (hardware, SO, etc.) en el que debe montarse un entorno de ejecución del producto que se está desarrollando.  
@@ -116,7 +116,7 @@ Cerramos esta sección describiendo algunas de las características de npm, uno 
 El archivo en el que se detallan las dependencias directas de un proyecto es el llamado `package.json`. 
 En rigor, este archivo define información general sobre el desarrollo de un producto, que incluye a las dependencias entre otros aspectos.
 
-Este es un ejemplo abreviado del archivo `package.json` para un proyecto de backend HTTP en el que se utiliza [TypeScript](https://www.typescriptlang.org/) como lenguaje, y [NestJS](https://nestjs.com/) como franework principal.
+Este es un ejemplo abreviado del archivo `package.json` para un proyecto de backend HTTP en el que se utiliza [TypeScript](https://www.typescriptlang.org/) como lenguaje, y [NestJS](https://nestjs.com/) como framework principal.
 
 ``` json
 {
