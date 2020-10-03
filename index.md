@@ -23,3 +23,5 @@ Puede verse haciendo [clic aquí](./programa.pdf).
 [Unidad 6 - Modelo de branch](./git-branch/git-branch.index)  
 
 [Unidad 7 - Integración y despliegue continuo](./ci-cd/ci-cd.index)  
+
+[Unidad 8 - Trabajo colaborativo](./trabajo-colaborativo/trabajo-colaborativo.index)  
