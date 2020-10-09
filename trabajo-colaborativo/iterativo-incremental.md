@@ -3,13 +3,13 @@ layout: default
 ---
 
 # Desarrollo iterativo e incremental
-En distintas secciones de este curso, presentamos ideas y conceptos ques e contraponen a la idea clásica de _desarrollo en cascada_, o por fases, en la que un producto de software emerge como resultado de una serie de tareas (análisis inical, definición de requerimientos, diseño de alto nivel, implementación, test entre otras) que se ejecutan en una secuencia estricta.
+En distintas secciones de este curso, presentamos ideas y conceptos que se contraponen a la idea clásica de _desarrollo en cascada_, o por fases, en la que un producto de software emerge como resultado de una serie de tareas (análisis inicial, definición de requerimientos, diseño de alto nivel, implementación, test, entre otras) que se ejecutan en una secuencia estricta.
 
 Al describirse la idea de [ciclo de vida](../programacion-a-desarrollo/ciclo-de-vida), mencionamos la conveniencia de organizar un proyecto de desarrollo en _ciclos cortos_, que idealmente pudieran medirse en semanas. Se mencionaron como motivaciones: mantener un mayor control del desarrollo previniendo los riesgos adecuadamente, y potenciar la capacidad de obtener feedback de clientes o usuarios que apunten a elevar la calidad del producto, señalando en forma temprana ajustes a realizar y defectos a ser corregidos. 
 
 Estas ideas fueron reforzadas al presentar los [marcos de trabajo ágiles](../programacion-a-desarrollo/intro-agil), agregándose varios elementos relacionados.  
-Uno es el carácter ilusorio de la pretensión de que los requerimientos de un proyecto de desarrollo de software puedan preveerse completamente al principio del proyecto, y que permanezcan inalterados durante el mismo.  
-También se mencionó la conveniencia de realizar varios ciclos o _iteraciones_ en el desarrollo de cada componente, a fin de aprovechar las enseñanzas obtenidas en cada ciclo para concebir e implementar mejoreas en los sucesivos.  
+Uno es el carácter ilusorio de la pretensión de que los requerimientos de un proyecto de desarrollo de software puedan preverse completamente al principio del proyecto, y que permanezcan inalterados durante el mismo.  
+También se mencionó la conveniencia de realizar varios ciclos o _iteraciones_ en el desarrollo de cada componente, a fin de aprovechar las enseñanzas obtenidas en cada ciclo para concebir e implementar mejoras en los sucesivos.  
 Finalmente, se señaló el énfasis en entregar valor mediante el software construido, en buscar la satisfacción de clientes y usuarios, y en generar productos de calidad, más que en el cumplimiento de planes elaborados con alto grado de precisión.
 
 Ya en la unidad 7, describimos el concepto de [entrega continua](../ci-cd/entrega-continua), mediante el cual se obtiene una enorme agilidad en la generación y despliegue de productos, en la forma de _builds_ de generación periódica.
