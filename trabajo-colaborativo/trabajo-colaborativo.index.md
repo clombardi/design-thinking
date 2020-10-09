@@ -7,3 +7,5 @@ layout: default
 [Introducción](./trabajo-colaborativo-intro)
 
 [Desarrollo iterativo e incremental](./iterativo-incremental)
+
+[La importancia del Full Stack development](./importancia-full-stack)
