@@ -5,11 +5,17 @@ layout: default
 # Collective code ownership
 A pesar de la proliferación de roles y tareas que describimos en la [Unidad 1](../programacion-a-desarrollo/construccion-tareas-roles), el rol del desarrollador sigue siendo central para la mayor parte de los proyectos de construcción de software. 
 A su vez, el principal producto del trabajo de las desarrolladoras, el _código fuente_, es uno de los principales recursos de un proyecto (si no el principal). En este curso, hemos dedicado la [Unidad 5](../scm-git/scm-git.index) a la gestión del mismo.  
-Por lo tanto, las _actitudes_ que asuma cada desarrollador respecto de su trabajo, y respecto del proyecto del que forma parte, representan un aspecto crítico para el éxito de un proyecto de desarrollo.
+Por lo tanto, las _actitudes_ que asuma cada desarrollador respecto de su trabajo, y respecto del proyecto del que forma parte, representan un aspecto crítico para el éxito de un proyecto de desarrollo.   
+En el ámbito de la industria del software, se conocen varias propuestas para organizar equipos de trabajo que fomenten, en sus integrantes, actitudes positivas respecto del éxito de los proyectos en los que participan.
+
+En esta página, y en las siguientes, trataremos sobre algunos conceptos y técnicas referidos a la organización y la forma de trabajo de equipos de desarrollo. Tienen como objetivo común la generación de código comprensible, aprovechable y modificable por cualquiera de los integrantes de un equipo, y a la elevación continuada de la potencialidad del mismo mediante la disposición a compartir experiencias de trabajo y conocimientos.  
+En esta página, luego de una introducción general, hablaremos sobre _collective code ownership_. En la siguiente abordaremos la técnica de _pair programming_, que proviene al igual que la anterior, del conjunto de propuestas conocido como _Extreme Programming_ o _XP_. Finalmente, trataremos sobre _full-stack development_.  
+Como veremos más adelante, estas ideas no se limitan al ámbito estricto del desarrollo, sino que pueden extenderse a otros roles, en particular en los ligados a tareas de operaciones. 
+Entendemos que su aplicación fomenta el enfoque _DevOps_ de combinación entre las visiones de desarrollo y operaciones. Tal es la motivación para incluir, en esta última unidad, las temáticas recién mencionadas.
 
 
 ## Tres aspectos en la visión de desarrollador
-Este tema fue tratado ya en la [Unidad 1](../programacion-a-desarrollo/programar-y-desarrollar), al describir una visión acotada del rol de las personas que producen código, a la que asociamos con la idea de "programador", y contraponerla con otra de miras más amplias, que resulta mucho más valiosa para un proyecto de desarrollo, y a la que relacionamos con la palabra "desarrollador".
+Las distintas actitudes que puede manifestar cada desarrollador ya fueron tratadas en la [Unidad 1](../programacion-a-desarrollo/programar-y-desarrollar), al describir una visión acotada del rol de las personas que producen código, a la que asociamos con la idea de "programador", y contraponerla con otra de miras más amplias, que resulta mucho más valiosa para un proyecto de desarrollo, y a la que relacionamos con la palabra "desarrollador".
 En esa parte del material, destacamos tres aspectos de lo que llamamos "visión de desarrolladora".
 
 Por un lado, una desarrolladora entiende cabalmente que su trabajo _se inscribe dentro de un proyecto_, siendo consciente de que el código que produce debe representar una contribución positiva para el mismo. 
@@ -37,3 +43,18 @@ Adicionalmente, una organización de esta forma desalienta la diseminación, den
 
 Finalmente, mencionemos que muchos desarrolladores, en particular los más talentosos, presentan _personalidades fuertes_, que pueden dar lugar en un equipo de desarrollo al fenómeno conocido como "lucha de egos".  
 Este hecho, si no es convenientemente gestionado y acotado, tiene consecuencias funestas para la posibilidad de generar espacios de colaboración y de trabajo compartido, para el establecimiento de convenciones para la producción de código, y en general, para la generación de código que resulte manejable por personas distintas a quien lo escribió.
+
+En resumen, los factores reseñados provocan que el código fuente de un proyecto puede resultar de difícil comprensión y/o modificación. 
+Una base de código con estas características corre, a su vez, el riesgo de quedar _obsoleta_ ante cambios en las tecnologías o lenguajes de programación utilizados: el temor a modificar código cuyo comportamiento se comprende sólo en forma aproximada puede resultar mayor a las ventajas o conveniencia de aplicar mejoras o actualizaciones.  
+Esto genera una reacción en cadena: a medida que pasa el tiempo, se va haciendo más difícil encontrar personas que puedan lidiar con código donde se aplican tecnologías que van quedando obsoletas, lo que aumenta la dificultad para modificar dicho código, reforzándose así la intangibilidad del código incomprensible.  
+Esta es una de las fuentes de la llamada _deuda técnica_, un término que designa a la incapacidad de un proyecto de mantenerse actualizado respecto del estado del arte de las tecnologías que utiliza.
+
+Otra problemática asociada a estos escenarios desfavorables es la _duplicación_ (o multiplicación) de código, o sea, que una misma funció o algoritmo aparezca repetido en secciones separadas del código, debido a la falta de comunicación en el equipo de trabajo y a la deficiente legibilidad y/o documentación en el código.  
+Esto provoca el riesgo de que al producirse la necesidad de realizar cambios en el comportamiento de la función o algoritmo involucrado, se modifiquen sólo algunas de sus "copias" en el código, generándose inconsistencias que pueden ser difíciles de detectar.
+
+
+## Conceptos para configurar equipos abiertos
+Para evitar los efectos indeseados de los fenómenos recién descriptos, y reforzar las fortalezas de la "visión de desarrolladora" mencionada más arriba, surgieron varias propuestas de organización del desarrollo, que fomentan la conformación de equipos abiertos al intercambio de ideas sobre organización de código, al trabajo compartido, y al establecimiento de convenciones que faciliten la comprensión, por parte de todos los integrantes de un equipo, del código escrito por cualquiera de ellos.  
+De acuerdo a lo indicado por la llamada "ley de Conway", que sugiere que la forma del código reflejará aquella en que se organiza la organización que lo produce, estas características abiertas y flexibles de un equipo de trabajo se transladarán al código fuente.
+
+Varias de las propuestas provienen de una iniciativa conocida como _Extreme Programming_ o _XP_, surgida en la década de 1990.
