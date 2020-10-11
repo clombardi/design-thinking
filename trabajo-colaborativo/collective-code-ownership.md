@@ -8,6 +8,9 @@ A su vez, el principal producto del trabajo de las desarrolladoras, el _código 
 Por lo tanto, las _actitudes_ que asuma cada desarrollador respecto de su trabajo, y respecto del proyecto del que forma parte, representan un aspecto crítico para el éxito de un proyecto de desarrollo.   
 En el ámbito de la industria del software, se conocen varias propuestas para organizar equipos de trabajo que fomenten, en sus integrantes, actitudes positivas respecto del éxito de los proyectos en los que participan.
 
+(acá puede ir una imagen sobre "trabajo en equipo")  
+![imagen sobre "trabajo en equipo"](../images/logoelevate.jpg)
+
 En esta página, y en las siguientes, trataremos sobre algunos conceptos y técnicas referidos a la organización y la forma de trabajo de equipos de desarrollo. Tienen como objetivo común la generación de código comprensible, aprovechable y modificable por cualquiera de los integrantes de un equipo, y a la elevación continuada de la potencialidad del mismo mediante la disposición a compartir experiencias de trabajo y conocimientos.  
 En esta página, luego de una introducción general, hablaremos sobre _collective code ownership_. En la siguiente abordaremos la técnica de _pair programming_, que proviene al igual que la anterior, del conjunto de propuestas conocido como _Extreme Programming_ o _XP_. Finalmente, trataremos sobre _full-stack development_.  
 Como veremos más adelante, estas ideas no se limitan al ámbito estricto del desarrollo, sino que pueden extenderse a otros roles, en particular en los ligados a tareas de operaciones. 
@@ -35,6 +38,9 @@ Lamentablemente, en la industria del software encontramos varios factores que at
 Uno de ellos lo constituye la tendencia que muestran varias personas que se dedican a esta actividad, a llevar un _estilo de trabajo aislado_ o solitario. Un "programador ermitaño", por llamarlo de alguna forma, se muestra por lo general muy dispuesto a colaborar con colegas que soliciten asistencia, pero mucho menos a realizar actividades en conjunto.  
 Esta forma de trabajo genera grandes diferencias de estilo y concepción en el código de distintas personas que forman parte (al menos nominalmente) de un mismo equipo, lo que dificulta su aprovechamiento fuera del entorno aislado que forma el código escrito por cada persona, así como la aplicación de cambios al código por parte de alguien distinto a quien lo produjo.
 
+(acá puede ir una imagen sobre "programador ermitaño")  
+![imagen sobre "programador ermitaño"](../images/logoelevate.jpg)
+
 Este fenómeno se ve reforzado por la tendencia a una _excesiva especialización_ en la producción de código con características o propósitos particulares por parte de una persona. 
 Así, encontramos frecuentemente "programadoras X", donde X puede ser un lenguaje ("programador JavaScript"), una tecnología o herramienta ("desarrolladora Angular"), o un aspecto dentro del desarrollo de software ("programador Web").  
 Indudablemente, contar con personas con conocimientos extendidos sobre temáticas relevantes para un proyecto resulta altamente valioso. 
@@ -49,6 +55,9 @@ Una base de código con estas características corre, a su vez, el riesgo de que
 Esto genera una reacción en cadena: a medida que pasa el tiempo, se va haciendo más difícil encontrar personas que puedan lidiar con código donde se aplican tecnologías que van quedando obsoletas, lo que aumenta la dificultad para modificar dicho código, reforzándose así la intangibilidad del código incomprensible.  
 Esta es una de las fuentes de la llamada _deuda técnica_, un término que designa a la incapacidad de un proyecto de mantenerse actualizado respecto del estado del arte de las tecnologías que utiliza.
 
+(acá puede ir una imagen sobre obsolescencia)  
+![imagen sobre obsolescencia](../images/logoelevate.jpg)
+
 Otra problemática asociada a estos escenarios desfavorables es la _duplicación_ (o multiplicación) de código, o sea, que una misma funció o algoritmo aparezca repetido en secciones separadas del código, debido a la falta de comunicación en el equipo de trabajo y a la deficiente legibilidad y/o documentación en el código.  
 Esto provoca el riesgo de que al producirse la necesidad de realizar cambios en el comportamiento de la función o algoritmo involucrado, se modifiquen sólo algunas de sus "copias" en el código, generándose inconsistencias que pueden ser difíciles de detectar.
 
@@ -58,3 +67,14 @@ Para evitar los efectos indeseados de los fenómenos recién descriptos, y refor
 De acuerdo a lo indicado por la llamada "ley de Conway", que sugiere que la forma del código reflejará aquella en que se organiza la organización que lo produce, estas características abiertas y flexibles de un equipo de trabajo se transladarán al código fuente.
 
 Varias de las propuestas provienen de una iniciativa conocida como _Extreme Programming_ o _XP_, surgida en la década de 1990.
+XP se propone como un proceso inscripto dentro de los [marcos de trabajo ágiles](../programacion-a-desarrollo/intro-agil), compartiendo el objetivo de adaptación y gestión del cambio, y un estilo [iterativo e incremental](./iterativo-incremental) de desarrollo.  
+Una característica distintiva de XP es que acentúa la relevancia del equipo de desarrollo como factor clave para el éxito de un proyecto.
+
+(acá puede ir una imagen sobre XP)  
+![imagen sobre XP](../images/logoelevate.jpg)
+
+Aunque XP fue propuesta originalmente como una metodología completa de desarrollo, su mayor legado al estado actual del arte de la industria del software lo constituyen varias prácticas que propuso originalmente, y que en la actualidad están mucho más difundidas que la metodología en sí.
+Entre ellas encontramos varios aspectos ligados al trabajo del equipo del desarrollo; además de las que se tratarán en esta unidad, esto es Collective Code Ownership, Pair Programming, mencionamos [Test-Driven Development](../testing/testing-software/tdd) y Code Review. También es una de las primeras propuestas integrales que enfatiza el rol del [testing unitario](../testing/testing-software/testing-unitario) y de la [integración continua](../ci-cd/intro).
+
+
+
