@@ -11,8 +11,8 @@ En el ámbito de la industria del software, se conocen varias propuestas para or
 (acá puede ir una imagen sobre "trabajo en equipo")  
 ![imagen sobre "trabajo en equipo"](../images/logoelevate.jpg)
 
-En esta página, y en las siguientes, trataremos sobre algunos conceptos y técnicas referidos a la organización y la forma de trabajo de equipos de desarrollo. Tienen como objetivo común la generación de código comprensible, aprovechable y modificable por cualquiera de los integrantes de un equipo, y a la elevación continuada de la potencialidad del mismo mediante la disposición a compartir experiencias de trabajo y conocimientos.  
-En esta página, luego de una introducción general, hablaremos sobre _collective code ownership_. En la siguiente abordaremos la técnica de _pair programming_, que proviene al igual que la anterior, del conjunto de propuestas conocido como _Extreme Programming_ o _XP_. Finalmente, trataremos sobre _full-stack development_.  
+En esta sección, y en las siguientes, trataremos sobre algunos conceptos y técnicas referidos a la organización y la forma de trabajo de equipos de desarrollo. Tienen como objetivo común la generación de código comprensible, aprovechable y modificable por cualquiera de los integrantes de un equipo, y a la elevación continuada de la potencialidad del mismo mediante la disposición a compartir experiencias de trabajo y conocimientos.  
+En esta sección, luego de una introducción general, hablaremos sobre _collective code ownership_. En la siguiente abordaremos la técnica de _pair programming_, que proviene al igual que la anterior, del conjunto de propuestas conocido como _Extreme Programming_ o _XP_. Finalmente, trataremos sobre _full-stack development_.  
 Como veremos más adelante, estas ideas no se limitan al ámbito estricto del desarrollo, sino que pueden extenderse a otros roles, en particular en los ligados a tareas de operaciones. 
 Entendemos que su aplicación fomenta el enfoque _DevOps_ de combinación entre las visiones de desarrollo y operaciones. Tal es la motivación para incluir, en esta última unidad, las temáticas recién mencionadas.
 
@@ -76,5 +76,35 @@ Una característica distintiva de XP es que acentúa la relevancia del equipo de
 Aunque XP fue propuesta originalmente como una metodología completa de desarrollo, su mayor legado al estado actual del arte de la industria del software lo constituyen varias prácticas que propuso originalmente, y que en la actualidad están mucho más difundidas que la metodología en sí.
 Entre ellas encontramos varios aspectos ligados al trabajo del equipo del desarrollo; además de las que se tratarán en esta unidad, esto es Collective Code Ownership, Pair Programming, mencionamos [Test-Driven Development](../testing/testing-software/tdd) y Code Review. También es una de las primeras propuestas integrales que enfatiza el rol del [testing unitario](../testing/testing-software/testing-unitario) y de la [integración continua](../ci-cd/intro).
 
+
+## Ownership del código
+Para adentrarnos en la temática específica de esta sección, comencemos describiendo brevemente qué se entiende por _ownership_ del código. 
+Este término se utiliza para indicar quién, o quiénes, tienen el control sobre una determinada parte del código fuente de un proyecto. En particular, el ownership implica la posibilidad de _definir quiénes pueden realizar modificaciones_ sobre el código.  
+Este concepto también conlleva la responsabilidad de garantizar que el código en cuestión funciona adecuadamente, y de corregir los eventuales defectos que pudieran surgir.  
+La unidad mínima para definir ownership de código es un archivo fuente; esto es, el ownership se aplica a un grupo de archivos, eventualmente a un único archivo.
+
+En la industria se han propuesto varios modelos de ownership, que pueden describirse a partir de tres esquemas prototípicos.
+
+
+## Modelos tradicionales de ownership
+El modelo más tradicional es el conocido como _strong code ownership_.
+En este modelo, el código fuente de un producto o componente se divide en secciones, asignándose cada sección a un desarrollador que será dueño y responsable de la misma.
+Por lo tanto, cada desarrollador sólo puede modificar el código de las secciones que tiene asignadas, y del mismo modo, cada archivo sólo puede ser modificado por su owner.  
+Si un desarrollador necesita modificaciones sobre un archivo que queda fuera de sus "dominios", debe solicitar al owner del archivo en cuestión que realice los cambios requeridos. 
+Una variante posible, que permanece dentro de este esquema, es realizar los cambios en una [rama](../git-branch/git-branch-merge) separada, y solicitar al owner que los acepte mediante un [pull request](../git-branch/pull-requests).
+
+Este modelo tiene una debilidad evidente: cuando un integrante deja el equipo por cualquier motivo, es probable que el resto sólo tenga un conocimiento débil o aproximado sobre el código del que tal integrante es owner.  
+Por eso, en algunos proyectos se adopta la práctica de definir una suerte de "responsable accesorio" de cada sección del código, para que haya al menos dos personas que conozcan su funcionamiento con un cierto nivel de detalle.  
+Otro problema del strong code ownership es que cualquier modificación que afecte a distintas partes del código (por ejemplo, un cambio de nombre en un componente utilizado extensamente) requiere del concurso simultáneo de varios desarrolladores, aún cuando se trate de operaciones rutinarias, que incluso pueden ser realizadas por un programa en forma automática.
+
+El _weak code ownership_ es un esquema alternativo, en el que cada sección del código se asigna a un desarrollador como en el caso anterior, pero donde la propiedad del código no conlleva el derecho exclusivo a su modificación.
+Por lo tanto, cualquier desarrollador puede realizar cambios sobre código del que no es owner. Si los cambios son pequeños o rutinarios, los puede realizar directamente. En caso de modificaciones más relevantes, deben contar al menos con el acuerdo del dueño del código involucrado (o de los dueños, si el cambio afecta a secciones de código asignadas a distintas personas).  
+En este modelo, el owner de cada sección de código es responsable de su integridad y correcto funcionamiento, debiendo revisar las modificaciones realizadas por otros integrantes del equipo.
+
+
+## Collective code ownership
+Este esquema resulta de la eliminación del concepto de ownership individual del código: en una formulación con cierto dejo propagandístico, se dice que _el código no tiene dueño_.  
+Todo el equipo es solidariamente responsable sobre el conjunto del código fuente, y consecuentemente, cualquier integrante tiene la potestad de realizar cambios en cualquier parte del código, en cualquier momento. 
+Modificaciones relevantes serán sujetas a debate dentro del equipo, debiendo llegarse a una decisión conjunta.
 
 
