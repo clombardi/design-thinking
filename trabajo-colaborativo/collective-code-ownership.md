@@ -102,9 +102,25 @@ Por lo tanto, cualquier desarrollador puede realizar cambios sobre código del q
 En este modelo, el owner de cada sección de código es responsable de su integridad y correcto funcionamiento, debiendo revisar las modificaciones realizadas por otros integrantes del equipo.
 
 
-## Collective code ownership
+## Collective code ownership y sus consecuencias
 Este esquema resulta de la eliminación del concepto de ownership individual del código: en una formulación con cierto dejo propagandístico, se dice que _el código no tiene dueño_.  
 Todo el equipo es solidariamente responsable sobre el conjunto del código fuente, y consecuentemente, cualquier integrante tiene la potestad de realizar cambios en cualquier parte del código, en cualquier momento. 
-Modificaciones relevantes serán sujetas a debate dentro del equipo, debiendo llegarse a una decisión conjunta.
+Las modificaciones relevantes serán sujetas a debate dentro del equipo, debiendo llegarse a una decisión conjunta.
 
+Uno de los objetivos de este esquema es facilitar el trabajo en conjunto.
+A tal efecto, es habitual la definicion de _pautas y convenciones de codificación_, que deben ser respetadas por todo el equipo.
+A su vez, esta práctica brinda un alto nivel de uniformidad en el código, lo que facilita su legibilidad y comprensión.  
+Existen herramientas que puden asociarse a los editores de código, cuyo propósito es verificar que se cumplan las pautas definidas; en algunos casos pueden realizar modificaciones sobre el código en tal sentido.
 
+Una consecuencia notoria de este modelo es que alienta la introducción frecuente de mejoras en el código, los llamados _refactors_ que se describieron en la sección sobre [test-driven development](../testing/testing-software/tdd).
+Esto es producto del análisis de distintas personas sobre cada sección del código.  
+La inexistencia de dueños individuales sobre secciones determinadas del código, impide que una persona se erija como barrera para el cambio, al resistirse a modificaciones que puedan afectar a "su" código. Este es parte del efecto buscado con la aplicación del collective code ownership.  
+En este mismo sentido, el ownership compartido permite que ante la aparición de un defecto, sean varias las integrantes del equipo que pueden abordar su resolución, generándose una gestión más ágil de defectos.  
+A su vez, la responsabilidad de que el aumento en la frecuencia de cambios no genere la aparición de nuevos defectos, recae en parte en la existencia de potentes baterías de test. En este sentido, el collective code ownership va de la mano con el testeo extensivo.
+
+Además de fomentar el trabajo en conjunto, este estilo alienta el intercambio de conocimientos entre los integrantes de un equipo de desarrollo.
+Adicionalmente, provoca que cada desarrolladora pueda trabajar sobre secciones de código de distintas características. De esta forma, se favorece la formación de profesionales que puedan colaborar en cualquier componente de un proyecto, los llamados _full-stack developers_ de los que hablaremos en una sección posterior.
+
+Una consecuencia obvia de este modelo es que se reduce la dependencia de cualquiera de los integrantes individuales de un equipo, resultando en un esquema de trabajo más robusto.
+Una debilidad potencial es que al no definirse responsables individuales, pueda diluirse la responsabilidad acerca del correcto funcionamiento del código.
+La idea del collective code ownership es apostar al efecto contrario: que la responsabilidad compartida en forma solidaria fomente el compromiso de cada integrante, al mismo tiempo que la cohesión del equipo.
