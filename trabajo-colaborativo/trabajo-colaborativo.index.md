@@ -10,4 +10,6 @@ layout: default
 
 [Collective code ownership](./collective-code-ownership)
 
+[Pair programming](./pair-programming)
+
 [La importancia del Full Stack development](./importancia-full-stack)
