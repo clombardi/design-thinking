@@ -99,13 +99,16 @@ Otro problema del strong code ownership es que cualquier modificación que afect
 
 El _weak code ownership_ es un esquema alternativo, en el que cada sección del código se asigna a un desarrollador como en el caso anterior, pero donde la propiedad del código no conlleva el derecho exclusivo a su modificación.
 Por lo tanto, cualquier desarrollador puede realizar cambios sobre código del que no es owner. Si los cambios son pequeños o rutinarios, los puede realizar directamente. En caso de modificaciones más relevantes, deben contar al menos con el acuerdo del dueño del código involucrado (o de los dueños, si el cambio afecta a secciones de código asignadas a distintas personas).  
-En este modelo, el owner de cada sección de código es responsable de su integridad y correcto funcionamiento, debiendo revisar las modificaciones realizadas por otros integrantes del equipo.
+En este modelo, el owner de cada sección de código es responsable (o _champion_, de acuerdo a un vocablo en inglés utilizado en este ámbito) de su integridad y correcto funcionamiento, debiendo revisar las modificaciones realizadas por otros integrantes del equipo.
 
 
 ## Collective code ownership y sus consecuencias
 Este esquema resulta de la eliminación del concepto de ownership individual del código: en una formulación con cierto dejo propagandístico, se dice que _el código no tiene dueño_.  
 Todo el equipo es solidariamente responsable sobre el conjunto del código fuente, y consecuentemente, cualquier integrante tiene la potestad de realizar cambios en cualquier parte del código, en cualquier momento. 
 Las modificaciones relevantes serán sujetas a debate dentro del equipo, debiendo llegarse a una decisión conjunta.
+
+(acá puede ir una imagen sobre "trabajo colaborativo")  
+![imagen sobre "trabajo colaborativo"](../images/logoelevate.jpg)
 
 Uno de los objetivos de este esquema es facilitar el trabajo en conjunto.
 A tal efecto, es habitual la definicion de _pautas y convenciones de codificación_, que deben ser respetadas por todo el equipo.
@@ -124,3 +127,14 @@ Adicionalmente, provoca que cada desarrolladora pueda trabajar sobre secciones d
 Una consecuencia obvia de este modelo es que se reduce la dependencia de cualquiera de los integrantes individuales de un equipo, resultando en un esquema de trabajo más robusto.
 Una debilidad potencial es que al no definirse responsables individuales, pueda diluirse la responsabilidad acerca del correcto funcionamiento del código.
 La idea del collective code ownership es apostar al efecto contrario: que la responsabilidad compartida en forma solidaria fomente el compromiso de cada integrante, al mismo tiempo que la cohesión del equipo.
+
+
+## A modo de conclusión
+La separación del código en secciones con responsables exclusivos, puede desembocar en la coexistencia en un mismo proyecto, de código con estilos y criterios de organización muy distintos. De esta forma, el código fuente queda compartimentado en "islas" o "mundos" de una gran diversidad.
+Como ya mencionamos, este escenario presenta varias debilidades importantes, que se han verificado en la experiencia acumulada de la industria del software.
+
+Fenómenos análogos se observan en el estudio del funcionamiento de organizaciones en general (o sea, más allá del ámbito específico del software), utilizándose para designarlos los términos de "nichos" o "silos".  
+Dentro del desarrollo, un aspecto complementario en el que se refleja esta situación es la especialización de los profesionales de sistemas o programación/desarrollo, que algunas veces tienden a encasillarse en roles que resultan muy estrechos.  
+Por otro lado, estos fenómenos no se limitan, en la industria del software, a las tareas y roles ligados con el desarrollo: se dan situaciones análogas en otros ámbitos dentro de los proyectos de construcción y operación de aplicaciones.
+
+La adopción del collective code ownership es una de las estrategias que puede utilizarse para evitar la aparición de esta suerte de "silos" dentro de un proyecto de software.
