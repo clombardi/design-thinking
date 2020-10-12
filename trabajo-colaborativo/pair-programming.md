@@ -35,12 +35,17 @@ Una variante sobre este esquema básico es el llamado _strong-style pairing_, en
 En esta variante, se recomienda asignar el rol de piloto al integrante más inexperto; el navegante provee información y sugerencias que guían el trabajo del piloto.
 De esta forma, se genera un entorno de _aprendizaje activo_, en el que quien asume el rol de driver va adquiriendo conocimientos y/o experiencia mediante la práctica, que es asistida por el rol del navigator.
 
-También mencionamos otro esquema posible para el Pair Programming, al que se conoce por el nombre de _Ping Pong_. 
-En este esquema, una de las dos integrantes del par genera un test para un componente o unidad de código a construirse (Ping), y la otra provee posteriormente una implementación (Pong) que satisface las condiciones del test. Los roles de generadora de test y de implementación se alternan en cada iteración de "Ping-Pong".
+Otro esquema posible para el Pair Programming es el llamado _Ping Pong_, en el que una de las dos integrantes del par genera un test para un componente o unidad de código a construirse (Ping), y la otra provee posteriormente una implementación (Pong) que satisface las condiciones del test. Los roles de generación de test y de implementación se alternan en cada iteración de "Ping-Pong".
 Esta variante representa una forma de implementar las ideas de [Test-driven development](../testing/testing-software/tdd) en un entorno que aplica Pair Programming.
 
 (acá puede ir una imagen sobre "ping pong en pair programming")  
 ![imagen sobre "ping pong en pair programming"](../images/logoelevate.jpg)
+
+Finalmente, mencionamos que los avances y nuevas herramientas de comunicación, permiten trabajar en un esquema de _Pair Programming en forma remota_, en donde los dos integrantes de un par trabajan en lugares físicamente separados. 
+A este respecto, destacamos la existencia de extensiones a los editores de código más difundidos, que simplifican el trabajo sobre una misma sección de código por parte de dos personas que están en equipos separados.
+
+(acá puede ir una imagen sobre "pair programming remoto")  
+![imagen sobre "pair programming remoto"](../images/logoelevate.jpg)
 
 
 ## Prácticas y riesgos asociados al Pair Programming
@@ -65,3 +70,23 @@ En particular, la aplicación de Pair Programming implica la necesidad de manten
 También deben manejarse situaciones de conflicto, si las integrantes de un par no logran un acuerdo acerca de cierta cuestión: debe aceptarse que una de las dos propuestas en danza debe ser la que se pruebe primero, para evitar un bloqueo en el trabajo del par.
 
 
+## Consecuencias del Pair Programming
+Como se mencionó al principio, una de las fortalezas de la aplicación de Pair Programming es que propende a la generación de _código de mayor calidad_.
+Esto se debe a varias consecuencias de esta práctica, entre las que mencionamos:
+- cada decisión respecto de la organización del código es el resultado del análisis, las ideas y el debate de (al menos) dos personas.
+- todo el código tiene al menos la revisión de una persona, en concreto la que ocupa el rol de navigator en el momento en que se tipea.
+- el acompañamiento del navigator permite que la persona que redacta el código, o sea el driver, pueda focalizarse específicamente en cada línea de código que escribe, lo que reduce la generación de defectos triviales o de código que resulte de difícil comprensión.
+
+Varios artículos afirman que este aumento de la calidad _no se logra a costa de la productividad_ del equipo: la disminución en el ritmo de generación de código producida por el hecho de que sólo la mitad del equipo está tipeando en cada momento, es mínima o nula, y en todo caso se compensa largamente por la menor tasa de defectos y (tal vez más importante) el aumento en la calidad que produce código más legible, aprovechable y modificable, cualidades que facilitan la _evolución_ del software que se está construyendo.  
+Señalamos al respecto que el trabajo en conjunto evita que una mala decisión tomada por un desarrollador lleve a código erróneo, ya sea porque resuelve un problema distinto al que se necesita abordar, o porque contiene defectos que no admiten soluciones puntuales, requiriéndose un rediseño. Estas situaciones de "callejones sin salida" que producen retrasos importantes en el desarrollo, se evitan en gran medida en un esquema de Pair Programming.  
+Otro factor a tener en cuenta es que el trabajo en conjunto permite mantener el desarrollo si uno de los dos integrantes de un par debe atender asuntos urgentes, o se presenta alguna situación personal que lo aleja de la tarea. El integrante restante puede trabjar solo durante un período, o en conjunto con un nuevo colega si la situación se prolonga.
+
+Pero probablemente, los efectos más relevantes de la aplicación de Pair Programming son los relacionados con el _equipo de desarrollo_.  
+Esta práctica lleva a elevar en gran medida la capacidad de comunicación y de interacción dentro de un equipo, generando una mayor cohesión en el mismo. 
+Al sancionarse como norma el trabajo en conjunto, la comunicación, junto con la generación, debate y estudio de distintas alternativas de solución a un problema dado, se vuelven situaciones habituales.  
+En la perspectiva de Pair Programming, se reconoce la posible aparición de conflictos interpersonales, y se apuesta a encontrar los caminos para resolverlos. 
+Podemos encontrar aquí una analogía con los [marcos de trabajo ágiles](../programacion-a-desarrollo/intro-agil), que parten de la inevitabilidad del cambio y proponen mecanismos para manejarlo, en lugar de intentar evitarlo.
+
+Otra consecuencia de la aplicación de Pair Programming es la _difusión de conocimientos_, tanto técnicos como respecto del dominio de aplicación del software que se está desarrollando. Este efecto se potencia si el Pair Programming se combina con la práctica, ya mencionada, de rotaciones a intervalos regulares.  
+Cada integrante del equipo transita por distintas secciones del código, e interactúa con distintos colegas, en un período relativamente corto de tiempo.  Esta dinámica evita que se generen "silos de conocimiento", en el sentido descripto al presentar el [Collective Code Ownership](./collective-code-ownership). 
+Tambien contribuye a la integración de nuevos integrantes, el proceso conocido como _onboarding_, que puede resultar problemático en proyectos complejos o de características peculiares.
