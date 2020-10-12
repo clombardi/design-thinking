@@ -13,3 +13,5 @@ layout: default
 [Pair programming](./pair-programming)
 
 [La importancia del Full Stack development](./importancia-full-stack)
+
+[Desarrollo sobre operaciones: factores de conflicto](./desarrollo-operaciones-conflicto)
