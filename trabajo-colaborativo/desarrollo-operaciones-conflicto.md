@@ -24,7 +24,7 @@ Establecer un plan de acción para transformar la cultura de la organización ha
 
 Llevando al extremo lo enunciado en el punto anterior, podemos encontrarnos con equipos de Desarrollo que consideran que la labor de Operaciones no es importante, y dificulten aún más la interacción. 
 
-Esta visión puede partir del desconocimiento de las tareas que Operaciones realiza, de una subestimación del esfuerzo que estas tareas conllevan y/o de un bajo nivel de involucramiento con el producto software que se está construyendo. Probablemente no haya una mirada integral sobre el trabajo que se lleva a cabo y en ese sentido las tareas de Operaciones parecieran no tener valor para Desarrollo, sino más bien resultar una molestia.
+Esta visión puede partir del desconocimiento de las tareas que Operaciones realiza, de una subestimación del esfuerzo que estas tareas conllevan y/o de un bajo nivel de involucramiento con el producto de software que se está construyendo. Probablemente no haya una mirada integral sobre el trabajo que se lleva a cabo y en ese sentido las tareas de Operaciones parecieran no tener valor para Desarrollo, sino más bien resultar una molestia.
 
 Nuevamente, alentar la comunicación entre los equipos puede ayudar a romper estos "silos funcionales", poniendo sobre la mesa las responsabilidades que cada parte tiene y demostrando cómo el aporte de cada equipo contribuye a elevar la calidad del software producido. Será importante también que Desarrollo conozca todas las tareas relacionadas a Operaciones: soporte técnico, elaboración de métricas, guardias, planificación y ejecución de planes de contingencia, mantenimiento de ambientes, respaldo de datos, y una larga lista de etcéteras.
 
