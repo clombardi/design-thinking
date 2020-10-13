@@ -8,6 +8,10 @@ Como mencionamos en la sección anterior, en ciertos sectores de la industria es
 
 Siguiendo con esta tendencia a la compartimentación, surgen dos categorías que ya hemos mencionado en la unidad 1 [al hablar sobre arquitectura de software](../programacion-a-desarrollo/arquitectura-de-software): _backend_ y _frontend_. Muchas veces se piensan como roles opuestos o antagónicos, asociando el primero a personas con mayor conocimiento sobre algoritmia, bases de datos e interacción con sistemas externos y el segundo a quienes dominan conceptos de _user experience (UX)_, diseño gráfico y programación reactiva.
 
+En esta línea, se piensa al desarrollo de software como un _stack_ o pila de tecnologías y a los desarrolladores como expertos o ignorantes en cada una de las capas de esa pila. Pensando en una arquitectura web, las capas inferiores representarían a la base de datos y al servidor, y a medida que vamos "hacia arriba" nos acercaríamos a lo que un usuario del sistema podría ver. Solo por dar algún ejemplo, podríamos mencionar al clásico [stack LAMP](https://es.wikipedia.org/wiki/LAMP) (Linux - Apache - MySQL - PHP) o al más moderno [MERN](https://www.mongodb.com/mern-stack) (MongoDB - ExpressJS - ReactJS - NodeJS).
+
+![Desarrollo en capas](./images/desarrollo-stack-capas.png)
+
 En la vereda contraria a todo esto, aparece el rol de _full stack developer_: un perfil más integral, con las habilidades y la experiencia necesaria para involucrarse en cualquier área del desarrollo. Por supuesto que, según su recorrido, cada persona tendrá mayor o menor conocimiento sobre cada área específica, pero eso no impedirá que pueda eventualmente colaborar en otrás especialidades.
 
 A continuación, detallaremos un poco más en profundidad lo que implica reconocerse _full stack_, así también como algunas ventajas y desventajas de incluir desarrolladoras con este perfil en los equipos de trabajo.
@@ -25,6 +29,7 @@ Existen tantas definiciones de _full stack developer_ como publicaciones hechas 
 
 Según qué definición tomemos, pueden incluirse también habilidades que no sean estrictamente técnicas: autonomía, capacidad de trabajo en equipo, comprensión de las necesidades del negocio, manejo de herramientas de seguimiento de tareas, etc.
 
+_(puede ir otra imagen, pero sería bueno respetar esta idea de círculos como oposición a la pila)_
 ![Full stack](./images/full-stack.jpg)
 
 No se pretende ser experto en todas esas áreas, pero sí se valora que todas resulten familiares y, sobre todo, la habilidad para poder construir un producto que funcione. En general, quienes se encuadran en este perfil son personas con muchos años de experiencia en roles variados, han trabajado con varias tecnologías distintas y se han desempeñado en industrias diversas.
