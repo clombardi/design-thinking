@@ -17,3 +17,5 @@ layout: default
 [Desarrollo sobre operaciones: factores de conflicto](./desarrollo-operaciones-conflicto)
 
 [DevSecOps: la seguridad como parte del desarrollo](./dev-sec-ops)
+
+[Conclusiones y cierre](./cierre)
